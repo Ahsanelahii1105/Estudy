@@ -7,34 +7,6 @@
 @section('content')
 
      <!-- Facilities Start -->
-  
-  <!-- <div class="container-fluid w-100 mt-5">
-    <div class="row">
-
-    <div class="col-lg-3">
-      <div class="card shadow cd">
-
-      </div>
-    </div>
-
-    <div class="col-lg-3">
-      <div class="card shadow cd">
-
-      </div>
-    </div>
-    
-    <div class="col-lg-3">
-      <div class="card shadow cd">
-
-      </div>
-    </div>
-
-    <div class="col-lg-3">
-      <div class="card shadow cd">
-
-      </div>
-    </div>
-  </div> -->
 
 
 <div class="container mt-5">
