@@ -462,6 +462,8 @@
 
 		</div>
 	</div>
+
+	<!-- subject boxes  -->
 	
 	<div id="contentArea">
 		<span style="font-size: 30px; cursor: pointer"
