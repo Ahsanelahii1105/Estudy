@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\WebsiteController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,9 +32,7 @@ Route::middleware([
 
 // navbar 
 
-Route::get('/', function(){
-    return view('index');
-});
+Route::get('/' , [WebsiteController::class , 'index']);
 
 Route::get('/subject', function () {
     return view('subject');
@@ -63,3 +63,11 @@ Route::get('/work', function () {
 Route::get('/terms_condition', function () {
     return view('terms_condition');
 });
+
+
+
+//-------------Routes By TH for Inserting Data-------------
+Route::get('/admin/home' , [AdminController::class , 'index']);
+
+Route::get('/admin/insertsubject' , [AdminController::class , 'create']);
+Route::post('/admin/insertsubject' , [AdminController::class , 'store']);

@@ -38,6 +38,7 @@
   <div class="container pb-3">
     <div class="row">
 
+      @foreach ($subject as $sub)
       <div class="col-lg-6 col-md-6 col-sm-6">
         <div class="card mb-3" style="max-width: 540px;">
           <div class="row no-gutters">
@@ -46,35 +47,18 @@
             </div>
             <div class="col-md-7">
               <div class="card-body">
-                <h5 class="card-title">Website development</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.</p>
+                <h5 class="card-title">{{$sub->subject_name}}</h5>
+                <p class="card-text">{{$sub->subject_desc}}</p>
                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 <button type="button" class="btn btn-outline-primary">Join Free</button>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div>      
+      @endforeach
 
-      <div class="col-lg-6 col-md-6 col-sm-6">
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row no-gutters">
-            <div class="col-md-5">
-              <img src="img/about-1.jpg" width="100%" height="300px" class="card-img" alt="...">
-            </div>
-            <div class="col-md-7">
-              <div class="card-body">
-                <h5 class="card-title">webiste</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                  additional content. This content is a little bit longer.</p>
-                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                <button type="button" class="btn btn-outline-primary">Buy</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
   </div>
 </div>
