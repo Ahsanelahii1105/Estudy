@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\subject;
 use Illuminate\Http\Request;
+use App\Models\subject;
+use App\Models\classes;
 
 class AdminController extends Controller
 {
@@ -20,7 +21,11 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('admin.subjectInsert');
+        return view('admin.subjectinsert');
+    }
+    public function classcreate()
+    {
+        return view('admin.classinsert');
     }
 
     /**
@@ -38,6 +43,21 @@ class AdminController extends Controller
         $subject->subject_image = $imagename;
 
         $subject->save();
+        return redirect()->back();
+    }
+
+    public function classstore(Request $request)
+    {
+        $class = new classes();
+        $class->class_name = $request->name;
+        $class->class_desc = $request->desc;
+
+        $image = $request->image;
+        $imagename = time().'.'.$image->getClientOriginalExtension();
+        $request->image->move('images/categoryimages' , $imagename);
+        $class->subject_image = $imagename;
+
+        $class->save();
         return redirect()->back();
     }
 

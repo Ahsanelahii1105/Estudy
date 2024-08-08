@@ -3,9 +3,9 @@
 
    @section('main-section')
 
-   <h1 class="text-secondary text-center">Insert Course</h1>
+   <h1 class="text-secondary text-center">Insert Classes</h1>
    <div class="container-fluid w-50">
-      <form action="/admin/insertsubject" method="post" enctype="multipart/form-data">
+      <form action="/admin/insertclass" method="post" enctype="multipart/form-data">
          @csrf
          <div class="form-group">
             <label for="" class="form-label">Subject Title</label>

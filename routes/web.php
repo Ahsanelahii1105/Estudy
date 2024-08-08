@@ -76,5 +76,10 @@ Route::get('/terms_condition', function () {
 //-------------Routes By TH for Inserting Data-------------
 Route::get('/admin/home' , [AdminController::class , 'index']);
 
+// for course
 Route::get('/admin/insertsubject' , [AdminController::class , 'create']);
 Route::post('/admin/insertsubject' , [AdminController::class , 'store']);
+
+// for classes
+Route::get('/admin/insertclass' , [AdminController::class , 'classcreate']);
+Route::post('/admin/insertclass' , [AdminController::class , 'classstore']);

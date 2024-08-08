@@ -32,6 +32,14 @@
                      <a class="nav-link {{Request::is('admin/insertsubject') ? 'active' : ''}}"
                         href="/admin/insertsubject">Insert Subject</a>
                   </li>
+                  <li class="nav-item">
+                     <a class="nav-link {{Request::is('admin/insertclass') ? 'active' : ''}}"
+                        href="/admin/insertclass">Insert class</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link {{Request::is('admin/insertsubject') ? 'active' : ''}}"
+                        href="/admin/insertsubject">Insert Subject</a>
+                  </li>
                </ul>
                <div class="d-flex my-2 my-lg-0">
                   @if (Route::has('login'))

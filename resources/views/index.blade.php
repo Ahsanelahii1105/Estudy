@@ -43,7 +43,7 @@
         <div class="card mb-3" style="max-width: 540px;">
           <div class="row no-gutters">
             <div class="col-md-5 col-sm-12">
-              <img src="img/about-1.jpg" width="100%" height="300px" class="card-img" alt="...">
+              <img src="{{$sub->subject_image}}" name="image" width="100%" height="300px" class="card-img" alt="...">
             </div>
             <div class="col-md-7">
               <div class="card-body">
