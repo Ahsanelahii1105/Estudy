@@ -94,14 +94,14 @@
                 </div>
             </div>
 
-            <!-- <div class="d-flex flex-row align-items-center mb-0">
+            <div class="d-flex flex-row align-items-center mb-0">
                 <i class="fas fa-user fa-lg ms-3 fa-fw"></i>
                 <div data-mdb-input-init class="form-outline flex-fill mt-4">
                     <x-input id="age" class="form-control" type="bigint" name="age" :value="old('age')" required
                         autocomplete="userage" />
                     <x-label for="age" class="form-label" value="{{ __('Age') }}" />
                 </div>
-            </div> -->
+            </div>
 
             <div class="d-flex flex-row align-items-center mb-0">
                 <i class="fas fa-lock fa-lg ms-3 fa-fw"></i>
@@ -121,25 +121,25 @@
                 </div>
             </div>
 
-            <!-- <div class="d-flex flex-row align-items-center mb-0">
+            <div class="d-flex flex-row align-items-center mb-0">
                 <i class="fas fa-lock fa-lg ms-3 fa-fw"></i>
                 <div data-mdb-input-init class="form-outline flex-fill mt-4">
-                    <x-input id="password_confirmation" class="form-control" type="tel" name="phone" required
+                    <x-input id="Phone_Number" class="form-control" type="text" name="phone" required
                         autocomplete="usernumber" />
-                    <x-label for="password_confirmation" class="form-label" value="{{ __('Phone Number') }}" />
+                    <x-label for="Phone_Number" class="form-label" value="{{ __('Phone Number') }}" />
                 </div>
-            </div> -->
+            </div>
 
-            <!-- <div class="d-flex flex-row align-items-center mb-0">
+            <div class="d-flex flex-row align-items-center mb-0">
                 <i class="fas fa-lock fa-lg ms-3 fa-fw"></i>
                 <div data-mdb-input-init class="form-outline flex-fill mt-4">
-                    <x-input id="password_confirmation" class="form-control" type="text" name="address" required
+                    <x-input id="Current_address" class="form-control" type="text" name="address" required
                         autocomplete="useraddress" />
-                    <x-label for="password_confirmation" class="form-label" value="{{ __('Current Address') }}" />
+                    <x-label for="Current_address" class="form-label" value="{{ __('Current Address') }}" />
                 </div>
-            </div> -->
+            </div>
 
-            <!-- <div class="d-flex flex-row align-items-center mb-0">
+            <div class="d-flex flex-row align-items-center mb-0">
                 <i class="fas fa-lock fa-lg ms-3 fa-fw"></i>
                 <div data-mdb-input-init class="form-outline flex-fill mt-4">
                     <select name="gender" id="" class="form-control">
@@ -149,7 +149,7 @@
                     </select>
                     <label class="form-label">Gender</label>
                 </div>
-            </div> -->
+            </div>
 
             <!-- @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                 <div class="mt-4">

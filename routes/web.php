@@ -1,8 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\WebsiteController;
-use Illuminate\Support\Facades\Route;
+use App\Models\subject;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +27,12 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        if(Auth::User()->role==1){
+            $subject = subject::all();
+            return view('index' , compact('subject'));
+        }else{
+            return view('index');
+        }
     })->name('dashboard');
 });
 

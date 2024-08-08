@@ -25,18 +25,38 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                   <li class="nav-item">
-                     <a class="nav-link {{Request::is('admin/home')?'active':''}}" href="/admin/home" aria-current="page">Home<span class="visually-hidden">(current)</span></a>
+                     <a class="nav-link {{Request::is('admin/home') ? 'active' : ''}}" href="/"
+                        aria-current="page">Home<span class="visually-hidden">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link {{Request::is('admin/insertsubject')?'active':''}}" href="/admin/insertsubject">Insert Subject</a>
+                     <a class="nav-link {{Request::is('admin/insertsubject') ? 'active' : ''}}"
+                        href="/admin/insertsubject">Insert Subject</a>
                   </li>
                </ul>
-               <form class="d-flex my-2 my-lg-0">
-                  <input class="form-control me-sm-2" type="text" placeholder="Search" />
-                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-                     Search
-                  </button>
-               </form>
+               <div class="d-flex my-2 my-lg-0">
+                  @if (Route::has('login'))
+                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+                   @auth
+                  <form method="POST" action="{{ route('logout') }}" x-data>
+                     @csrf
+                     <button type="submit" class="btn btn-outline-danger" @click.prevent="$root.submit();">
+                        {{ __('Log Out') }}
+                     </button>
+                  </form>
+
+               @else
+               <a href="{{ route('login') }}"
+                class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log
+                in</a>
+
+               @if (Route::has('register'))
+               <a href="{{ route('register') }}"
+               class="ml-4 font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
+            @endif
+            @endauth
+                 </div>
+              @endif
+               </div>
             </div>
          </div>
       </nav>
