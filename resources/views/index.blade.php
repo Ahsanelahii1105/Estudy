@@ -38,7 +38,7 @@
   <div class="container pb-3">
     <div class="row">
 
-      @foreach ($subject as $sub)
+      @foreach ($subjects as $sub)
       <div class="col-lg-6 col-md-6 col-sm-6">
         <div class="card mb-3" style="max-width: 540px;">
           <div class="row no-gutters">

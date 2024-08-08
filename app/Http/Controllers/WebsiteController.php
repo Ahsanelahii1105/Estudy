@@ -12,8 +12,8 @@ class WebsiteController extends Controller
      */
     public function index()
     {
-        $subject = subject::all();
-        return view('index' , compact('subject'));
+        $subjects = subject::all();
+        return view('index' , compact('subjects'));
     }
 
     /**

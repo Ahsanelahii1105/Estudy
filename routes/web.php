@@ -28,10 +28,10 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', function () {
         if(Auth::User()->role==1){
-            $subject = subject::all();
-            return view('index' , compact('subject'));
+            return view('admin.index');
         }else{
-            return view('index');
+            $subjects = subject::all();
+            return view('index' , compact('subjects'));
         }
     })->name('dashboard');
 });
