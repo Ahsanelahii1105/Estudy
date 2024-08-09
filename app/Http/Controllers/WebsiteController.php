@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\subject;
+use App\Models\classes;
 use Illuminate\Http\Request;
 
 class WebsiteController extends Controller
@@ -14,6 +15,12 @@ class WebsiteController extends Controller
     {
         $subjects = subject::all();
         return view('index' , compact('subjects'));
+    }
+    
+    public function class()
+    {
+        $class = classes::all();
+        return view('index' , compact('class'));
     }
 
     /**

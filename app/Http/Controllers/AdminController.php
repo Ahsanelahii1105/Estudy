@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\subject;
 use App\Models\classes;
+use App\Models\courses;
 
 class AdminController extends Controller
 {
@@ -23,14 +24,12 @@ class AdminController extends Controller
     {
         return view('admin.subjectinsert');
     }
-    public function classcreate()
-    {
-        return view('admin.classinsert');
-    }
 
     /**
      * Store a newly created resource in storage.
      */
+
+    //  course feature 
     public function store(Request $request)
     {
         $subject = new subject();
@@ -39,11 +38,18 @@ class AdminController extends Controller
 
         $image = $request->image;
         $imagename = time().'.'.$image->getClientOriginalExtension();
-        $request->image->move('images/categoryimages' , $imagename);
-        $subject->subject_image = $imagename;
+        $path = 'images/subject/';
+        $request->image->move( $path, $imagename);
+        $subject->subject_image = $path.$imagename;
 
         $subject->save();
         return redirect()->back();
+    }
+
+    // class index
+    public function classcreate()
+    {
+        return view('admin.classinsert');
     }
 
     public function classstore(Request $request)
@@ -51,13 +57,46 @@ class AdminController extends Controller
         $class = new classes();
         $class->class_name = $request->name;
         $class->class_desc = $request->desc;
+        $class->class_image = $request->image;
+        $class->class_whichclass = $request->whichclass;
+        $class->class_seats = $request->seats;
+        $class->class_timing = $request->timing;
+        $class->class_fees = $request->fees;
 
         $image = $request->image;
         $imagename = time().'.'.$image->getClientOriginalExtension();
-        $request->image->move('images/categoryimages' , $imagename);
-        $class->subject_image = $imagename;
+        $path = 'images/class/';
+        $request->image->move($path , $imagename);
+        $class->class_image = $path.$imagename;
 
         $class->save();
+        return redirect()->back();
+    }
+
+    // course main
+    public function coursecreate()
+    {
+        return view('admin.classinsert');
+    }
+
+    public function coursestore(Request $request)
+    {
+        $course = new courses();
+        $course->course_name = $request->name;
+        $course->course_desc = $request->desc;
+        $course->course_imagec = $request->desc;
+        $course->course_time = $request->desc;
+        $course->course_whichclass = $request->desc;
+        $course->course_seats = $request->desc;
+        $course->course_fees = $request->desc;
+
+        $image = $request->image;
+        $imagename = time().'.'.$image->getClientOriginalExtension();
+        $path = 'images/class/';
+        $request->image->move($path , $imagename);
+        $course->course_image = $path.$imagename;
+
+        $course->save();
         return redirect()->back();
     }
 
