@@ -52,7 +52,26 @@
           <a href="gallery.html" class="nav-item nav-link">Discussion Library</a>
           <a href="/contact" class="nav-item nav-link">Contact</a>
         </div>
-        <a href="/login" class="btn btn-primary px-4">Login</a>
+        @if (Route::has('login'))
+                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
+                   @auth
+                  <form method="POST" action="{{ route('logout') }}" x-data>
+                     @csrf
+                     <button type="submit" class="btn btn-outline-danger" @click.prevent="$root.submit();">
+                        {{ __('Log Out') }}
+                     </button>
+                  </form>
+
+               @else
+               <a href="{{ route('login') }}"
+                class="btn btn-primary px-4">Log
+                in</a>
+
+              
+            @endauth
+                 </div>
+              @endif
+        
         
       </div>
     </nav>

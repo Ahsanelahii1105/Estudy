@@ -24,15 +24,19 @@
     />
 
     <!-- Flaticon Font -->
-    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet" />
+    <link href="{{asset('lib/flaticon/font/flaticon.css')}}" rel="stylesheet" />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="{{asset('lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet" />
+    <link href="{{asset('lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
+<<<<<<< HEAD
     <link href="css/ABOUT.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+=======
+    <link href="{{asset('css/style.css')}}" rel="stylesheet" />
+>>>>>>> d50e7855876d831acd661bb4a3737ae0d87a35f7
   </head>
 
   <body>

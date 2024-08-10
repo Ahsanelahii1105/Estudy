@@ -1,6 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\WebsiteController;
+use App\Models\subject;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,16 +27,19 @@ Route::middleware([
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        if(Auth::User()->role==1){
+            return view('admin.index');
+        }else{
+            $subjects = subject::all();
+            return view('index' , compact('subjects'));
+        }
     })->name('dashboard');
 });
 
 
 // navbar 
 
-Route::get('/', function(){
-    return view('index');
-});
+Route::get('/' , [WebsiteController::class , 'index']);
 
 Route::get('/subject', function () {
     return view('subject');
@@ -63,3 +70,16 @@ Route::get('/work', function () {
 Route::get('/terms_condition', function () {
     return view('terms_condition');
 });
+
+
+
+//-------------Routes By TH for Inserting Data-------------
+Route::get('/admin/home' , [AdminController::class , 'index']);
+
+// for course
+Route::get('/admin/insertsubject' , [AdminController::class , 'create']);
+Route::post('/admin/insertsubject' , [AdminController::class , 'store']);
+
+// for classes
+Route::get('/admin/insertclass' , [AdminController::class , 'classcreate']);
+Route::post('/admin/insertclass' , [AdminController::class , 'classstore']);
