@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\subs;
 use Illuminate\Http\Request;
 use App\Models\subject;
 use App\Models\classes;
@@ -76,7 +77,7 @@ class AdminController extends Controller
     // course main
     public function coursecreate()
     {
-        return view('admin.classinsert');
+        return view('admin.courseinsert');
     }
 
     public function coursestore(Request $request)
@@ -84,11 +85,7 @@ class AdminController extends Controller
         $course = new courses();
         $course->course_name = $request->name;
         $course->course_desc = $request->desc;
-        $course->course_imagec = $request->desc;
-        $course->course_time = $request->desc;
-        $course->course_whichclass = $request->desc;
-        $course->course_seats = $request->desc;
-        $course->course_fees = $request->desc;
+        $course->course_image = $request->image;
 
         $image = $request->image;
         $imagename = time().'.'.$image->getClientOriginalExtension();
@@ -97,6 +94,29 @@ class AdminController extends Controller
         $course->course_image = $path.$imagename;
 
         $course->save();
+        return redirect()->back();
+    }
+
+    // sub main
+    public function SUBcreate()
+    {
+        return view('admin.subinsert');
+    }
+
+    public function SUBstore(Request $request)
+    {
+        $sub = new subs();
+        $sub->sub_name = $request->name;
+        $sub->sub_desc = $request->desc;
+        $sub->sub_image = $request->image;
+
+        $image = $request->image;
+        $imagename = time().'.'.$image->getClientOriginalExtension();
+        $path = 'images/class/';
+        $request->image->move($path , $imagename);
+        $sub->sub_image = $path.$imagename;
+
+        $sub->save();
         return redirect()->back();
     }
 

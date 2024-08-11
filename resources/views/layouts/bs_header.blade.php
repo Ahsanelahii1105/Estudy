@@ -37,8 +37,12 @@
                         href="/admin/insertclass">Insert class</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link {{Request::is('admin/insertsubject') ? 'active' : ''}}"
-                        href="/admin/insertsubject">Insert Subject</a>
+                     <a class="nav-link {{Request::is('admin/insertcourse') ? 'active' : ''}}"
+                        href="/admin/insertcourse">Insert Course</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link {{Request::is('admin/insertsub') ? 'active' : ''}}"
+                        href="/admin/insertsub">Insert Sub main</a>
                   </li>
                </ul>
                <div class="d-flex my-2 my-lg-0">
