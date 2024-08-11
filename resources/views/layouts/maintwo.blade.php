@@ -31,12 +31,9 @@
     <link href="{{asset('lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-<<<<<<< HEAD
     <link href="css/ABOUT.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
-=======
     <link href="{{asset('css/style.css')}}" rel="stylesheet" />
->>>>>>> d50e7855876d831acd661bb4a3737ae0d87a35f7
   </head>
 
   <body>

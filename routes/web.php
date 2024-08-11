@@ -45,6 +45,10 @@ Route::get('/subject', function () {
     return view('subject');
 });
 
+Route::get('/about', function () {
+    return view('about');
+});
+
 Route::get('/courses', function () {
     return view('courses');
 });
