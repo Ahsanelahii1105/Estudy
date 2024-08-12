@@ -3,16 +3,16 @@
 
    @section('main-section')
 
-   <h1 class="text-secondary text-center mt-5">Insert Sub</h1>
+   <h1 class="text-secondary text-center mt-5">Insert Faculties Data</h1>
    <div class="container-fluid w-50">
       <form action="/admin/insertfaculty" method="post" enctype="multipart/form-data">
          @csrf
          <div class="form-group">
-            <label for="" class="form-label">Subject Title</label>
+            <label for="" class="form-label">Faculty Title</label>
             <input type="text" name="name" id="" class="form-control" placeholder="Enter Subject Title">
          </div>
          <div class="form-group">
-            <label for="" class="form-label">Subject Description</label>
+            <label for="" class="form-label">Faculty Description</label>
             <textarea rows="4" type="text" name="desc" id="" class="form-control" placeholder="Enter Subject Description"></textarea>
          </div>
          <div class="form-group">

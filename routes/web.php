@@ -57,11 +57,6 @@ Route::get('/faculty', function () {
     return view('faculty');
 });
 
-Route::get('/contact', function () {
-    return view('contact');
-});
-
-
 Route::get('/chat', function () {
     return view('chat');
 });
@@ -99,3 +94,7 @@ Route::post('/admin/insertsub' , [AdminController::class , 'SUBstore']);
 // for faculty data
 Route::get('/admin/insertfaculty' , [AdminController::class , 'facultycreate']);
 Route::post('/admin/insertfaculty' , [AdminController::class , 'facultystore']);
+
+// for contact data
+Route::get('/contact' , [AdminController::class , 'contactcreate']);
+Route::post('/contact' , [AdminController::class , 'contactstore']);

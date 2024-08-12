@@ -8,6 +8,7 @@ use App\Models\subject;
 use App\Models\classes;
 use App\Models\courses;
 use App\Models\faculties;
+use App\Models\contacts;
 
 class AdminController extends Controller
 {
@@ -120,10 +121,11 @@ class AdminController extends Controller
         $sub->save();
         return redirect()->back();
     }
-    // sub main
+    
+    // faculty main
     public function facultycreate()
     {
-        return view('admin.subinsert');
+        return view('admin.facultyinsert');
     }
 
     public function facultystore(Request $request)
@@ -140,6 +142,23 @@ class AdminController extends Controller
         $faculty->faculty_image = $path.$imagename;
 
         $faculty->save();
+        return redirect()->back();
+    }
+
+    // CONTACT 
+    public function contactcreate()
+    {
+        return view('contact');
+    }
+
+    public function contactstore(Request $request)
+    {
+        $contact = new contacts();
+        $contact->contact_name = $request->name;
+        $contact->contact_email = $request->email;
+        $contact->contact_subject = $request->subject;
+        $contact->contact_message = $request->message;
+
         return redirect()->back();
     }
 
