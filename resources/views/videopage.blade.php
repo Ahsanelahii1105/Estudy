@@ -66,23 +66,6 @@
 </div>
 
 
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-lg-6" style="margin: auto;">
-
-                <div id="comments-container" class="comments-container">
-                    <!-- Comments will be dynamically added here -->
-                </div>
-
-                <form id="comment-form" class="comment-form">
-                  <input type="text" id="username" placeholder="Your Name" required>
-                  <input type="text" id="comment-text" placeholder="Your Comment" required>
-                  <button type="submit">Post Comment</button>
-                </form>
-
-            </div>
-        </div>
-    </div>
 
 
     <script src="script.js"></script>
