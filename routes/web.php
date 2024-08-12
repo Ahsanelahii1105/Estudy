@@ -70,6 +70,10 @@ Route::get('/terms_condition', function () {
     return view('terms_condition');
 });
 
+Route::get('/videopage', function () {
+    return view('videopage');
+});
+
 
 
 //-------------Routes By TH for Inserting Data-------------

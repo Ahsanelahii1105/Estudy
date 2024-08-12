@@ -145,7 +145,7 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
-    // CONTACT 
+    // CONTACT ZZZ
     public function contactcreate()
     {
         return view('contact');
@@ -157,8 +157,8 @@ class AdminController extends Controller
         $contact->contact_name = $request->name;
         $contact->contact_email = $request->email;
         $contact->contact_subject = $request->subject;
-        $contact->contact_message = $request->message;
-
+        $contact->contact_mesage = $request->message;
+        
         return redirect()->back();
     }
 
