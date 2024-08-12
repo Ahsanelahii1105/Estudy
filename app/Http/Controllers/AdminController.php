@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\subject;
 use App\Models\classes;
 use App\Models\courses;
+use App\Models\faculties;
 
 class AdminController extends Controller
 {
@@ -117,6 +118,28 @@ class AdminController extends Controller
         $sub->sub_image = $path.$imagename;
 
         $sub->save();
+        return redirect()->back();
+    }
+    // sub main
+    public function facultycreate()
+    {
+        return view('admin.subinsert');
+    }
+
+    public function facultystore(Request $request)
+    {
+        $faculty = new faculties();
+        $faculty->faculty_name = $request->name;
+        $faculty->faculty_desc = $request->desc;
+        $faculty->faculty_image = $request->image;
+
+        $image = $request->image;
+        $imagename = time().'.'.$image->getClientOriginalExtension();
+        $path = 'images/class/';
+        $request->image->move($path , $imagename);
+        $faculty->faculty_image = $path.$imagename;
+
+        $faculty->save();
         return redirect()->back();
     }
 

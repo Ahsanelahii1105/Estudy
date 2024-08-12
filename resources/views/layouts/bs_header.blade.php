@@ -44,6 +44,10 @@
                      <a class="nav-link {{Request::is('admin/insertsub') ? 'active' : ''}}"
                         href="/admin/insertsub">Insert Sub main</a>
                   </li>
+                  <li class="nav-item">
+                     <a class="nav-link {{Request::is('admin/insertfaculty') ? 'active' : ''}}"
+                        href="/admin/insertfacullty">Insert Faculty Data</a>
+                  </li>
                </ul>
                <div class="d-flex my-2 my-lg-0">
                   @if (Route::has('login'))

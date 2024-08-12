@@ -48,7 +48,7 @@
           <a href="/" class="nav-item nav-link active">Home</a>
           <a href="/subject" class="nav-link ">Subjects</a>
           <a href="/courses" class="nav-link ">Courses</a>
-          <a href="team.html" class="nav-item nav-link">Faculty Need?</a>
+          <a href="/faculty" class="nav-item nav-link">Faculty Need?</a>
           <a href="gallery.html" class="nav-item nav-link">Discussion Library</a>
           <a href="/contact" class="nav-item nav-link">Contact</a>
         </div>

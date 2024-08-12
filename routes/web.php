@@ -95,3 +95,7 @@ Route::post('/admin/insertcourse' , [AdminController::class , 'coursestore']);
 // for sub main
 Route::get('/admin/insertsub' , [AdminController::class , 'SUBcreate']);
 Route::post('/admin/insertsub' , [AdminController::class , 'SUBstore']);
+
+// for faculty data
+Route::get('/admin/insertfaculty' , [AdminController::class , 'facultycreate']);
+Route::post('/admin/insertfaculty' , [AdminController::class , 'facultystore']);
