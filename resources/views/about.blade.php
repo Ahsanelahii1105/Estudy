@@ -25,7 +25,7 @@
 </div>
 <br>
 
-<div class="container">
+<div class="container mt-5">
   <div class="row">
     <div class="col-md-12 col-sm-12 card2 text-center">
       <h1 class="mission">OUR MISSION</h1>
@@ -88,7 +88,7 @@
   </div>
 </div>
 
-<div class="container" style="margin-top: 20px;">
+<div class="container mt-5" style="margin-top: 20px;">
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 card2 text-center">
       <h1 class="olp">Online learning platform</h1>
@@ -114,7 +114,7 @@
 
 
 
-<div class="container">
+<div class="container mt-5">
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 card2 text-center">
       <h1 class="course">Courses</h1>
@@ -149,7 +149,7 @@
     </div>
   </div>
 </div>
-<div class="container">
+<div class="container mt-5">
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 text-center;d-flex;justify-content:center;text-align:center;">
       <h1 id="benefits">Benefits</h1>
@@ -184,7 +184,7 @@
   </div>
 </div>
 <br><br>
-<div class="container">
+<div class="container mt-5">
   <div class="row">
     <div class="col-lg-12 col-md12 col-sm-12 ">
       <h1 class="subj">Subjects</h1>
@@ -206,7 +206,7 @@
 
 
 
-<div class="container">
+<div class="container mt-5">
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 card2 text-center">
       <h1 class="fa">Faculty</h1>
@@ -272,7 +272,7 @@
 
 
 
-<div class="container">
+<div class="container mt-5">
   <div class="row">
     <div class="col-lg-12 col-md12 col-sm-12">
       <h1 id="groupstudy">Group Study</h1>

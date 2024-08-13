@@ -35,11 +35,44 @@
               <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px" href="#"><i
                   class="fab fa-linkedin-in"></i></a>
             </div>
+           
           </div>
-          <h4>Julia Smith</h4>
-          <i>Music Teacher</i>
+          <h5>RohanPatel</h5>
+          <i>ComputerScience</i>
+         
+          
+   <!-- Button trigger modal -->
+   <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="modal-name" id="exampleModalLabel" ><strong>ROHAN PATEL</strong>
+            <br> 
+        <strong>Description:</strong> He is renowned expert in the field of Computer Science with over 15 years of teaching experience. His research interests include Artificial Intelligence, Machine Learning, and Data Mining.
+            <br>
+            Monday - Wednesday: 9:00 AM - 12:00 PM 
+          <br>
+          Charges: RS 1500 per hour
+        </p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="col-md-6 col-lg-3 text-center team mb-5">
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>
+          <div class="col-md-6 col-lg-3 text-center team mb-5">
           <div class="position-relative overflow-hidden mb-4" style="border-radius: 100%">
             <img class="img-fluid w-100" src="img/team-2.jpg" alt="" />
             <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
