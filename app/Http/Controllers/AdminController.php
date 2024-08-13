@@ -160,7 +160,8 @@ class AdminController extends Controller
         $contact->contact_message = $request->message;
         
         $contact->save();
-        return redirect()->back();
+        
+         return redirect()->back();
     }
 
     public function contactdetails(){
