@@ -5,8 +5,9 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
-                @foreach ($contacts as $c)
+            @foreach ($contacts as $c)
+                <div class="col-lg-4">
+                
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">{{$c->contact_name}}</h4>
@@ -16,9 +17,9 @@
                         </div>
                     </div>
                     
-                @endforeach
-            </div>
+                </div>
+            @endforeach
         </div>
     </div>
 
-   @endsectionar
+   @endsection
