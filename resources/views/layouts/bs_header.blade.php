@@ -48,6 +48,10 @@
                      <a class="nav-link {{Request::is('admin/insertfaculty') ? 'active' : ''}}"
                         href="/admin/insertfaculty">Insert Faculty Data</a>
                   </li>
+                  <li class="nav-item">
+                     <a class="nav-link {{Request::is('admin/contactfetch') ? 'active' : ''}}"
+                        href="/admin/contactfetch">Contact Fetch Data</a>
+                  </li>
                </ul>
                <div class="d-flex my-2 my-lg-0">
                   @if (Route::has('login'))

@@ -8,7 +8,7 @@ use App\Models\subject;
 use App\Models\classes;
 use App\Models\courses;
 use App\Models\faculties;
-use App\Models\contacts;
+use App\Models\contact;
 
 class AdminController extends Controller
 {
@@ -153,13 +153,19 @@ class AdminController extends Controller
 
     public function contactstore(Request $request)
     {
-        $contact = new contacts();
+        $contact = new contact();
         $contact->contact_name = $request->name;
         $contact->contact_email = $request->email;
         $contact->contact_subject = $request->subject;
-        $contact->contact_mesage = $request->message;
+        $contact->contact_message = $request->message;
         
+        $contact->save();
         return redirect()->back();
+    }
+
+    public function contactdetails(){
+        $contacts = contact::all();
+        return view('admin.contactfetch', compact('contacts'));
     }
 
     /**

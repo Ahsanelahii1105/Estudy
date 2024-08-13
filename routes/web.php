@@ -101,4 +101,5 @@ Route::post('/admin/insertfaculty' , [AdminController::class , 'facultystore']);
 
 // for contact data
 Route::get('/contact' , [AdminController::class , 'contactcreate']);
-Route::post('/contact' , [AdminController::class , 'contactstore']);
+Route::post('/insert' , [AdminController::class , 'contactstore']);
+Route::post('/admin/contactfetch' , [AdminController::class , 'contactdetails']);
