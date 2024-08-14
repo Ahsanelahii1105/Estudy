@@ -65,6 +65,26 @@
     </div>
 </div>
 
+<div class="container mt-5">
+    <div class="row">
+        <div class="card mb-5 shadow" style="max-width: 1000px;" id="contentTitle">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="/img/online course.jpg" width="100%" height="302px" class="img rounded-start position-relative" alt="image">
+        </div>
+        <div class="col-md-8 mt-4">
+            <div class="card-body">
+                <h5 class="card-title">ONLINE COURSE</h5>
+                <p class="card-description">Our online courses offer a flexible and interactive learning experience, designed to fit your schedule and learning style. With the ability to learn from anywhere, at any time, you can unlock your potential and transform your skills and knowledge</p>
+                <span><button type="button" style="width: 130px; color: #e8dcdc; font-weight: 700;" class="btn btn-dark p-2">$35</button></span> <span><button style="width: 130px; background-color: #5a8fef;" class="btn mx-3 p-2" type="button"><a href="/videopage" style="width: 130px; background-color: #5a8fef; color: #e8dcdc; border: none; font-weight: 700; border: none !important;">Start</a></button></span>
+            </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+
 
 
 
