@@ -38,6 +38,7 @@ class AdminController extends Controller
         $subject = new subject();
         $subject->subject_name = $request->name;
         $subject->subject_desc = $request->desc;
+        $subject->subject_image = $request->image;
 
         $image = $request->image;
         $imagename = time().'.'.$image->getClientOriginalExtension();
@@ -114,12 +115,17 @@ class AdminController extends Controller
 
         $image = $request->image;
         $imagename = time().'.'.$image->getClientOriginalExtension();
-        $path = 'images/class/';
+        $path = 'images/sub/';
         $request->image->move($path , $imagename);
         $sub->sub_image = $path.$imagename;
 
         $sub->save();
         return redirect()->back();
+    }
+
+    public function subdetails(){
+        $subs = subs::all();
+        return view('subject', compact('subs'));
     }
     
     // faculty main

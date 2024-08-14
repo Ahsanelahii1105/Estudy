@@ -89,7 +89,7 @@
             ipsum at ipsum nonumy amet. Clita lorem dolore sed stet et est justo
             dolore.
           </p>
-          <a href="#" class="btn btn-secondary mt-1 py-3 px-5">Learn More</a>
+          <a href="/about" class="btn btn-secondary mt-1 py-3 px-5">Learn More</a>
         </div>
       </div>
     </div>
@@ -163,11 +163,11 @@
       <div class="col-lg-3 col-md-6 mb-5">
         <h3 class="text-primary mb-4">Quick Links</h3>
         <div class="d-flex flex-column justify-content-start">
-          <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-          <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
+          <a class="text-white mb-2" href="/index"><i class="fa fa-angle-right mr-2"></i>Home</a>
+          <a class="text-white mb-2" href="/about"><i class="fa fa-angle-right mr-2"></i>About</a>
           <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Terms And Conditions</a>
           <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Privacy Policy</a>
-          <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+          <a class="text-white" href="/contact"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
         </div>
       </div>
       <div class="col-lg-3 col-md-6 mb-5">

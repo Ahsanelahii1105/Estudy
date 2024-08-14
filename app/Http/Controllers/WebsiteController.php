@@ -16,12 +16,6 @@ class WebsiteController extends Controller
         $subjects = subject::all();
         return view('index' , compact('subjects'));
     }
-    
-    public function class()
-    {
-        $class = classes::all();
-        return view('index' , compact('class'));
-    }
 
     /**
      * Show the form for creating a new resource.

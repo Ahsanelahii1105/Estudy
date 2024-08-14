@@ -485,7 +485,7 @@
 		  	</div>
 		</div>
 
-		<div class="card mb-5 shadow" style="max-width: 1000px;">
+		<!-- <div class="card mb-5 shadow" style="max-width: 1000px;">
 		  	<div class="row g-0">
 		  	  	<div class="col-md-4">
 		  	  	  <img src="img/about-2.jpg" width="100%" height="302px" class="img rounded-start position-relative" alt="image">
@@ -663,7 +663,7 @@
 		  	  	  	</div>
 		  	  	</div>
 		  	</div>
-		</div>
+		</div> -->
 		
 	</div>
 

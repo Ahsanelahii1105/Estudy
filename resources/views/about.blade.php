@@ -57,7 +57,7 @@
         We track student progress regularly and provide feedback to parents.
       </div>
       <br>
-      <div>
+      <div class="mt-5">
         <h5 class="ques">Why Choose Us?</h5>
 
         <ul class="list">
@@ -69,7 +69,7 @@
         </ul>
       </div>
 
-      <h5 class="h5">*Based on our conversation, I would say that your website falls under the category of: <strong>Online Education Website,</strong></h5>
+      <h5 class="h5 mt-5">*Based on our conversation, I would say that your website falls under the category of: <strong>Online Education Website,</strong></h5>
 
       <p style="text-align:justify ;">This category includes websites that offer online courses, educational resources, and learning services to
       students. Your website appears to provide a range of educational facilities and services, making it a great fit

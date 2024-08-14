@@ -256,7 +256,7 @@
             </ul>
           </div>
         </div>
-        <a href="" class="btn btn-primary mt-2 py-2 px-4">Learn More</a>
+        <a href="/about" class="btn btn-primary mt-2 py-2 px-4">Learn More</a>
       </div>
     </div>
   </div>
