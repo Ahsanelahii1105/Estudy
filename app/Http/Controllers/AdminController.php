@@ -99,6 +99,11 @@ class AdminController extends Controller
         $course->save();
         return redirect()->back();
     }
+    
+    public function coursedetails(){
+        $courses = courses::all();
+        return view('courses', compact('courses'));
+    }
 
     // sub main
     public function SUBcreate()
@@ -149,6 +154,11 @@ class AdminController extends Controller
 
         $faculty->save();
         return redirect()->back();
+    }
+   
+    public function facultydetails(){
+        $faculties = faculties::all();
+        return view('faculty', compact('faculties'));
     }
 
     // CONTACT ZZZ

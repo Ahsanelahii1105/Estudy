@@ -470,21 +470,25 @@
 		<h2 id="contentTitle">All Courses</h2>
 		<h3>HTML CSS JS</h3>
 
+		@foreach ($courses as $cors)
+		
 		<div class="card mb-5 shadow" style="max-width: 1000px;" id="contentTitle">
-		  	<div class="row g-0">
-		  	  	<div class="col-md-4">
-		  	  	  <img src="img/about-2.jpg" width="100%" height="302px" class="img rounded-start position-relative" alt="image">
-		  	  	</div>
-		  	  	<div class="col-md-8 mt-4">
-		  	  	  	<div class="card-body">
-		  	      		<h5 class="card-title">COURSE BUILDER-ONLINE COURSE</h5>
-		  	      		<p class="card-text">The Course Builder WordPress Theme is a high quality LMS (Learning Management System) theme for Corporate, Multisite Business, Group, Company to create training websites for employees.</p>
-				  		<span><button type="button" style="width: 130px; color: #e8dcdc; font-weight: 700;" class="btn btn-dark p-2">$35</button></span> <span><button style="width: 130px; background-color: #5a8fef;" class="btn mx-3 p-2" type="button"><a href="/videopage" style="width: 130px; background-color: #5a8fef; color: #e8dcdc; border: none; font-weight: 700; border: none !important;">Start</a></button></span>
-		  	  	  	</div>
-		  	  	</div>
-		  	</div>
+			<div class="row g-0">
+				<div class="col-md-4">
+					<img src="{{$cors->course_image}}" width="100%" height="302px" class="img rounded-start position-relative" alt="image">
+				</div>
+				<div class="col-md-8 mt-4">
+					<div class="card-body">
+						<h5 class="card-title">{{$cors->course_name}}</h5>
+						<p class="card-text">{{$cors->course_desc}}</p>
+						<span><button type="button" style="width: 130px; color: #e8dcdc; font-weight: 700;" class="btn btn-dark p-2">$35</button></span> <span><button style="width: 130px; background-color: #5a8fef;" class="btn mx-3 p-2" type="button"><a href="/videopage" style="width: 130px; background-color: #5a8fef; color: #e8dcdc; border: none; font-weight: 700; border: none !important;">Start</a></button></span>
+					</div>
+				</div>
+			</div>
 		</div>
-
+		
+		@endforeach
+		
 		<!-- <div class="card mb-5 shadow" style="max-width: 1000px;">
 		  	<div class="row g-0">
 		  	  	<div class="col-md-4">

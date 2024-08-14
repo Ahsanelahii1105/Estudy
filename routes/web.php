@@ -90,6 +90,7 @@ Route::post('/admin/insertclass' , [AdminController::class , 'classstore']);
 // for course main
 Route::get('/admin/insertcourse' , [AdminController::class , 'coursecreate']);
 Route::post('/admin/insertcourse' , [AdminController::class , 'coursestore']);
+Route::get('/courses' , [AdminController::class , 'coursedetails']);
 
 // for sub main
 Route::get('/admin/insertsub' , [AdminController::class , 'SUBcreate']);
@@ -99,6 +100,7 @@ Route::get('/subject' , [AdminController::class , 'subdetails']);
 // for faculty data
 Route::get('/admin/insertfaculty' , [AdminController::class , 'facultycreate']);
 Route::post('/admin/insertfaculty' , [AdminController::class , 'facultystore']);
+Route::get('faculty' , [AdminController::class , 'facultydetails']);
 
 // for contact data
 Route::get('/contact' , [AdminController::class , 'contactcreate']);
