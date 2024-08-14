@@ -11433,7 +11433,7 @@ i {
   height: 500px;
   background-size: cover;
   /* width: 100%; */
-  background-image: url("allimages/library.jpg");
+  background-image: url("/img/library.jpg");
   padding: 0%;
   margin: 0%;
   width: 250%;
@@ -11452,7 +11452,7 @@ i {
 
 .card3 {
   height: 500px;
-  background-image: url("allimages/oniline\ learnings.jpg");
+  background-image: url("/img/learnings.jpg");
   height: 800px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -11462,7 +11462,7 @@ i {
 
 .card4 {
   height: 500px;
-  background-image: url("allimages/subject.jpg");
+  background-image: url("/img/subject.jpg");
   /* width: 100px; */
   width: 100%;
   background-size: cover;
@@ -11475,25 +11475,25 @@ i {
 
 
 
-  background-image: url("allimages/webdesigning.jpg");
+  background-image: url("/img/webdesigning.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-/* .card6{
+.card6{
   height: 250px;
-  background-image: url("about\ 3.avif");
+  background-image: url("");
 
  background-repeat: no-repeat;
  background-size: cover;
- margin-left: 700px;
+ /* margin-left: 700px; */
 
-} */
+}
 
 .card7 {
   width: 100%;
   height: 500px;
-  background-image: url("allimages/group\ study.jpg");
+  background-image: url("/img/study.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   /* width: 100px; */
@@ -11502,7 +11502,7 @@ i {
 .card8 {
   width: 100%;
   height: 500px;
-  background-image: url("allimages/faculty.jpg");
+  background-image: url("/img/faculty.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   /* width: 100px; */
