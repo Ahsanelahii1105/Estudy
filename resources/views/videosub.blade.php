@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-lg-10" style="margin: auto;">
                 <section class="video-container">
-                    <iframe id="video" width="100%" height="500" src="videos/ex1.mp4" frameborder="0"
+                    <iframe id="video" width="100%" height="500" src="videos/subject.mp4" frameborder="0"
                         allowfullscreen></iframe>
                     <div class="video-info">
                         <h2>Higher Diploma In Software Engineering I</h2>
@@ -45,34 +45,36 @@
                         </div>
                     </div>
                 </section>
+                <h2 class="mx-5">Recommended Videos</h2>
+
+
+
                 <div class="card mb-5 shadow" style="margin: auto; max-width: 800px;">
                     <div class="row g-0">
 
-                        <h2>Recommended Videos</h2>
 
                         <div class="col-md-4">
-                            <img src="/img/online course.jpg" width="100%" height="302px"
+                            <img src="/img/class-1.jpg" width="100%" height="302px"
                                 class="img rounded-start position-relative" alt="image">
                         </div>
                         <div class="col-md-8 mt-4">
                             <div class="card-body">
-                                <h5 class="card-title">ONLINE COURSE</h5>
-                                <p class="card-description">Our online courses offer a flexible and interactive learning
-                                    experience, designed to fit your schedule and learning style. With the ability to learn
-                                    from
-                                    anywhere, at any time, you can unlock your potential and transform your skills and
-                                    knowledge
+                                <h5 class="card-title"> Matric Arts Field:</h5>
+                                <p class="card-description">The Matric Arts field is a broad and diverse field that encompasses various subjects related to humanities, social sciences, and languages.
                                 </p>
                                 <button style="width: 130px; background-color: #5a8fef;" class="btn mx-3 p-2"
-                                    type="button"><a href="/videopage"
+                                    type="button"><a href="/videosub"
                                         style="width: 130px; background-color: #5a8fef; color: #e8dcdc; border: none; font-weight: 700; border: none !important;">Start</a></button>
                             </div>
                         </div>
 
                     </div>
                 </div>
+
             </div>
         </div>
+    </div>
+    </div>
     </div>
 
     <div class="container mt-5">
