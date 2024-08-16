@@ -19,9 +19,9 @@
 			class="closeBtn"
 			onclick="closeNav()">×</a>
 		<div class="mainMenu">
-			
+
 			<h2>Categories</h2>
-			
+
 			<a href="javascript:void(0)" onclick="showContent('WordPress')">
 
 				<div style="display: flex; justify-content: space-between; margin-right: 12px;">
@@ -464,16 +464,15 @@
 	</div>
 
 	<!-- subject boxes  -->
-	
+
 	<div id="contentArea">
 		<span style="font-size: 30px; cursor: pointer"
 			onclick="openNav()">☰</span>
 		<div class="contentText">
 
 		<h2 id="contentTitle">All Courses</h2>
-		<h3>HTML CSS JS</h3>
 	@foreach ($subs as $s)
-	
+
 	<div class="card mb-5 shadow" style="max-width: 1000px;">
 		<div class="row g-0">
 			<div class="col-md-4">
@@ -488,7 +487,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	@endforeach
 		<!-- <div class="card mb-5 shadow" style="max-width: 1000px;">
 		  	<div class="row g-0">
@@ -669,7 +668,7 @@
 		  	  	</div>
 		  	</div>
 		</div> -->
-		
+
 	</div>
 
 
