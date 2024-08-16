@@ -208,6 +208,7 @@ class AdminController extends Controller
         $contacts = contact::all();
         return view('admin.contactfetch', compact('contacts'));
     }
+    
 
     /**
      * Display the specified resource.

@@ -113,3 +113,4 @@ Route::get('/admin/contactfetch' , [AdminController::class , 'contactdetails']);
 // for booking data
 Route::post('/insertwo' , [AdminController::class , 'bookstore']);
 Route::get('/admin/bookfetch' , [AdminController::class , 'bookdetails']);
+

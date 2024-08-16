@@ -115,21 +115,21 @@
       <div class="col-lg-3 col-md-6 mb-5">
         <h3 class="text-primary mb-4">Get In Touch</h3>
         <div class="d-flex">
-          <h4 class="fa fa-map-marker-alt text-primary"></h4>
+          <h4 class="fas fa-map-marker-alt text-primary"></h4>
           <div class="pl-3">
             <h5 class="text-white">Address</h5>
             <p>Aptech Garden Center, Karachi.</p>
           </div>
         </div>
         <div class="d-flex">
-          <h4 class="fa fa-envelope text-primary"></h4>
+          <h4 class="fas fa-envelope text-primary"></h4>
           <div class="pl-3">
             <h5 class="text-white">Email</h5>
             <p>mindgroweredu@gmail.com</p>
           </div>
         </div>
         <div class="d-flex">
-          <h4 class="fa fa-phone-alt text-primary"></h4>
+          <h4 class="fas fa-phone-alt text-primary"></h4>
           <div class="pl-3">
             <h5 class="text-white">Phone</h5>
             <p>0303-039483</p>
@@ -139,11 +139,11 @@
       <div class="col-lg-3 col-md-6 mb-5">
         <h3 class="text-primary mb-4">Quick Links</h3>
         <div class="d-flex flex-column justify-content-start">
-          <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-          <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About</a>
-          <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Terms And Conditions</a>
-          <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Privacy Policy</a>
-          <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+          <a class="text-white mb-2" href="#"><i class="fas fa-angle-right mr-2"></i>Home</a>
+          <a class="text-white mb-2" href="#"><i class="fas fa-angle-right mr-2"></i>About</a>
+          <a class="text-white mb-2" href="#"><i class="fas fa-angle-right mr-2"></i>Terms And Conditions</a>
+          <a class="text-white mb-2" href="#"><i class="fas fa-angle-right mr-2"></i>Privacy Policy</a>
+          <a class="text-white" href="#"><i class="fas fa-angle-right mr-2"></i>Contact Us</a>
         </div>
       </div>
       <div class="col-lg-3 col-md-6 mb-5">
@@ -171,7 +171,7 @@
 
         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
         Designed by
-        <a class="text-primary font-weight-bold" href="#">Team name</a>
+        <a class="text-primary font-weight-bold" href="#">Digital Dynamos</a>
         <br />Distributed By:
         <a href="#" target="_blank">Apech Center</a>
       </p>
@@ -182,7 +182,7 @@
 
   <!-- Back to Top -->
   <a href="#" class="btn btn-primary p-3 back-to-top">
-    <i class="fa fa-angle-double-up"></i>
+    <i class="fas fa-angle-double-up"></i>
   </a>
 
 
