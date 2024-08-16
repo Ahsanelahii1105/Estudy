@@ -7,7 +7,7 @@
           class="d-flex flex-column align-items-center justify-content-center"
           >
          <div class="card" style="height: 100px; width: 80%;">
-            <img class="card-img-top" src="" alt="Title" />
+            <img class="img" src="/img/backpage.jpg" alt="Title" />
           </div>
 
             <div class="card-1">
