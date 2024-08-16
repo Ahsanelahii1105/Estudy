@@ -11,11 +11,11 @@ class WebsiteController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
-    {
-        $subjects = subject::all();
-        return view('index' , compact('subjects'));
-    }
+    // public function index()
+    // {
+    //     $subjects = subject::all();
+    //     return view('index' , compact('subjects'));
+    // }
 
     /**
      * Show the form for creating a new resource.

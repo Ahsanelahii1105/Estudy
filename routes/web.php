@@ -37,7 +37,7 @@ Route::middleware([
 });
 
 
-// navbar 
+// navbar
 
 Route::get('/' , [WebsiteController::class , 'index']);
 
@@ -86,6 +86,7 @@ Route::post('/admin/insertsubject' , [AdminController::class , 'store']);
 // for classes
 Route::get('/admin/insertclass' , [AdminController::class , 'classcreate']);
 Route::post('/admin/insertclass' , [AdminController::class , 'classstore']);
+Route::get('/' , [AdminController::class , 'coursesubjectdetails']);
 
 // for course main
 Route::get('/admin/insertcourse' , [AdminController::class , 'coursecreate']);
@@ -106,3 +107,8 @@ Route::get('faculty' , [AdminController::class , 'facultydetails']);
 Route::get('/contact' , [AdminController::class , 'contactcreate']);
 Route::post('/insert' , [AdminController::class , 'contactstore']);
 Route::get('/admin/contactfetch' , [AdminController::class , 'contactdetails']);
+
+// for booking data
+Route::get('/' , [AdminController::class , 'bookcreate']);
+Route::post('/insertwo' , [AdminController::class , 'bookstore']);
+Route::get('/admin/bookfetch' , [AdminController::class , 'bookdetails']);

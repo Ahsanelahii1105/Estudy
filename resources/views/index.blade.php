@@ -100,15 +100,14 @@
     </div>
     <div class="row">
 
-    
+      @foreach ($clases as $cls)
       <div class="col-lg-4 mb-5">
       <div class="card border-0 bg-light shadow-sm pb-2">
-        <img class="card-img-top mb-2" src="img/class-1.jpg" alt="" />
+        <img class="card-img-top mb-2" src="{{$cls->class_image}}" alt="" />
         <div class="card-body text-center">
-        <h4 class="card-title">Mathematic Subject</h4>
+        <h4 class="card-title">{{$cls->class_name}}</h4>
         <p class="card-text">
-          Justo ea diam stet diam ipsum no sit, ipsum vero et et diam
-          ipsum duo et no et, ipsum ipsum erat duo amet clita duo
+          {{$cls->class_desc}}
         </p>
         </div>
         <div class="card-footer bg-transparent py-4 px-5">
@@ -116,31 +115,31 @@
           <div class="col-6 py-1 text-right border-right">
           <strong>Classes</strong>
           </div>
-          <div class="col-6 py-1">XI - IIX</div>
+          <div class="col-6 py-1">{{$cls->class_whichclass}}</div>
         </div>
         <div class="row border-bottom">
           <div class="col-6 py-1 text-right border-right">
           <strong>Total Seats</strong>
           </div>
-          <div class="col-6 py-1">40 Seats</div>
+          <div class="col-6 py-1">{{$cls->class_seats}}</div>
         </div>
         <div class="row border-bottom">
           <div class="col-6 py-1 text-right border-right">
           <strong>Class Time</strong>
           </div>
-          <div class="col-6 py-1">08:00 AM - 10:00 AM</div>
+          <div class="col-6 py-1">{{$cls->class_timing}}</div>
         </div>
         <div class="row">
           <div class="col-6 py-1 text-right border-right">
           <strong>Tution Fee</strong>
           </div>
-          <div class="col-6 py-1">$290 / Month</div>
+          <div class="col-6 py-1">{{$cls->class_fees}}</div>
         </div>
         </div>
         <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
       </div>
       </div>
-
+    @endforeach
     </div>
   </div>
 </div>
@@ -300,15 +299,15 @@
             <h1 class="text-white m-0">Book A Seat</h1>
           </div>
           <div class="card-body rounded-bottom bg-primary p-5">
-            <form>
+            <form action="{{URL::TO('/insertwo')}}" method="POST">
               <div class="form-group">
-                <input type="text" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
+                <input type="text" name="name" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
               </div>
               <div class="form-group">
-                <input type="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
+                <input type="email" name="email" class="form-control border-0 p-4" placeholder="Your Email" required="required" />
               </div>
               <div class="form-group">
-                <select class="custom-select border-0 px-4" style="height: 47px">
+                <select name="class" class="custom-select border-0 px-4" style="height: 47px">
                   <option selected>Select A Class</option>
                   <option value="1">Class 1</option>
                   <option value="2">Class 1</option>
