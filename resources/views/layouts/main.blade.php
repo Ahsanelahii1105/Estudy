@@ -19,16 +19,16 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
 
   <!-- Flaticon Font -->
-  <link href="lib/flaticon/font/flaticon.css" rel="stylesheet" />
+  <link href="{{asset('lib/flaticon/font/flaticon.css')}}" rel="stylesheet" />
 
   <!-- Libraries Stylesheet -->
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+  <link href="{{asset('lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet" />
+  <link href="{{asset('lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet" />
 
   <!-- Customized Bootstrap Stylesheet -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="{{asset('css/style.css')}}" rel="stylesheet" />
 
-  
+
 </head>
 
 <body>
@@ -67,12 +67,12 @@
                 class="btn btn-primary px-4">Log
                 in</a>
 
-              
+
             @endauth
                  </div>
               @endif
-        
-        
+
+
       </div>
     </nav>
     <!-- Header Start -->
@@ -217,7 +217,7 @@
    <!-- CounterUp CDN  -->
    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js" integrity="sha512-d8F1J2kyiRowBB/8/pAWsqUl0wSEOkG5KATkVV4slfblq9VRQ6MyDZVxWl2tWd+mPhuCbpTB4M7uU/x9FlgQ9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
- 
+
 
   <!-- Contact Javascript File -->
   <script src="mail/jqBootstrapValidation.min.js"></script>

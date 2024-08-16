@@ -71,17 +71,17 @@
     <div class="col-md-4 counterone">
       <h1><span class="counter">2,523</span></h1>
       <h3>Customers</h3>
-      <i class="fa fa-users"></i>
+      <i class="fas fa-users"></i>
     </div>
     <div class="col-md-4 counterone">
       <h1><span class="counter">63,075</span></h1>
       <h3>Total Web Pages</h3>
-      <i class="fa fa-desktop"></i>
+      <i class="fas fa-desktop"></i>
     </div>
     <div class="col-md-4 counterone">
       <h1><span class="counter">12,218</span></h1>
       <h3>Cups Of Coffee</h3>
-      <i class="fa fa-coffee"></i>
+      <i class="fas fa-coffee"></i>
     </div>
   </div>
 </div>
@@ -241,15 +241,15 @@
           <div class="col-6 col-md-8">
             <ul class="list-inline m-0">
               <li class="py-2 border-top border-bottom">
-                <i class="fa fa-check text-primary mr-3"></i>Labore eos amet
+                <i class="fas fa-check text-primary mr-3"></i>Labore eos amet
                 dolor amet diam
               </li>
               <li class="py-2 border-bottom">
-                <i class="fa fa-check text-primary mr-3"></i>Etsea et sit
+                <i class="fas fa-check text-primary mr-3"></i>Etsea et sit
                 dolor amet ipsum
               </li>
               <li class="py-2 border-bottom">
-                <i class="fa fa-check text-primary mr-3"></i>Diam dolor diam
+                <i class="fas fa-check text-primary mr-3"></i>Diam dolor diam
                 elitripsum vero.
               </li>
             </ul>
@@ -279,15 +279,15 @@
         </p>
         <ul class="list-inline m-0">
           <li class="py-2">
-            <i class="fa fa-check text-success mr-3"></i>Labore eos amet
+            <i class="fas fa-check text-success mr-3"></i>Labore eos amet
             dolor amet diam
           </li>
           <li class="py-2">
-            <i class="fa fa-check text-success mr-3"></i>Etsea et sit dolor
+            <i class="fas fa-check text-success mr-3"></i>Etsea et sit dolor
             amet ipsum
           </li>
           <li class="py-2">
-            <i class="fa fa-check text-success mr-3"></i>Diam dolor diam
+            <i class="fas fa-check text-success mr-3"></i>Diam dolor diam
             elitripsum vero.
           </li>
         </ul>
@@ -300,6 +300,7 @@
           </div>
           <div class="card-body rounded-bottom bg-primary p-5">
             <form action="{{URL::TO('/insertwo')}}" method="POST">
+            @csrf
               <div class="form-group">
                 <input type="text" name="name" class="form-control border-0 p-4" placeholder="Your Name" required="required" />
               </div>
@@ -343,11 +344,11 @@
           <img class="img-fluid w-100" src="img/team-1.jpg" alt="" />
           <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
             <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
-                class="fab fa-twitter"></i></a>
+                class="fas fa-twitter"></i></a>
             <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
-                class="fab fa-facebook-f"></i></a>
+                class="fas fa-facebook-f"></i></a>
             <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px" href="#"><i
-                class="fab fa-linkedin-in"></i></a>
+                class="fas fa-linkedin-in"></i></a>
           </div>
         </div>
         <h4>Julia Smith</h4>
@@ -358,11 +359,11 @@
           <img class="img-fluid w-100" src="img/team-2.jpg" alt="" />
           <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
             <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
-                class="fab fa-twitter"></i></a>
+                class="fas fa-twitter"></i></a>
             <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
-                class="fab fa-facebook-f"></i></a>
+                class="fas fa-facebook-f"></i></a>
             <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px" href="#"><i
-                class="fab fa-linkedin-in"></i></a>
+                class="fas fa-linkedin-in"></i></a>
           </div>
         </div>
         <h4>Jhon Doe</h4>
@@ -373,7 +374,7 @@
           <img class="img-fluid w-100" src="img/team-3.jpg" alt="" />
           <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
             <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
-                class="fab fa-twitter"></i></a>
+                class="fas fa-twitter"></i></a>
             <a class="btn btn-outline-light text-center mr-2 px-0" style="width: 38px; height: 38px" href="#"><i
                 class="fab fa-facebook-f"></i></a>
             <a class="btn btn-outline-light text-center px-0" style="width: 38px; height: 38px" href="#"><i

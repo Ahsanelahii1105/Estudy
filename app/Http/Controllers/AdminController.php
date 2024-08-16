@@ -81,14 +81,9 @@ class AdminController extends Controller
 
         $clases = classes::all();
         $subjects = subject::all();
-        $book = booking::all();
         return view('index', compact([("clases"),("subjects")]));
     }
 
-    public function bookcreate()
-    {
-        return view('/');
-    }
 
     public function bookstore(Request $request)
     {
