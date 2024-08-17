@@ -76,6 +76,10 @@ Route::get('/videopage', function () {
     return view('videopage');
 });
 
+Route::get('/videosub', function () {
+    return view('videosub');
+});
+
 
 
 //-------------Routes By TH for Inserting Data-------------

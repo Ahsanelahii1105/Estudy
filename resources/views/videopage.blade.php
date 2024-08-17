@@ -17,10 +17,8 @@
                             software development and data management. It begins with <b>Data Management With SQL Server</b>,
                             where students will gain proficiency in managing, querying, and maintaining databases using SQL
                             Server, a critical skill for handling large-scale data. Following this, the <b>Programming in
-                                C#</b> module introduces the powerful and versatile C# programming language, enabling
-                            students to
-                            develop a variety of applications. The course on <b>Angular Application With TypeScript</b>
-                            equips
+                            C#</b> module introduces the powerful and versatile C# programming language, enabling students to
+                            develop a variety of applications. The course on <b>Angular Application With TypeScript</b> equips
                             learners with the knowledge to build dynamic and responsive single-page applications using
                             Angular and TypeScript, essential for modern front-end development.
 
@@ -45,10 +43,12 @@
                         </div>
                     </div>
                 </section>
+
+                <h2 class="mx-5 mb-5">Recommended Videos</h2>
+
                 <div class="card mb-5 shadow" style="margin: auto; max-width: 800px;">
                     <div class="row g-0">
 
-                        <h2>Recommended Videos</h2>
 
                         <div class="col-md-4">
                             <img src="/img/online course.jpg" width="100%" height="302px"
