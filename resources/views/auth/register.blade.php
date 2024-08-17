@@ -22,7 +22,7 @@
 
         <x-validation-errors class="mb-4" />
 
-       
+
         <form class="mx-1 mx-md-4" method="POST" action="{{ route('register') }}">
 
             @csrf
@@ -101,7 +101,7 @@
                 </div>
             </div>
 
-            <!-- @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
+         @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                 <div class="mt-4">
                     <x-label for="terms">
                         <div class="flex items-center">
@@ -116,14 +116,14 @@
                         </div>
                     </x-label>
                 </div>
-            @endif -->
+            @endif
 
-            <div class="form-check mb-5 mx-3">
+            {{-- <div class="form-check mb-5 mx-3">
                 <input class="form-check-input me-2" type="checkbox" value="" />
                 <label class="form-check-label" for="form2Example3">
                     I agree all statements in <a href="#">terms and condition</a>
                 </label>
-            </div>
+            </div> --}}
 
             <div class="text-center text-lg-start mt-2 pt-2">
 

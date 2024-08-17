@@ -1,10 +1,11 @@
 <?php
 
+use App\Models\classes;
+use App\Models\subject;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\WebsiteController;
-use App\Models\subject;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,13 +32,14 @@ Route::middleware([
             return view('admin.index');
         }else{
             $subjects = subject::all();
-            return view('index' , compact('subjects'));
+            $clases = classes::all();
+            return view('index' , compact('subjects', 'clases'));
         }
     })->name('dashboard');
 });
 
 
-// navbar 
+// navbar
 
 Route::get('/' , [WebsiteController::class , 'index']);
 
@@ -86,6 +88,7 @@ Route::post('/admin/insertsubject' , [AdminController::class , 'store']);
 // for classes
 Route::get('/admin/insertclass' , [AdminController::class , 'classcreate']);
 Route::post('/admin/insertclass' , [AdminController::class , 'classstore']);
+Route::get('/' , [AdminController::class , 'classsubjectdetails']);
 
 // for course main
 Route::get('/admin/insertcourse' , [AdminController::class , 'coursecreate']);
@@ -106,3 +109,8 @@ Route::get('faculty' , [AdminController::class , 'facultydetails']);
 Route::get('/contact' , [AdminController::class , 'contactcreate']);
 Route::post('/insert' , [AdminController::class , 'contactstore']);
 Route::get('/admin/contactfetch' , [AdminController::class , 'contactdetails']);
+
+// for booking data
+Route::post('/insertwo' , [AdminController::class , 'bookstore']);
+Route::get('/admin/bookfetch' , [AdminController::class , 'bookdetails']);
+

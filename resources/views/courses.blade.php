@@ -478,10 +478,10 @@
 					<img src="{{$cors->course_image}}" width="100%" height="302px" class="img rounded-start position-relative" alt="image">
 				</div>
 				<div class="col-md-8 mt-4">
-					<div class="card-body">
+					<div class="card-body" style="text-align: justify;">
 						<h5 class="card-title">{{$cors->course_name}}</h5>
 						<p class="card-text">{{$cors->course_desc}}</p>
-						<span><button type="button" style="width: 130px; color: #e8dcdc; font-weight: 700;" class="btn btn-dark p-2">$35</button></span> <span><button style="width: 130px; background-color: #5a8fef;" class="btn mx-3 p-2" type="button"><a href="/videopage" style="width: 130px; background-color: #5a8fef; color: #e8dcdc; border: none; font-weight: 700; border: none !important;">Start</a></button></span>
+					    <button style="width: 130px; background-color: #5a8fef;" class="btn mx-3 p-2" type="button"><a href="/videopage" style="width: 130px; background-color: #5a8fef; color: #e8dcdc; border: none; font-weight: 700; border: none !important;">Start</a></button>
 					</div>
 				</div>
 			</div>
