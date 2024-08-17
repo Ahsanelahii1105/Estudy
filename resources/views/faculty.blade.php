@@ -57,13 +57,20 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Faculty Name</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+      <p class="description"> 
+          <strong>Description:</strong> He is renowned expert in the field of Computer Science with over 15
+                  years of teaching experience. His research interests include Artificial Intelligence, Machine
+            <br>
+            Monday - Wednesday: 9:00 AM - 12:00 PM
+            <br>
+            Charges: RS 1500 per hour
+        </p>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
