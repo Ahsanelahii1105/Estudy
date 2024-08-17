@@ -468,7 +468,6 @@
 		<div class="contentText">
 
 		<h2 id="contentTitle">All Courses</h2>
-		<h3>HTML CSS JS</h3>
 
 		@foreach ($courses as $cors)
 

@@ -482,7 +482,7 @@
 				<div class="card-body">
 					<h5 class="card-title">{{$s->sub_name}}</h5>
 					<p class="card-text">{{$s->sub_desc}}</p>
-					<span><button type="button" style="width: 130px; color: #e8dcdc; font-weight: 700;" class="btn btn-dark p-2">$35</button></span> <span><button style="width: 130px; background-color: #5a8fef; color: #e8dcdc; border: none; font-weight: 700;" class="btn mx-3 p-2" type="submit">Start</button></span>
+					<button style="width: 130px; background-color: #5a8fef;" class="btn mx-3 p-2" type="button"><a href="/videosub" style="width: 130px; background-color: #5a8fef; color: #e8dcdc; border: none; font-weight: 700; border: none !important;">Start</a></button>
 				</div>
 			</div>
 		</div>
