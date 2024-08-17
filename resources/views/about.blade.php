@@ -16,10 +16,10 @@
 
 @section('content')
 
-<div class="container">
+<div class="container mt-5`">
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 card1">
-      
+
     </div>
   </div>
 </div>
@@ -197,7 +197,7 @@
         <li>Business Studies</li>
         <li>Economics</li>
         <li> Computer Science <strong> & many more!</strong></li>
-        
+
       </ol>
       </p>
     </div>

@@ -12,27 +12,8 @@
                     <iframe id="video" width="100%" height="500" src="videos/subject.mp4" frameborder="0"
                         allowfullscreen></iframe>
                     <div class="video-info">
-                        <h2>Higher Diploma In Software Engineering I</h2>
-                        <p>This meticulously crafted package is aimed at providing learners with robust skills in modern
-                            software development and data management. It begins with <b>Data Management With SQL Server</b>,
-                            where students will gain proficiency in managing, querying, and maintaining databases using SQL
-                            Server, a critical skill for handling large-scale data. Following this, the <b>Programming in
-                                C#</b> module introduces the powerful and versatile C# programming language, enabling
-                            students to
-                            develop a variety of applications. The course on <b>Angular Application With TypeScript</b>
-                            equips
-                            learners with the knowledge to build dynamic and responsive single-page applications using
-                            Angular and TypeScript, essential for modern front-end development.
-
-                            Further advancing their skills, <b>Developing ASP.NET CORE MVC Web Application</b> provides
-                            students with the tools and techniques to create robust and scalable web applications using the
-                            ASP.NET Core MVC framework. This is followed by <b>eProject.NET Web Application Development</b>,
-                            where learners will apply their acquired skills to develop a comprehensive .NET web application
-                            project, simulating real-world development environments and challenges.
-
-                            This package ensures that learners not only gain technical expertise in various modern
-                            technologies but also practical experience, preparing them to excel in the ever-evolving field
-                            of software development.</p>
+                        <h2>Mathematic Subject For Ninth Class</h2>
+                        <p>Mathematics is the study of numbers, quantities, and shapes. It involves the use of logical reasoning, problem-solving skills, and mathematical operations to understand and describe the world around us. Mathematics encompasses various branches, including algebra, geometry, calculus, and statistics, which provide a foundation for understanding and analyzing data, patterns, and relationships. Through mathematics, students develop critical thinking, analytical skills, and problem-solving abilities, essential for success in various fields, including science, technology, engineering, and mathematics (STEM).</p>
                         <div class="video-stats">
                             <span id="view-count">123,456 views</span>
                             <span id="like-count">1,234 likes</span>
