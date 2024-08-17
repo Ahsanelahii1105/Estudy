@@ -136,7 +136,7 @@
           <div class="col-6 py-1">{{$cls->class_fees}}</div>
         </div>
         </div>
-        <a href="" class="btn btn-primary px-4 mx-auto mb-4">Join Now</a>
+        <a href="/videosub" class="btn btn-primary px-4 mx-auto mb-4">Start</a>
       </div>
       </div>
     @endforeach
