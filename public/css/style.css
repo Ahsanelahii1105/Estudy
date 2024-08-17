@@ -11429,18 +11429,7 @@ i {
   color: rgb(18, 18, 165, 0.72);
 }
 
-.card1 {
-  height: 500px;
-  background-size: cover;
-  /* width: 100%; */
-  background-image: url("/img/about-1.jpg");
-  padding: 0%;
-  margin: 0%;
-  width: 250%;
-  background-repeat: no-repeat;
-  /* margin-left: 350px;
-  margin-top: 150px; */
-}
+
 
 /* .card2{
   /* margin-left: 200px; */
