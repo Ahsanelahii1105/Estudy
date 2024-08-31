@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\subs;
-use Illuminate\Http\Request;
-use App\Models\subject;
 use App\Models\classes;
-use App\Models\courses;
-use App\Models\faculties;
 use App\Models\contact;
+use App\Models\courses;
+use App\Models\subject;
+use App\Models\faculties;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -17,7 +18,11 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        if(Auth::check()){
+            return view('admin.index');
+        }else{
+            return redirect()->route('login');
+        }
     }
 
     /**
@@ -25,7 +30,11 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('admin.subjectinsert');
+        if(Auth::check()){
+            return view('admin.subjectinsert');
+        }else{
+            return redirect()->route('login');
+        }
     }
 
     /**
@@ -52,7 +61,11 @@ class AdminController extends Controller
     // class index
     public function classcreate()
     {
-        return view('admin.classinsert');
+        if(Auth::check()){
+            return view('admin.classinsert');
+        }else{
+            return redirect()->route('login');
+        }
     }
 
     public function classstore(Request $request)
@@ -79,7 +92,11 @@ class AdminController extends Controller
     // course main
     public function coursecreate()
     {
-        return view('admin.courseinsert');
+        if(Auth::check()){
+            return view('admin.courseinsert');
+        }else{
+            return redirect()->route('login');
+        }
     }
 
     public function coursestore(Request $request)
@@ -102,7 +119,11 @@ class AdminController extends Controller
     // sub main
     public function SUBcreate()
     {
-        return view('admin.subinsert');
+        if(Auth::check()){
+            return view('admin.subinsert');
+        }else{
+            return redirect()->route('login');
+        }
     }
 
     public function SUBstore(Request $request)
@@ -125,7 +146,11 @@ class AdminController extends Controller
     // faculty main
     public function facultycreate()
     {
-        return view('admin.facultyinsert');
+        if(Auth::check()){
+            return view('admin.facultyinsert');
+        }else{
+            return redirect()->route('login');
+        }
     }
 
     public function facultystore(Request $request)
