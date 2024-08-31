@@ -8,7 +8,7 @@
       <form action="/admin/insertcourse" method="post" enctype="multipart/form-data">
          @csrf
          <div class="form-group">
-            <label for="" class="form-label">Course Title</label>
+            <label for="" class="form-label">Course title</label>
             <input type="text" name="name" id="" class="form-control" placeholder="Enter Subject Title">
          </div>
          <div class="form-group">

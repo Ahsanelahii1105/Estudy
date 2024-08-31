@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\subs;
+use App\Models\booking;
 use App\Models\classes;
 use App\Models\contact;
 use App\Models\courses;
@@ -41,12 +42,13 @@ class AdminController extends Controller
      * Store a newly created resource in storage.
      */
 
-    //  course feature 
+    //  course feature
     public function store(Request $request)
     {
         $subject = new subject();
         $subject->subject_name = $request->name;
         $subject->subject_desc = $request->desc;
+        $subject->subject_image = $request->image;
 
         $image = $request->image;
         $imagename = time().'.'.$image->getClientOriginalExtension();
@@ -88,6 +90,29 @@ class AdminController extends Controller
         $class->save();
         return redirect()->back();
     }
+    public function classsubjectdetails(){
+
+        $clases = classes::all();
+        $subjects = subject::all();
+        return view('index', compact([("clases"),("subjects")]));
+    }
+
+
+    public function bookstore(Request $request)
+    {
+        $books = new booking();
+        $books->name = $request->name;
+        $books->email = $request->email;
+        $books->class = $request->class;
+
+        $books->save();
+        return redirect()->back();
+    }
+    public function bookdetails(){
+        $book = booking::all();
+        return view('admin.bookfetch', compact('book'));
+    }
+
 
     // course main
     public function coursecreate()
@@ -116,6 +141,11 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
+    public function coursedetails(){
+        $courses = courses::all();
+        return view('courses', compact('courses'));
+    }
+
     // sub main
     public function SUBcreate()
     {
@@ -135,14 +165,19 @@ class AdminController extends Controller
 
         $image = $request->image;
         $imagename = time().'.'.$image->getClientOriginalExtension();
-        $path = 'images/class/';
+        $path = 'images/sub/';
         $request->image->move($path , $imagename);
         $sub->sub_image = $path.$imagename;
 
         $sub->save();
         return redirect()->back();
     }
-    
+
+    public function subdetails(){
+        $subs = subs::all();
+        return view('subject', compact('subs'));
+    }
+
     // faculty main
     public function facultycreate()
     {
@@ -170,6 +205,11 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
+    public function facultydetails(){
+        $faculties = faculties::all();
+        return view('faculty', compact('faculties'));
+    }
+
     // CONTACT ZZZ
     public function contactcreate()
     {
@@ -183,9 +223,9 @@ class AdminController extends Controller
         $contact->contact_email = $request->email;
         $contact->contact_subject = $request->subject;
         $contact->contact_message = $request->message;
-        
+
         $contact->save();
-        
+
          return redirect()->back();
     }
 
@@ -193,6 +233,7 @@ class AdminController extends Controller
         $contacts = contact::all();
         return view('admin.contactfetch', compact('contacts'));
     }
+    
 
     /**
      * Display the specified resource.

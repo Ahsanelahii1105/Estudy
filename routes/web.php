@@ -1,10 +1,11 @@
 <?php
 
+use App\Models\classes;
+use App\Models\subject;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\WebsiteController;
-use App\Models\subject;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,13 +36,14 @@ Route::middleware([
             return view('admin.index');
         }else{
             $subjects = subject::all();
-            return view('index' , compact('subjects'));
+            $clases = classes::all();
+            return view('index' , compact('subjects', 'clases'));
         }
     })->name('dashboard');
 });
 
 
-// navbar 
+// navbar
 
 Route::get('/' , [WebsiteController::class , 'index']);
 
@@ -78,6 +80,10 @@ Route::get('/videopage', function () {
     return view('videopage');
 });
 
+Route::get('/videosub', function () {
+    return view('videosub');
+});
+
 
 
 //-------------Routes By TH for Inserting Data-------------
@@ -90,20 +96,29 @@ Route::post('/admin/insertsubject' , [AdminController::class , 'store']);
 // for classes
 Route::get('/admin/insertclass' , [AdminController::class , 'classcreate']);
 Route::post('/admin/insertclass' , [AdminController::class , 'classstore']);
+Route::get('/' , [AdminController::class , 'classsubjectdetails']);
 
 // for course main
 Route::get('/admin/insertcourse' , [AdminController::class , 'coursecreate']);
 Route::post('/admin/insertcourse' , [AdminController::class , 'coursestore']);
+Route::get('/courses' , [AdminController::class , 'coursedetails']);
 
 // for sub main
 Route::get('/admin/insertsub' , [AdminController::class , 'SUBcreate']);
 Route::post('/admin/insertsub' , [AdminController::class , 'SUBstore']);
+Route::get('/subject' , [AdminController::class , 'subdetails']);
 
 // for faculty data
 Route::get('/admin/insertfaculty' , [AdminController::class , 'facultycreate']);
 Route::post('/admin/insertfaculty' , [AdminController::class , 'facultystore']);
+Route::get('faculty' , [AdminController::class , 'facultydetails']);
 
 // for contact data
 Route::get('/contact' , [AdminController::class , 'contactcreate']);
 Route::post('/insert' , [AdminController::class , 'contactstore']);
 Route::get('/admin/contactfetch' , [AdminController::class , 'contactdetails']);
+
+// for booking data
+Route::post('/insertwo' , [AdminController::class , 'bookstore']);
+Route::get('/admin/bookfetch' , [AdminController::class , 'bookdetails']);
+

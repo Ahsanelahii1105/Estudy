@@ -16,7 +16,8 @@
 
 @section('content')
 
-<div class="container">
+<<<<<<< HEAD
+<div class="container mt-5`">
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 card1">
 
@@ -24,8 +25,11 @@
   </div>
 </div>
 <br>
+=======
 
-<div class="container">
+>>>>>>> 62c95174ee8012248c544a73094f033c1dbe747c
+
+<div class="container mt-5">
   <div class="row">
     <div class="col-md-12 col-sm-12 card2 text-center">
       <h1 class="mission">OUR MISSION</h1>
@@ -57,7 +61,7 @@
         We track student progress regularly and provide feedback to parents.
       </div>
       <br>
-      <div>
+      <div class="mt-5">
         <h5 class="ques">Why Choose Us?</h5>
 
         <ul class="list">
@@ -69,7 +73,7 @@
         </ul>
       </div>
 
-      <h5 class="h5">*Based on our conversation, I would say that your website falls under the category of: <strong>Online Education Website,</strong></h5>
+      <h5 class="h5 mt-5">*Based on our conversation, I would say that your website falls under the category of: <strong>Online Education Website,</strong></h5>
 
       <p style="text-align:justify ;">This category includes websites that offer online courses, educational resources, and learning services to
       students. Your website appears to provide a range of educational facilities and services, making it a great fit
@@ -88,7 +92,7 @@
   </div>
 </div>
 
-<div class="container" style="margin-top: 20px;">
+<div class="container mt-5" style="margin-top: 20px;">
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 card2 text-center">
       <h1 class="olp">Online learning platform</h1>
@@ -114,7 +118,7 @@
 
 
 
-<div class="container">
+<div class="container mt-5">
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 card2 text-center">
       <h1 class="course">Courses</h1>
@@ -149,7 +153,7 @@
     </div>
   </div>
 </div>
-<div class="container">
+<div class="container mt-5">
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 text-center;d-flex;justify-content:center;text-align:center;">
       <h1 id="benefits">Benefits</h1>
@@ -184,7 +188,7 @@
   </div>
 </div>
 <br><br>
-<div class="container">
+<div class="container mt-5">
   <div class="row">
     <div class="col-lg-12 col-md12 col-sm-12 ">
       <h1 class="subj">Subjects</h1>
@@ -197,7 +201,7 @@
         <li>Business Studies</li>
         <li>Economics</li>
         <li> Computer Science <strong> & many more!</strong></li>
-        
+
       </ol>
       </p>
     </div>
@@ -206,7 +210,7 @@
 
 
 
-<div class="container">
+<div class="container mt-5">
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 card2 text-center">
       <h1 class="fa">Faculty</h1>
@@ -272,7 +276,7 @@
 
 
 
-<div class="container">
+<div class="container mt-5">
   <div class="row">
     <div class="col-lg-12 col-md12 col-sm-12">
       <h1 id="groupstudy">Group Study</h1>
