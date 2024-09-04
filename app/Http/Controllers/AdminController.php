@@ -156,6 +156,7 @@ class AdminController extends Controller
         }
     }
 
+
     public function SUBstore(Request $request)
     {
         $sub = new subs();
@@ -213,7 +214,11 @@ class AdminController extends Controller
     // CONTACT ZZZ
     public function contactcreate()
     {
-        return view('contact');
+        if(Auth::check()){
+            return view('contact');
+        }else{
+            return redirect()->route('login');
+        }
     }
 
     public function contactstore(Request $request)
@@ -233,7 +238,73 @@ class AdminController extends Controller
         $contacts = contact::all();
         return view('admin.contactfetch', compact('contacts'));
     }
-    
+
+    // index sub
+
+    public function authsub()
+    {
+        if(Auth::check()){
+            return view('subject');
+        }else{
+            return redirect()->route('login');
+        }
+    }
+
+    // index cors
+
+    public function authcors()
+    {
+        if(Auth::check()){
+            return view('courses');
+        }else{
+            return redirect()->route('login');
+        }
+    }
+
+    // index vido course page
+
+    public function authvidcor()
+    {
+        if(Auth::check()){
+            return view('subject');
+        }else{
+            return redirect()->route('login');
+        }
+    }
+
+    // index vido sub page
+
+    public function authvidsub()
+    {
+        if(Auth::check()){
+            return view('subject');
+        }else{
+            return redirect()->route('login');
+        }
+    }
+
+    // index faculty
+
+    public function authfac()
+    {
+        if(Auth::check()){
+            return view('subject');
+        }else{
+            return redirect()->route('login');
+        }
+    }
+
+    // index about
+
+    public function authabout()
+    {
+        if(Auth::check()){
+            return view('about');
+        }else{
+            return redirect()->route('login');
+        }
+    }
+
 
     /**
      * Display the specified resource.
