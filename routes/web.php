@@ -89,20 +89,20 @@ Route::get('/admin/contactfetch' , [AdminController::class , 'contactdetails']);
 Route::post('/insertwo' , [AdminController::class , 'bookstore']);
 Route::get('/admin/bookfetch' , [AdminController::class , 'bookdetails']);
 
-// subject index
-Route::get('/subject' , [AdminController::class , 'authsub']);
+// // subject index
+// Route::get('/subject' , [AdminController::class , 'authsub']);
 
-// course index
-Route::get('/courses' , [AdminController::class , 'authcors']);
+// // course index
+// Route::get('/courses' , [AdminController::class , 'authcors']);
 
-// video course
-Route::get('/videopage' , [AdminController::class , 'authvidcor']);
+// // video course
+// Route::get('/videopage' , [AdminController::class , 'authvidcor']);
 
-// video sub
-Route::get('/videosub' , [AdminController::class , 'authvidsub']);
+// // video sub
+// Route::get('/videosub' , [AdminController::class , 'authvidsub']);
 
-// index faculty
-Route::get('/faculty' , [AdminController::class , 'authfac']);
+// // index faculty
+// Route::get('/faculty' , [AdminController::class , 'authfac']);
 
-// index about
-Route::get('/about' , [AdminController::class , 'authabout']);
+// // index about
+// Route::get('/about' , [AdminController::class , 'authabout']);

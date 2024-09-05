@@ -175,8 +175,12 @@ class AdminController extends Controller
     }
 
     public function subdetails(){
-        $subs = subs::all();
-        return view('subject', compact('subs'));
+        if(Auth::check()){
+            $subs = subs::all();
+            return view('subject' , compact('subs'));
+        }else{
+            return redirect()->route('login');
+        }
     }
 
     // faculty main
@@ -241,69 +245,69 @@ class AdminController extends Controller
 
     // index sub
 
-    public function authsub()
-    {
-        if(Auth::check()){
-            return view('subject');
-        }else{
-            return redirect()->route('login');
-        }
-    }
+    // public function authsub()
+    // {
+    //     if(Auth::check()){
+    //         return view('subject');
+    //     }else{
+    //         return redirect()->route('login');
+    //     }
+    // }
 
-    // index cors
+    // // index cors
 
-    public function authcors()
-    {
-        if(Auth::check()){
-            return view('courses');
-        }else{
-            return redirect()->route('login');
-        }
-    }
+    // public function authcors()
+    // {
+    //     if(Auth::check()){
+    //         return view('courses');
+    //     }else{
+    //         return redirect()->route('login');
+    //     }
+    // }
 
-    // index vido course page
+    // // index vido course page
 
-    public function authvidcor()
-    {
-        if(Auth::check()){
-            return view('subject');
-        }else{
-            return redirect()->route('login');
-        }
-    }
+    // public function authvidcor()
+    // {
+    //     if(Auth::check()){
+    //         return view('subject');
+    //     }else{
+    //         return redirect()->route('login');
+    //     }
+    // }
 
-    // index vido sub page
+    // // index vido sub page
 
-    public function authvidsub()
-    {
-        if(Auth::check()){
-            return view('subject');
-        }else{
-            return redirect()->route('login');
-        }
-    }
+    // public function authvidsub()
+    // {
+    //     if(Auth::check()){
+    //         return view('subject');
+    //     }else{
+    //         return redirect()->route('login');
+    //     }
+    // }
 
-    // index faculty
+    // // index faculty
 
-    public function authfac()
-    {
-        if(Auth::check()){
-            return view('subject');
-        }else{
-            return redirect()->route('login');
-        }
-    }
+    // public function authfac()
+    // {
+    //     if(Auth::check()){
+    //         return view('subject');
+    //     }else{
+    //         return redirect()->route('login');
+    //     }
+    // }
 
-    // index about
+    // // index about
 
-    public function authabout()
-    {
-        if(Auth::check()){
-            return view('about');
-        }else{
-            return redirect()->route('login');
-        }
-    }
+    // public function authabout()
+    // {
+    //     if(Auth::check()){
+    //         return view('about');
+    //     }else{
+    //         return redirect()->route('login');
+    //     }
+    // }
 
 
     /**
