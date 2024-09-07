@@ -90,7 +90,7 @@ Route::post('/insertwo' , [AdminController::class , 'bookstore']);
 Route::get('/admin/bookfetch' , [AdminController::class , 'bookdetails']);
 
 // video course
-Route::get('/videopage' , [AdminController::class , 'authvidcor']);
+Route::get('/videopage/{id}' , [AdminController::class , 'authvidcor'])->name('videopage');
 
 // video sub
 Route::get('/videosub' , [AdminController::class , 'authvidsub']);

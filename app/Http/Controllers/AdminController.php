@@ -130,24 +130,32 @@ class AdminController extends Controller
         $course->course_name = $request->name;
         $course->course_desc = $request->desc;
         $course->course_image = $request->image;
+        $course->course_video = $request->video;
 
-        $image = $request->image;
-        $imagename = time().'.'.$image->getClientOriginalExtension();
-        $path = 'images/class/';
-        $request->image->move($path , $imagename);
-        $course->course_image = $path.$imagename;
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+            $imagename = time() . '.' . $image->getClientOriginalExtension();
+            // Save image to 'public/images/class' and get its path
+            $path = $image->storeAs('images/class', $imagename, 'public');
+            $course->course_image = $path;
+        }
+
+        // Handle video upload
+        if ($request->hasFile('video')) {
+            $video = $request->file('video');
+            $videoname = time() . '.' . $video->getClientOriginalExtension();
+            // Save video to 'public/videos/class' and get its path
+            $path = $video->storeAs('videos/class', $videoname, 'public');
+            $course->course_video = $path;
+        }
 
         $course->save();
         return redirect()->back();
     }
 
     public function coursedetails(){
-        if(Auth::check()){
             $courses = courses::all();
             return view('courses', compact('courses'));
-        }else{
-            return redirect()->route('login');
-        }
     }
 
     // sub main
@@ -179,12 +187,8 @@ class AdminController extends Controller
     }
 
     public function subdetails(){
-        if(Auth::check()){
             $subs = subs::all();
             return view('subject' , compact('subs'));
-        }else{
-            return redirect()->route('login');
-        }
     }
 
     // faculty main
@@ -215,22 +219,14 @@ class AdminController extends Controller
     }
 
     public function facultydetails(){
-        if(Auth::check()){
             $faculties = faculties::all();
             return view('faculty' , compact('faculties'));
-        }else{
-            return redirect()->route('login');
-        }
     }
 
     // CONTACT ZZZ
     public function contactcreate()
     {
-        if(Auth::check()){
             return view('contact');
-        }else{
-            return redirect()->route('login');
-        }
     }
 
     public function contactstore(Request $request)
@@ -259,10 +255,11 @@ class AdminController extends Controller
 
     // // index vido course page
 
-    public function authvidcor()
+    public function authvidcor(int $id)
     {
         if(Auth::check()){
-            return view('videopage');
+            $video= courses::find($id);
+            return view('videopage', compact('video'));
         }else{
             return redirect()->route('login');
         }
@@ -274,18 +271,6 @@ class AdminController extends Controller
     {
         if(Auth::check()){
             return view('videosub');
-        }else{
-            return redirect()->route('login');
-        }
-    }
-
-
-    // // index about
-
-    public function authabout()
-    {
-        if(Auth::check()){
-            return view('about');
         }else{
             return redirect()->route('login');
         }

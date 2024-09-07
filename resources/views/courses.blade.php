@@ -480,7 +480,7 @@
 					<div class="card-body" style="text-align: justify;">
 						<h5 class="card-title">{{$cors->course_name}}</h5>
 						<p class="card-text">{{$cors->course_desc}}</p>
-					    <button style="width: 130px; background-color: #5a8fef;" class="btn mx-3 p-2" type="button"><a href="/videopage" style="width: 130px; background-color: #5a8fef; color: #e8dcdc; border: none; font-weight: 700; border: none !important;">Start</a></button>
+					    <button style="width: 130px; background-color: #5a8fef;" class="btn mx-3 p-2" type="button"><a href="/videopage/{{$cors->id}}" style="width: 130px; background-color: #5a8fef; color: #e8dcdc; border: none; font-weight: 700; border: none !important;">Start</a></button>
 					</div>
 				</div>
 			</div>
