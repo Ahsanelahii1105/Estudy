@@ -20,9 +20,13 @@
             <input type="file" name="image" id="" class="form-control">
          </div>
          <div class="form-group">
+            <label for="" class="form-label">Modular (if any:)</label>
+            <input type="file" name="modular" id="" class="form-control">
+         </div>
+         {{-- <div class="form-group">
             <label for="" class="form-label">Video (if any:)</label>
             <input type="file" name="video" accept="video/*" id="" class="form-control">
-         </div>
+         </div> --}}
          <div class="form-group mt-3">
             <button type="submit" class="w-100 btn btn-primary">Insert</button>
          </div>

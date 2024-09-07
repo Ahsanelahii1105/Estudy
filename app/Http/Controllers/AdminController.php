@@ -129,25 +129,31 @@ class AdminController extends Controller
         $course = new courses();
         $course->course_name = $request->name;
         $course->course_desc = $request->desc;
-        $course->course_image = $request->image;
-        $course->course_video = $request->video;
 
         if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $imagename = time() . '.' . $image->getClientOriginalExtension();
-            // Save image to 'public/images/class' and get its path
-            $path = $image->storeAs('images/class', $imagename, 'public');
-            $course->course_image = $path;
+            $image = $request->image;
+            $imagename = time().'.'.$image->getClientOriginalExtension();
+            $path = 'images/course/';
+            $request->image->move($path , $imagename);
+            $course->course_image = $path.$imagename;
         }
 
-        // Handle video upload
-        if ($request->hasFile('video')) {
-            $video = $request->file('video');
-            $videoname = time() . '.' . $video->getClientOriginalExtension();
-            // Save video to 'public/videos/class' and get its path
-            $path = $video->storeAs('videos/class', $videoname, 'public');
-            $course->course_video = $path;
+        if ($request->hasFile('modular')) {
+            $modular = $request->modular;
+            $modularname = time().'.'.$modular->getClientOriginalExtension();
+            $path = 'pdf/course/';
+            $request->modular->move($path , $modularname);
+            $course->course_modular = $path.$modularname;
         }
+
+        // // Handle video upload
+        // if ($request->hasFile('video')) {
+        //     $video = $request->file('video');
+        //     $videoname = time() . '.' . $video->getClientOriginalExtension();
+        //     // Save video to 'public/videos/class' and get its path
+        //     $path = $video->storeAs('videos/class', $videoname, 'public');
+        //     $course->course_video = $path;
+        // }
 
         $course->save();
         return redirect()->back();
