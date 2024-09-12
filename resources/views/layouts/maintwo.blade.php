@@ -10,7 +10,7 @@
     <meta content="Free HTML Templates" name="description" />
 
     <!-- Favicon -->
-    <link href="{{asset('img/favicon.ico')}}" rel="icon" />
+    <link href="{{asset('img/logo.png')}}" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="{{asset('https://fonts.gstatic.com')}}" />
