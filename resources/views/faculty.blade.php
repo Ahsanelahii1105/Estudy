@@ -48,37 +48,37 @@
 
 
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Launch demo modal
-        </button>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Know more
+</button>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <p class="modal-name" id="exampleModalLabel"><strong>ROHAN PATEL</strong>
-                <br>
-                <strong>Description:</strong> He is renowned expert in the field of Computer Science with over 15
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <p class="description"> 
+          <strong>Description:</strong> He is renowned expert in the field of Computer Science with over 15
                   years of teaching experience. His research interests include Artificial Intelligence, Machine
-                  Learning, and Data Mining.
-                  <br>
-                  Monday - Wednesday: 9:00 AM - 12:00 PM
-                  <br>
-                  Charges: RS 1500 per hour
-                </p>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
+            <br>
+            Monday - Wednesday: 9:00 AM - 12:00 PM
+            <br>
+            Charges: RS 1500 per hour
+        </p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
       </div>
         @endforeach
 

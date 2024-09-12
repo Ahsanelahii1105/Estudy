@@ -72,7 +72,7 @@
             </div>
 
             <div class="d-flex flex-row align-items-center mb-0">
-                <i class="fas fa-lock fa-lg ms-3 fa-fw"></i>
+                <i class="fa-solid fa-phone"></i>
                 <div data-mdb-input-init class="form-outline flex-fill mt-4">
                     <x-input id="Phone_Number" class="form-control" type="text" name="phone" required
                         autocomplete="usernumber" />
@@ -117,13 +117,6 @@
                     </x-label>
                 </div>
             @endif
-
-            {{-- <div class="form-check mb-5 mx-3">
-                <input class="form-check-input me-2" type="checkbox" value="" />
-                <label class="form-check-label" for="form2Example3">
-                    I agree all statements in <a href="#">terms and condition</a>
-                </label>
-            </div> --}}
 
             <div class="text-center text-lg-start mt-2 pt-2">
 

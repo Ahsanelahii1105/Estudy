@@ -18,9 +18,9 @@ use App\Http\Controllers\WebsiteController;
 |
 */
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
+Route::get('/login', function(){
+    return view('auth.login');
+})->name('login');
 
 Route::middleware([
     'auth:sanctum',
@@ -43,39 +43,14 @@ Route::middleware([
 
 Route::get('/' , [WebsiteController::class , 'index']);
 
-Route::get('/subject', function () {
-    return view('subject');
-});
-
-Route::get('/about', function () {
-    return view('about');
-});
-
-Route::get('/courses', function () {
-    return view('courses');
-});
-
-Route::get('/faculty', function () {
-    return view('faculty');
-});
 
 Route::get('/chat', function () {
     return view('chat');
 });
 
-
-Route::get('/work', function () {
-    return view('work');
-});
-
 Route::get('/terms_condition', function () {
     return view('terms_condition');
 });
-
-Route::get('/videopage', function () {
-    return view('videopage');
-});
-
 
 
 //-------------Routes By TH for Inserting Data-------------
@@ -114,3 +89,11 @@ Route::get('/admin/contactfetch' , [AdminController::class , 'contactdetails']);
 Route::post('/insertwo' , [AdminController::class , 'bookstore']);
 Route::get('/admin/bookfetch' , [AdminController::class , 'bookdetails']);
 
+// video course
+Route::get('/videopage/{id?}' , [AdminController::class , 'authvidcor'])->name('videopage');
+Route::get('/modular/pdf/{id}', [AdminController::class , 'authvideocor'])->name('modular');
+// video sub
+Route::get('/videosub' , [AdminController::class , 'authvidsub']);
+
+// index about
+Route::get('/about' , [AdminController::class , 'authabout']);

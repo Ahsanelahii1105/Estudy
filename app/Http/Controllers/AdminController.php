@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\subs;
-use Illuminate\Http\Request;
-use App\Models\subject;
-use App\Models\classes;
-use App\Models\courses;
-use App\Models\faculties;
-use App\Models\contact;
 use App\Models\booking;
+use App\Models\classes;
+use App\Models\contact;
+use App\Models\courses;
+use App\Models\subject;
+use App\Models\faculties;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -18,7 +19,11 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.index');
+        if(Auth::check()){
+            return view('admin.index');
+        }else{
+            return redirect()->route('login');
+        }
     }
 
     /**
@@ -26,7 +31,11 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('admin.subjectinsert');
+        if(Auth::check()){
+            return view('admin.subjectinsert');
+        }else{
+            return redirect()->route('login');
+        }
     }
 
     /**
@@ -54,7 +63,11 @@ class AdminController extends Controller
     // class index
     public function classcreate()
     {
-        return view('admin.classinsert');
+        if(Auth::check()){
+            return view('admin.classinsert');
+        }else{
+            return redirect()->route('login');
+        }
     }
 
     public function classstore(Request $request)
@@ -104,7 +117,11 @@ class AdminController extends Controller
     // course main
     public function coursecreate()
     {
-        return view('admin.courseinsert');
+        if(Auth::check()){
+            return view('admin.courseinsert');
+        }else{
+            return redirect()->route('login');
+        }
     }
 
     public function coursestore(Request $request)
@@ -112,28 +129,51 @@ class AdminController extends Controller
         $course = new courses();
         $course->course_name = $request->name;
         $course->course_desc = $request->desc;
-        $course->course_image = $request->image;
 
-        $image = $request->image;
-        $imagename = time().'.'.$image->getClientOriginalExtension();
-        $path = 'images/class/';
-        $request->image->move($path , $imagename);
-        $course->course_image = $path.$imagename;
+        if ($request->hasFile('image')) {
+            $image = $request->image;
+            $imagename = time().'.'.$image->getClientOriginalExtension();
+            $path = 'images/course/';
+            $request->image->move($path , $imagename);
+            $course->course_image = $path.$imagename;
+        }
+
+        if ($request->hasFile('modular')) {
+            $modular = $request->modular;
+            $modularname = time().'.'.$modular->getClientOriginalExtension();
+            $path = 'pdf/course/';
+            $request->modular->move($path , $modularname);
+            $course->course_modular = $path.$modularname;
+        }
+
+        // // Handle video upload
+        // if ($request->hasFile('video')) {
+        //     $video = $request->file('video');
+        //     $videoname = time() . '.' . $video->getClientOriginalExtension();
+        //     // Save video to 'public/videos/class' and get its path
+        //     $path = $video->storeAs('videos/class', $videoname, 'public');
+        //     $course->course_video = $path;
+        // }
 
         $course->save();
         return redirect()->back();
     }
 
     public function coursedetails(){
-        $courses = courses::all();
-        return view('courses', compact('courses'));
+            $courses = courses::all();
+            return view('courses', compact('courses'));
     }
 
     // sub main
     public function SUBcreate()
     {
-        return view('admin.subinsert');
+        if(Auth::check()){
+            return view('admin.subinsert');
+        }else{
+            return redirect()->route('login');
+        }
     }
+
 
     public function SUBstore(Request $request)
     {
@@ -153,14 +193,18 @@ class AdminController extends Controller
     }
 
     public function subdetails(){
-        $subs = subs::all();
-        return view('subject', compact('subs'));
+            $subs = subs::all();
+            return view('subject' , compact('subs'));
     }
 
     // faculty main
     public function facultycreate()
     {
-        return view('admin.facultyinsert');
+        if(Auth::check()){
+            return view('admin.facultyinsert');
+        }else{
+            return redirect()->route('login');
+        }
     }
 
     public function facultystore(Request $request)
@@ -181,14 +225,14 @@ class AdminController extends Controller
     }
 
     public function facultydetails(){
-        $faculties = faculties::all();
-        return view('faculty', compact('faculties'));
+            $faculties = faculties::all();
+            return view('faculty' , compact('faculties'));
     }
 
     // CONTACT ZZZ
     public function contactcreate()
     {
-        return view('contact');
+            return view('contact');
     }
 
     public function contactstore(Request $request)
@@ -205,10 +249,39 @@ class AdminController extends Controller
     }
 
     public function contactdetails(){
-        $contacts = contact::all();
-        return view('admin.contactfetch', compact('contacts'));
+        if(Auth::check()){
+            $contacts = contact::all();
+            return view('admin.contactfetch' , compact('contacts'));
+        }else{
+            return redirect()->route('login');
+        }
     }
-    
+
+
+
+    // // index vido course page
+
+    public function authvidcor(int $id)
+    {
+        if(Auth::check()){
+            $video= courses::find($id);
+            return view('videopage', compact('video'));
+        }else{
+            return redirect()->route('login');
+        }
+    }
+
+    // index vido sub page
+
+    public function authvidsub()
+    {
+        if(Auth::check()){
+            return view('videosub');
+        }else{
+            return redirect()->route('login');
+        }
+    }
+
 
     /**
      * Display the specified resource.
