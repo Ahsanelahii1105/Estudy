@@ -19,10 +19,6 @@
             <label for="" class="form-label">Image (if any:)</label>
             <input type="file" name="image" id="" class="form-control">
          </div>
-         {{-- <div class="form-group">
-            <label for="" class="form-label">Modular (if any:)</label>
-            <input type="file" name="modular" id="" class="form-control">
-         </div> --}}
          <div class="form-group">
             <label for="" class="form-label">Video (if any:)</label>
             <input type="file" name="video" accept="video/*" id="" class="form-control">

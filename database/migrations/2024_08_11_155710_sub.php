@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('sub_name')->required();
             $table->string('sub_desc')->required();
             $table->string('sub_image')->required();
+            $table->string('sub_video')->nullable();
             $table->timestamps();
         });
     }

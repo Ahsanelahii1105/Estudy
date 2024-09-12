@@ -10,14 +10,14 @@
     <meta content="Free HTML Templates" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+    <link href="{{asset('img/favicon.ico')}}" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="{{asset('https://fonts.gstatic.com')}}" />
+    <link href="{{asset('https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap')}}" rel="stylesheet" />
 
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="{{asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css')}}" rel="stylesheet" />
 
     <!-- Flaticon Font -->
     <link href="{{ asset('lib/flaticon/font/flaticon.css') }}" rel="stylesheet" />
@@ -33,15 +33,6 @@
 </head>
 
 <body>
-    @if (session('success'))
-        <div class="alert alert-primary">{{ session('success') }}</div>
-    @endif
-    @if (session('LoggedIn'))
-        <div class="alert alert-primary">{{ session('LoggedIn') }}</div>
-    @endif
-    @if (session('Error'))
-        <div class="alert alert-primary">{{ session('Error') }}</div>
-    @endif
     <!-- Navbar Start -->
     <div class="container-fluid bg-light position-relative shadow"
         style="width: 100%; height: 580px; background-image: url('img/library.jpg'); background-repeat: no-repeat; background-size: 100% 100%;">

@@ -129,6 +129,7 @@ class AdminController extends Controller
         $course = new courses();
         $course->course_name = $request->name;
         $course->course_desc = $request->desc;
+        $course->course_image = $request->image;
 
         if ($request->hasFile('image')) {
             $image = $request->image;
@@ -136,14 +137,6 @@ class AdminController extends Controller
             $path = 'images/course/';
             $request->image->move($path , $imagename);
             $course->course_image = $path.$imagename;
-        }
-
-        if ($request->hasFile('modular')) {
-            $modular = $request->modular;
-            $modularname = time().'.'.$modular->getClientOriginalExtension();
-            $path = 'pdf/course/';
-            $request->modular->move($path , $modularname);
-            $course->course_modular = $path.$modularname;
         }
 
         // Handle video upload
@@ -182,12 +175,22 @@ class AdminController extends Controller
         $sub->sub_name = $request->name;
         $sub->sub_desc = $request->desc;
         $sub->sub_image = $request->image;
+        $sub->sub_video = $request->videos;
 
         $image = $request->image;
         $imagename = time().'.'.$image->getClientOriginalExtension();
         $path = 'images/sub/';
         $request->image->move($path , $imagename);
         $sub->sub_image = $path.$imagename;
+
+        if ($request->hasFile('videos')) {
+
+            $videos= $request->videos;
+            $videos->move('upload/subjectfile', $videos->getClientOriginalName());
+            $videos_name=$videos->getClientOriginalName();
+
+            $sub->sub_video = $videos_name;
+        }
 
         $sub->save();
         return redirect()->back();
@@ -274,10 +277,11 @@ class AdminController extends Controller
 
     // index vido sub page
 
-    public function authvidsub()
+    public function authvidsub(int $id)
     {
         if(Auth::check()){
-            return view('videosub');
+            $videos= subs::find($id);
+            return view('videosub', compact('videos'));
         }else{
             return redirect()->route('login');
         }

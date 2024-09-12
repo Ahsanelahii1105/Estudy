@@ -27,24 +27,24 @@
   <div class="row">
     <div class="col-lg-7 mb-5">
       <div class="contact-form">
-        
+
         <form action="{{URL::TO('/insert')}}" method="POST" id="">
           @csrf
 
           <div class="control-group mb-3">
             <input type="text" class="form-control" name="name"  placeholder="Your Name" required="required"
              />
-          
+
           </div>
           <div class="control-group mb-3">
             <input type="email" class="form-control" name="email" placeholder="Your Email" required="required"
                />
-           
+
           </div>
           <div class="control-group mb-3">
             <input type="text" class="form-control" name="subject" placeholder="Subject" required="required"
                />
-            
+
           </div>
           <div class="control-group mb-3">
             <textarea class="form-control" name="message" rows="6" placeholder="Message" required="required"
@@ -57,7 +57,7 @@
             </button>
           </div>
         </form>
-        
+
       </div>
     </div>
     <div class="col-lg-5 mb-5">
@@ -68,7 +68,7 @@
         eirmod eirmod amet.
       </p>
       <div class="d-flex">
-        <i class="fa fa-map-marker-alt d-inline-flex align-items-center justify-content-center bg-primary text-secondary rounded-circle"
+        <i class="fas fa-map-marker-alt d-inline-flex align-items-center justify-content-center bg-primary text-secondary rounded-circle"
           style="width: 45px; height: 45px"></i>
         <div class="pl-3">
           <h5>Address</h5>
@@ -76,7 +76,7 @@
         </div>
       </div>
       <div class="d-flex">
-        <i class="fa fa-envelope d-inline-flex align-items-center justify-content-center bg-primary text-secondary rounded-circle"
+        <i class="fas fa-envelope d-inline-flex align-items-center justify-content-center bg-primary text-secondary rounded-circle"
           style="width: 45px; height: 45px"></i>
         <div class="pl-3">
           <h5>Email</h5>
@@ -84,7 +84,7 @@
         </div>
       </div>
       <div class="d-flex">
-        <i class="fa fa-phone-alt d-inline-flex align-items-center justify-content-center bg-primary text-secondary rounded-circle"
+        <i class="fas fa-phone-alt d-inline-flex align-items-center justify-content-center bg-primary text-secondary rounded-circle"
           style="width: 45px; height: 45px"></i>
         <div class="pl-3">
           <h5>Phone</h5>
