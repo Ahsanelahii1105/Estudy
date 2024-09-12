@@ -146,14 +146,15 @@ class AdminController extends Controller
             $course->course_modular = $path.$modularname;
         }
 
-        // // Handle video upload
-        // if ($request->hasFile('video')) {
-        //     $video = $request->file('video');
-        //     $videoname = time() . '.' . $video->getClientOriginalExtension();
-        //     // Save video to 'public/videos/class' and get its path
-        //     $path = $video->storeAs('videos/class', $videoname, 'public');
-        //     $course->course_video = $path;
-        // }
+        // Handle video upload
+        if ($request->hasFile('video')) {
+
+            $video= $request->video;
+            $video->move('upload/course', $video->getClientOriginalName());
+            $video_name=$video->getClientOriginalName();
+
+            $course->course_video = $video_name;
+        }
 
         $course->save();
         return redirect()->back();

@@ -39,6 +39,7 @@ Route::middleware([
 });
 
 
+
 // navbar
 
 Route::get('/' , [WebsiteController::class , 'index']);
@@ -50,6 +51,10 @@ Route::get('/chat', function () {
 
 Route::get('/terms_condition', function () {
     return view('terms_condition');
+});
+
+Route::get('/about', function () {
+    return view('about');
 });
 
 
@@ -95,5 +100,3 @@ Route::get('/modular/pdf/{id}', [AdminController::class , 'authvideocor'])->name
 // video sub
 Route::get('/videosub' , [AdminController::class , 'authvidsub']);
 
-// index about
-Route::get('/about' , [AdminController::class , 'authabout']);

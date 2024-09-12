@@ -16,7 +16,6 @@
 
 @section('content')
 
-<<<<<<< HEAD
 <div class="container mt-5`">
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12 card1">
@@ -25,9 +24,6 @@
   </div>
 </div>
 <br>
-=======
-
->>>>>>> 62c95174ee8012248c544a73094f033c1dbe747c
 
 <div class="container mt-5">
   <div class="row">
