@@ -23,7 +23,7 @@
                             <button id="like-btn">Like</button>
                             <button id="dislike-btn">Dislike</button>
                             <button id="share-btn">Share</button>
-                            <a href="/pdf/math.pdf" style="color: white; text-decoration: none;" target="_blank" type="application/pdf" rel="alternate" media="print"><button>PDF</button></a>
+                            <a href="/generate-pdf" style="color: white; text-decoration: none;" target="_blank" type="application/pdf" rel="alternate" media="print"><button>PDF</button></a>
                         </div>
                     </div>
                 </section>

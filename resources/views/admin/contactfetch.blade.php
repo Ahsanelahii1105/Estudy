@@ -9,24 +9,23 @@
             width: 100%;
         }
 
-        td,
-        th {
+        thead, td, th {
             border: 1px solid #dddddd;
             text-align: left;
             padding: 8px;
         }
 
-        tr:nth-child(even) {
+        thead, tr:nth-child(even) {
             background-color: #dddddd;
         }
     </style>
 
     <div class="container">
         <div class="row">
-            @foreach ($contacts as $c)
-                <div class="col-lg-12 mt-5">
+            <div class="col-lg-12 mt-5">
 
-                    <table class="text-center">
+                <table class="text-center">
+                    <thead>
                         <tr>
                             <th>ID</th>
                             <th>Name</th>
@@ -35,20 +34,25 @@
                             <th>Message</th>
                             <th>Action</th>
                         </tr>
-                        <tr>
-                            <td>{{ $c->id }}</td>
-                            <td>{{ $c->contact_name }}</td>
-                            <td>{{ $c->contact_email }}</td>
-                            <td>{{ $c->contact_subject }}</td>
-                            <td>{{ $c->contact_message }}</td>
-                            <td><a href="#" class="btn btn-primary">Update</a> &nbsp;<a href="#" class="btn btn-danger">Delete</a></td>
-                        </tr>
-                    </table>
+                    </thead>
+                    <tbody>
+                            @foreach ($contacts as $c)
+                            <tr>
+                                <td>{{ $c->id }}</td>
+                                <td>{{ $c->contact_name }}</td>
+                                <td>{{ $c->contact_email }}</td>
+                                <td>{{ $c->contact_subject }}</td>
+                                <td>{{ $c->contact_message }}</td>
+                                <td><a href="#" class="btn btn-primary">Update</a> &nbsp;<a href="#"
+                                        class="btn btn-danger">Delete</a></td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                </table>
 
-                </div>
+            </div>
 
         </div>
-        @endforeach
     </div>
     </div>
 @endsection

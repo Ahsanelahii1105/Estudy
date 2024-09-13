@@ -38,7 +38,11 @@ Route::middleware([
     })->name('dashboard');
 });
 
+Route::get('generate-pdf', [App\Http\Controllers\pdfController::class, 'generatepdf']);
 
+Route::get('/button', function () {
+    return view('button');
+});
 
 // navbar
 
