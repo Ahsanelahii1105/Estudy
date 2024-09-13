@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('course_name')->required();
             $table->string('course_desc')->required();
             $table->string('course_image')->required();
-            $table->string('course_modular')->nullable();
             $table->string('course_video')->nullable();
             $table->timestamps();
         });

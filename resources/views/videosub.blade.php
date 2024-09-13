@@ -9,11 +9,11 @@
         <div class="row">
             <div class="col-lg-10" style="margin: auto;">
                 <section class="video-container">
-                    <iframe id="video" width="100%" height="500" src="videos/subject.mp4" frameborder="0"
+                    <iframe id="video" width="100%" height="500" src="{{asset('upload/subjectfile/'.$videos->sub_video)}}" frameborder="0"
                         allowfullscreen></iframe>
                     <div class="video-info">
-                        <h2>Mathematic Subject For Ninth Class</h2>
-                        <p>Mathematics is the study of numbers, quantities, and shapes. It involves the use of logical reasoning, problem-solving skills, and mathematical operations to understand and describe the world around us. Mathematics encompasses various branches, including algebra, geometry, calculus, and statistics, which provide a foundation for understanding and analyzing data, patterns, and relationships. Through mathematics, students develop critical thinking, analytical skills, and problem-solving abilities, essential for success in various fields, including science, technology, engineering, and mathematics (STEM).</p>
+                        <h2>{{$videos->sub_name}}</h2>
+                        <p>{{$videos->sub_desc}}</p>
                         <div class="video-stats">
                             <span id="view-count">123,456 views</span>
                             <span id="like-count">1,234 likes</span>

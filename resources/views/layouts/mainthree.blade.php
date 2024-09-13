@@ -10,7 +10,7 @@
     <meta content="Free HTML Templates" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+    <link href="img/logo.png" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -37,11 +37,11 @@
 
     <!-- Navbar Start -->
     <div class="container-fluid bg-light position-relative"
-        style="background-image: url('img/library.jpg'); background-repeat: no-repeat; background-size: 100%;">
+        style="background-image: url('{{asset('img/library.jpg')}}'); background-repeat: no-repeat; background-size: 100%;">
 
         <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-0 px-0 px-lg-5">
             <a href="#" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px">
-                <img src="img/logo.png" class="bg-img" height="150px" width="150px" alt="logo">
+                <img src="{{asset('img/logo.png')}}" class="bg-img" height="150px" width="150px" alt="logo">
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon clicktoggle"></span>

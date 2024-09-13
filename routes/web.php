@@ -39,6 +39,7 @@ Route::middleware([
 });
 
 
+
 // navbar
 
 Route::get('/' , [WebsiteController::class , 'index']);
@@ -50,6 +51,10 @@ Route::get('/chat', function () {
 
 Route::get('/terms_condition', function () {
     return view('terms_condition');
+});
+
+Route::get('/about', function () {
+    return view('about');
 });
 
 
@@ -91,9 +96,6 @@ Route::get('/admin/bookfetch' , [AdminController::class , 'bookdetails']);
 
 // video course
 Route::get('/videopage/{id?}' , [AdminController::class , 'authvidcor'])->name('videopage');
-Route::get('/modular/pdf/{id}', [AdminController::class , 'authvideocor'])->name('modular');
 // video sub
-Route::get('/videosub' , [AdminController::class , 'authvidsub']);
+Route::get('/videosub/{id?}' , [AdminController::class , 'authvidsub'])->name('videosub');
 
-// index about
-Route::get('/about' , [AdminController::class , 'authabout']);

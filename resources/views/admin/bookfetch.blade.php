@@ -3,18 +3,46 @@
 
    @section('main-section')
 
+   <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+
     <div class="container">
         <div class="row">
             @foreach ($book as $b)
-                <div class="col-lg-4">
 
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">{{$b->name}}</h4>
-                            <h5 class="card-title">{{$b->email}}</h5>
-                            <h5 class="card-title">{{$b->class}}</h5>
-                        </div>
-                    </div>
+                <div class="col-lg-12 mt-5">
+
+                    <table class="text-center">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Booked Class</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td>{{ $b->id }}</td>
+                            <td>{{$b->name}}</td>
+                            <td>{{$b->email}}</td>
+                            <td>{{$b->class}}</td>
+                            <td><a href="#" class="btn btn-primary">Update</a> &nbsp;<a href="#" class="btn btn-danger">Delete</a></td>
+                        </tr>
+                    </table>
 
                 </div>
             @endforeach

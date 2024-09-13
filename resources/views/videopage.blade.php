@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-lg-10" style="margin: auto;">
                 <section class="video-container">
-                    <iframe id="video" width="100%" height="500" src="{{$video->course_video}}" frameborder="0"
+                    <iframe id="video" width="100%" height="500" src="{{asset('upload/course/'.$video->course_video)}}" frameborder="0"
                         allowfullscreen></iframe>
                     <div class="video-info">
                         <h2>{{$video->course_name}}</h2>

@@ -470,7 +470,7 @@
 			onclick="openNav()">☰</span>
 		<div class="contentText">
 
-		<h2 id="contentTitle">All Courses</h2>
+		<h2 id="contentTitle">All Subject</h2>
 	@foreach ($subs as $s)
 
 	<div class="card mb-5 shadow" style="max-width: 1000px;">
@@ -482,7 +482,7 @@
 				<div class="card-body">
 					<h5 class="card-title">{{$s->sub_name}}</h5>
 					<p class="card-text">{{$s->sub_desc}}</p>
-					<button style="width: 130px; background-color: #5a8fef;" class="btn mx-3 p-2" type="button"><a href="/videosub" style="width: 130px; background-color: #5a8fef; color: #e8dcdc; border: none; font-weight: 700; border: none !important;">Start</a></button>
+					<button style="width: 130px; background-color: #5a8fef;" class="btn mx-3 p-2" type="button"><a href="/videosub/{{$s->id}}" style="width: 130px; background-color: #5a8fef; color: #e8dcdc; border: none; font-weight: 700; border: none !important;">Start</a></button>
 				</div>
 			</div>
 		</div>
