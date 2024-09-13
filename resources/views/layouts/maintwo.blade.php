@@ -111,10 +111,11 @@
                     <img src="img/logo.png" class="bg-img" height="150px" width="150px" alt="logo">
                 </a>
                 <p>
-                    Labore dolor amet ipsum ea, erat sit ipsum duo eos. Volup amet ea
-                    dolor et magna dolor, elitr rebum duo est sed diam elitr. Stet elitr
-                    stet diam duo eos rebum ipsum diam ipsum elitr.
-                </p>
+                Explore New Horizons, Achieve New Heights
+Learn Without Limits, Grow Without Bounds
+Estudy: Your Gateway to Endless Possibilities
+Unlock Your Potential, Unleash Your Dreams
+Transforming Education, Transforming Lives  </p>
                 <div class="d-flex justify-content-start mt-4">
                     <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
                         style="width: 38px; height: 38px" href="#"><i class="fab fa-twitter"></i></a>

@@ -84,11 +84,11 @@
                         New Approach to Students Education
                     </h1>
                     <p class="text-white mb-4">
-                        Sea ipsum kasd eirmod kasd magna, est sea et diam ipsum est amet sed
-                        sit. Ipsum dolor no justo dolor et, lorem ut dolor erat dolore sed
-                        ipsum at ipsum nonumy amet. Clita lorem dolore sed stet et est justo
-                        dolore.
-                    </p>
+                    Explore New Horizons, Achieve New Heights
+Learn Without Limits, Grow Without Bounds
+Estudy: Your Gateway to Endless Possibilities
+Unlock Your Potential, Unleash Your Dreams
+Transforming Education, Transforming Lives  </p>
                     <a href="/about" class="btn btn-secondary mt-1 py-3 px-5">Learn More</a>
                 </div>
             </div>
@@ -121,9 +121,8 @@
                     <img src="img/logo.png" class="bg-img" height="150px" width="150px" alt="logo">
                 </a>
                 <p>
-                    Labore dolor amet ipsum ea, erat sit ipsum duo eos. Volup amet ea
-                    dolor et magna dolor, elitr rebum duo est sed diam elitr. Stet elitr
-                    stet diam duo eos rebum ipsum diam ipsum elitr.
+                we are a non-stop online learning platform that offers a wide range of subjects from matrix system and O Level
+                to A Level. Our comprehensive curriculum covers various subjects, including:.
                 </p>
                 <div class="d-flex justify-content-start mt-4">
                     <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"

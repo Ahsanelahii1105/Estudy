@@ -158,8 +158,7 @@
       <div class="testimonial-item px-3">
         <div class="bg-light shadow-sm rounded mb-4 p-4">
           <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-          Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr
-          eirmod clita lorem. Dolor tempor ipsum clita
+          Estudy has transformed my child's learning, now they're confident and self-assured!& teachers are very supportive
         </div>
         <div class="d-flex align-items-center">
           <img class="rounded-circle" src="img/testimonial-1.jpg" style="width: 70px; height: 70px" alt="Image" />
@@ -172,8 +171,7 @@
       <div class="testimonial-item px-3">
         <div class="bg-light shadow-sm rounded mb-4 p-4">
           <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-          Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr
-          eirmod clita lorem. Dolor tempor ipsum clita
+          Estudy's classes have given my child the right direction, now they're achieving their dream & study material is very useful 
         </div>
         <div class="d-flex align-items-center">
           <img class="rounded-circle" src="img/testimonial-2.jpg" style="width: 70px; height: 70px" alt="Image" />
@@ -186,8 +184,7 @@
       <div class="testimonial-item px-3">
         <div class="bg-light shadow-sm rounded mb-4 p-4">
           <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-          Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr
-          eirmod clita lorem. Dolor tempor ipsum clita
+          Estudy's teachers have provided my child with personalized attention,now they excel in every subject
         </div>
         <div class="d-flex align-items-center">
           <img class="rounded-circle" src="img/testimonial-3.jpg" style="width: 70px; height: 70px" alt="Image" />
@@ -200,8 +197,7 @@
       <div class="testimonial-item px-3">
         <div class="bg-light shadow-sm rounded mb-4 p-4">
           <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-          Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr
-          eirmod clita lorem. Dolor tempor ipsum clita
+          Estudy's study material has enhanced my child's understanding, now they grasp every concept with ease!
         </div>
         <div class="d-flex align-items-center">
           <img class="rounded-circle" src="img/testimonial-4.jpg" style="width: 70px; height: 70px" alt="Image" />
@@ -229,11 +225,11 @@
         </p>
         <h1 class="mb-4">Best Website For Our Fututre Students</h1>
         <p>
-          Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo
-          dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo.
-          Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
-          dolor
-        </p>
+        Your success has no limits, you can achieve anything you set your mind to!
+         We're proud of you, you're the future stars!
+          Education is the first step towards making your dreams come true.
+   
+      </p>
         <div class="row pt-2 pb-4">
           <div class="col-6 col-md-4">
             <img class="img-fluid rounded" src="img/about-2.jpg" alt="" />
@@ -241,16 +237,15 @@
           <div class="col-6 col-md-8">
             <ul class="list-inline m-0">
               <li class="py-2 border-top border-bottom">
-                <i class="fas fa-check text-primary mr-3"></i>Labore eos amet
-                dolor amet diam
+                <i class="fas fa-check text-primary mr-3"></i>We're proud of you, you're the future stars
               </li>
               <li class="py-2 border-bottom">
-                <i class="fas fa-check text-primary mr-3"></i>Etsea et sit
-                dolor amet ipsum
+                <i class="fas fa-check text-primary mr-3"></i>
+                May your hard work and dedication lead you to triumph!
               </li>
               <li class="py-2 border-bottom">
-                <i class="fas fa-check text-primary mr-3"></i>Diam dolor diam
-                elitripsum vero.
+                <i class="fas fa-check text-primary mr-3"></i>
+                Dream big, work hard, and achieve your goals!
               </li>
             </ul>
           </div>
@@ -272,23 +267,23 @@
         </p>
         <h1 class="mb-4">Book A Seat For Your Kid</h1>
         <p>
-          Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo
-          dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo.
-          Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
-          dolor
+        Booking seats for your kids in Estudy offers numerous benefits that enhance their learning experience and provide convenience for you as a parent. By reserving a seat, you ensure your child has a comfortable and designated spot, saving time and avoiding last-minute hassles.
         </p>
         <ul class="list-inline m-0">
           <li class="py-2">
-            <i class="fas fa-check text-success mr-3"></i>Labore eos amet
-            dolor amet diam
+            <i class="fas fa-check text-success mr-3"></i>Provides a sense of security and organization for your child
+
+
           </li>
           <li class="py-2">
-            <i class="fas fa-check text-success mr-3"></i>Etsea et sit dolor
-            amet ipsum
+            <i class="fas fa-check text-success mr-3"></i>
+            This thoughtful planning allows your child to focus on their studies 
           </li>
           <li class="py-2">
-            <i class="fas fa-check text-success mr-3"></i>Diam dolor diam
-            elitripsum vero.
+            <i class="fas fa-check text-success mr-3"></i>Gives you peace of mind knowing your child's seat is secured
+
+
+            
           </li>
         </ul>
       </div>
