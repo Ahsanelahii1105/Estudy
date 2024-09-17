@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\WebsiteController;
+use App\Http\Controllers\QuizController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,11 +39,8 @@ Route::middleware([
     })->name('dashboard');
 });
 
+// pdf ROUTE
 Route::get('generate-pdf', [App\Http\Controllers\pdfController::class, 'generatepdf']);
-
-Route::get('/button', function () {
-    return view('button');
-});
 
 // navbar
 
@@ -84,22 +82,54 @@ Route::get('/admin/insertsub' , [AdminController::class , 'SUBcreate']);
 Route::post('/admin/insertsub' , [AdminController::class , 'SUBstore']);
 Route::get('/subject' , [AdminController::class , 'subdetails']);
 
-// for faculty data
+//------------------------ for faculty data
 Route::get('/admin/insertfaculty' , [AdminController::class , 'facultycreate']);
 Route::post('/admin/insertfaculty' , [AdminController::class , 'facultystore']);
 Route::get('faculty' , [AdminController::class , 'facultydetails']);
 
-// for contact data
+//------------------------ for contact data
 Route::get('/contact' , [AdminController::class , 'contactcreate']);
 Route::post('/insert' , [AdminController::class , 'contactstore']);
 Route::get('/admin/contactfetch' , [AdminController::class , 'contactdetails']);
 
-// for booking data
+//------------------------ for booking data
 Route::post('/insertwo' , [AdminController::class , 'bookstore']);
 Route::get('/admin/bookfetch' , [AdminController::class , 'bookdetails']);
 
-// video course
+//------------------------ video course
 Route::get('/videopage/{id?}' , [AdminController::class , 'authvidcor'])->name('videopage');
-// video sub
+//------------------------ video sub
 Route::get('/videosub/{id?}' , [AdminController::class , 'authvidsub'])->name('videosub');
+
+
+
+//------------------------- QUIZ ROUTE
+
+Route::any('/quizIndex', function () {
+    return view('quiz/quizIndex');
+});
+
+Route::any('/ansDesk', function () {
+    return view('quiz/answerDesk');
+});
+
+Route::any('/quizStart', function () {
+    return view('quiz/start');
+});
+
+Route::any('/quizEnd', function () {
+    return view('quiz/end');
+});
+
+Route::any('/quiz/startquiz',[QuizController::class,  'startquiz']);
+
+Route::any('/quiz/submitans',[QuizController::class,  'submitans']);
+
+Route::any('/quiz/add',[QuizController::class,  'add']);
+
+Route::any('/quiz/update',[QuizController::class,  'update']);
+
+Route::any('/quiz/delete',[QuizController::class,  'delete']);
+
+Route::any('/quiz/question',[QuizController::class,  'showque']);
 
