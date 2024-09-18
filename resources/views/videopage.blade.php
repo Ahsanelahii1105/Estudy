@@ -1,7 +1,7 @@
 @extends('layouts.mainthree')
 
 @push('title')
-    <title>Mind Grower Education - Video</title>
+    <title>E-Study - Video</title>
 @endpush
 
 @section('content')

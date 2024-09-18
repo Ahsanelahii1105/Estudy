@@ -12,8 +12,12 @@
             <input type="text" name="name" id="" class="form-control" placeholder="Enter Subject Title">
          </div>
          <div class="form-group">
-            <label for="" class="form-label">Faculty Description</label>
+            <label for="" class="form-label">Faculty short Description</label>
             <textarea rows="4" type="text" name="desc" id="" class="form-control" placeholder="Enter Subject Description"></textarea>
+         </div>
+         <div class="form-group">
+            <label for="" class="form-label">Faculty full Description</label>
+            <textarea rows="4" type="text" name="fulldesc" id="" class="form-control" placeholder="Enter Subject Description"></textarea>
          </div>
          <div class="form-group">
             <label for="" class="form-label">Image (if any:)</label>

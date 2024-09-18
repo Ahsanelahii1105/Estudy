@@ -221,6 +221,7 @@ class AdminController extends Controller
         $faculty = new faculties();
         $faculty->faculty_name = $request->name;
         $faculty->faculty_desc = $request->desc;
+        $faculty->faculty_fulldesc = $request->fulldesc;
         $faculty->faculty_image = $request->image;
 
         $image = $request->image;

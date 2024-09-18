@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @push('title')
-  <title>Mind Grower Education - Home</title>
+  <title>E-Study - Home</title>
 @endpush
 
 @section('content')
@@ -171,7 +171,7 @@
       <div class="testimonial-item px-3">
         <div class="bg-light shadow-sm rounded mb-4 p-4">
           <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-          Estudy's classes have given my child the right direction, now they're achieving their dream & study material is very useful 
+          Estudy's classes have given my child the right direction, now they're achieving their dream & study material is very useful
         </div>
         <div class="d-flex align-items-center">
           <img class="rounded-circle" src="img/testimonial-2.jpg" style="width: 70px; height: 70px" alt="Image" />
@@ -228,7 +228,7 @@
         Your success has no limits, you can achieve anything you set your mind to!
          We're proud of you, you're the future stars!
           Education is the first step towards making your dreams come true.
-   
+
       </p>
         <div class="row pt-2 pb-4">
           <div class="col-6 col-md-4">
@@ -277,13 +277,13 @@
           </li>
           <li class="py-2">
             <i class="fas fa-check text-success mr-3"></i>
-            This thoughtful planning allows your child to focus on their studies 
+            This thoughtful planning allows your child to focus on their studies
           </li>
           <li class="py-2">
             <i class="fas fa-check text-success mr-3"></i>Gives you peace of mind knowing your child's seat is secured
 
 
-            
+
           </li>
         </ul>
       </div>

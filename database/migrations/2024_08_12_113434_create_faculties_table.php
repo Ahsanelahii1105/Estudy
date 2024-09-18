@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('faculty_name')->required();
             $table->string('faculty_desc')->required();
+            $table->string('faculty_fulldesc')->required();
             $table->string('faculty_image')->required();
             $table->timestamps();
         });

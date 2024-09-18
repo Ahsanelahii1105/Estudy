@@ -1,7 +1,7 @@
 @extends('layouts.maintwo')
 
 @push('title')
-    <title>Mind Grower Education - Contact</title>
+    <title>E-Study - Contact</title>
 @endpush
 
 @section('PageTitle')

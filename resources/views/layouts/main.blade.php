@@ -118,11 +118,11 @@ Transforming Education, Transforming Lives  </p>
             <div class="col-lg-3 col-md-6 mb-5">
                 <a href="" class="navbar-brand font-weight-bold text-primary m-0 mb-2 p-0"
                     style="font-size: 40px; line-height: 30px">
-                    <img src="img/logo.png" class="bg-img" height="150px" width="150px" alt="logo">
+                    <img src="img/lg.png" class="bg-img" height="150px" width="150px" alt="logo">
                 </a>
                 <p>
                 we are a non-stop online learning platform that offers a wide range of subjects from matrix system and O Level
-                to A Level. Our comprehensive curriculum covers various subjects, including:.
+                to A Level. Our comprehensive curriculum covers various subjects.
                 </p>
                 <div class="d-flex justify-content-start mt-4">
                     <a class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
@@ -193,7 +193,7 @@ Transforming Education, Transforming Lives  </p>
         <div class="container-fluid pt-5" style="border-top: 1px solid rgba(23, 162, 184, 0.2) ;">
             <p class="m-0 text-center text-white">
                 &copy;
-                <a class="text-primary font-weight-bold" href="#">Mind Grower Education</a>.
+                <a class="text-primary font-weight-bold" href="#">E-Study</a>
                 All Rights Reserved.
 
                 <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
