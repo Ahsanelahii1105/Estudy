@@ -93,9 +93,10 @@ class AdminController extends Controller
     }
     public function classsubjectdetails(){
 
-        $clases = classes::all();
-        $subjects = subject::all();
-        return view('index', compact([("clases"),("subjects")]));
+        $clases = classes::paginate(3)->all();
+        $subjects = subject::paginate(2)->all();
+        $faculties = faculties::paginate(4)->all();
+        return view('index', compact([("clases"),("subjects"),("faculties")]));
     }
 
     public function regfetch(){
