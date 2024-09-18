@@ -56,6 +56,10 @@
                      <a class="nav-link {{Request::is('admin/bookfetch') ? 'active' : ''}}"
                         href="/admin/bookfetch">Booking Data</a>
                   </li>
+                  <li class="nav-item">
+                     <a class="nav-link {{Request::is('admin/regfetch') ? 'active' : ''}}"
+                        href="/admin/regfetch">Register Fetch</a>
+                  </li>
                </ul>
                <div class="d-flex my-2 my-lg-0">
                   @if (Route::has('login'))

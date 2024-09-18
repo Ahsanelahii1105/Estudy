@@ -9,7 +9,7 @@
     <meta content="Free HTML Templates" name="description" />
 
     <!-- Favicon -->
-    <link href="img/logo.png" rel="icon" />
+    <link href="img/lg.png" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -39,7 +39,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light py-3 py-lg-0 px-0 px-lg-5">
             <a href="#" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px">
-                <img src="img/logo.png" class="bg-img" height="150px" width="150px" alt="logo">
+                <img src="img/lg.png" class="bg-img" height="150px" width="150px" alt="logo">
             </a>
             <button type="button" class="navbar-toggler clicktoggle" data-toggle="collapse"
                 data-target="#navbarCollapse">

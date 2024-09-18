@@ -92,6 +92,9 @@ Route::get('/contact' , [AdminController::class , 'contactcreate']);
 Route::post('/insert' , [AdminController::class , 'contactstore']);
 Route::get('/admin/contactfetch' , [AdminController::class , 'contactdetails']);
 
+
+Route::get('/admin/regfetch' , [AdminController::class , 'regfetch']);
+
 //------------------------ for booking data
 Route::post('/insertwo' , [AdminController::class , 'bookstore']);
 Route::get('/admin/bookfetch' , [AdminController::class , 'bookdetails']);

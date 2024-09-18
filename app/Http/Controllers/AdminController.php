@@ -10,6 +10,7 @@ use App\Models\courses;
 use App\Models\subject;
 use App\Models\faculties;
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
@@ -97,6 +98,10 @@ class AdminController extends Controller
         return view('index', compact([("clases"),("subjects")]));
     }
 
+    public function regfetch(){
+        $reg = User::all();
+        return view('admin/regfetch', compact(['reg']));
+    }
 
     public function bookstore(Request $request)
     {

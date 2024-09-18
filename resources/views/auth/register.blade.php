@@ -72,7 +72,7 @@
             </div>
 
             <div class="d-flex flex-row align-items-center mb-0">
-                <i class="fa-solid fa-phone"></i>
+                &nbsp;&nbsp;<i class="fas fas-solid fa-phone"></i>&nbsp;
                 <div data-mdb-input-init class="form-outline flex-fill mt-4">
                     <x-input id="Phone_Number" class="form-control" type="text" name="phone" required
                         autocomplete="usernumber" />
@@ -81,7 +81,7 @@
             </div>
 
             <div class="d-flex flex-row align-items-center mb-0">
-                <i class="fas fa-lock fa-lg ms-3 fa-fw"></i>
+                &nbsp;&nbsp;<i class="fas fa-solid fa-location-arrow"></i> &nbsp;
                 <div data-mdb-input-init class="form-outline flex-fill mt-4">
                     <x-input id="Current_address" class="form-control" type="text" name="address" required
                         autocomplete="useraddress" />
@@ -90,7 +90,7 @@
             </div>
 
             <div class="d-flex flex-row align-items-center mb-0">
-                <i class="fas fa-lock fa-lg ms-3 fa-fw"></i>
+                &nbsp;&nbsp;<i class="fas fa-solid fa-check"></i> &nbsp;
                 <div data-mdb-input-init class="form-outline flex-fill mt-4">
                     <select name="gender" id="" class="form-control">
                         <option value="" selected disabled>Select an option..</option>
