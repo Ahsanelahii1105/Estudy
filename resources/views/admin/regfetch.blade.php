@@ -9,14 +9,16 @@
             width: 100%;
         }
 
-        thead, td,
+        thead,
+        td,
         th {
             border: 1px solid #dddddd;
             text-align: left;
             padding: 8px;
         }
 
-        thead, tr:nth-child(even) {
+        thead,
+        tr:nth-child(even) {
             background-color: #dddddd;
         }
     </style>
@@ -48,14 +50,13 @@
                                 <td>{{ $r->phone }}</td>
                                 <td>{{ $r->address }}</td>
                                 <td>{{ $r->gender }}</td>
-                                <td><a href="#" class="btn btn-primary">Update</a> &nbsp;<a href="#"
-                                        class="btn btn-danger">Delete</a></td>
+                                <td><a href="#" class="btn btn-danger">Delete</a></td>
                             </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                        @endforeach
+                    </tbody>
+                </table>
 
-                </div>
+            </div>
         </div>
     </div>
 @endsection

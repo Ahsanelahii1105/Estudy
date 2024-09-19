@@ -2,11 +2,12 @@
 
 use App\Models\classes;
 use App\Models\subject;
+use App\Models\faculties;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\QuizController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\WebsiteController;
-use App\Http\Controllers\QuizController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,9 +33,10 @@ Route::middleware([
         if(Auth::User()->role==1){
             return view('admin.index');
         }else{
-            $subjects = subject::all();
             $clases = classes::all();
-            return view('index' , compact('subjects', 'clases'));
+            $subjects = subject::all();
+            $faculties = faculties::all();
+            return view('index', compact([("clases"),("subjects"),("faculties")]));
         }
     })->name('dashboard');
 });
