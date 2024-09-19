@@ -141,13 +141,20 @@
                 <div class="row" style="padding-top: 30vh; color: white;">
                     <div class="col-md-3"></div>
                     <div class="col-md-4">
-                        <h4>#{{ Session::get('nextq') }}: {{ $question->question }}</h4>
-                        <input value="a" checked="true" type="radio" name="ans">(A)<small>
-                            {{ $question->a }}</small><br>
-                        <input value="b" type="radio" name="ans">(B)<small> {{ $question->b }}</small><br>
-                        <input value="c" type="radio" name="ans">(C)<small> {{ $question->c }}</small><br>
-                        <input value="d" type="radio" name="ans">(D)<small> {{ $question->d }}</small>
-                        <input value="{{ $question->ans }}" style="visibility: hidden;" name="dbans">
+                        @if ($question)  <!-- Check if question exists -->
+                            <h4>#{{ Session::get('nextq') }}: {{ $question->question }}</h4>
+                            <input value="a" type="radio" name="ans" id="option-a" checked>
+                            <label for="option-a">(A) <small>{{ $question->a }}</small></label><br>
+                            <input value="b" type="radio" name="ans" id="option-b">
+                            <label for="option-b">(B) <small>{{ $question->b }}</small></label><br>
+                            <input value="c" type="radio" name="ans" id="option-c">
+                            <label for="option-c">(C) <small>{{ $question->c }}</small></label><br>
+                            <input value="d" type="radio" name="ans" id="option-d">
+                            <label for="option-d">(D) <small>{{ $question->d }}</small></label><br>
+                            <input type="hidden" value="{{ $question->ans }}" name="dbans">
+                        @else
+                            <h4>Question not found.</h4> <!-- Fallback message -->
+                        @endif
                     </div>
                     <div class="col-md-5"></div>
                 </div>

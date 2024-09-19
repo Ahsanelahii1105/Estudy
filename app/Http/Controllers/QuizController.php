@@ -3,100 +3,101 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\question;
+use App\Models\Question; // Use uppercase 'Q'
 use Illuminate\Support\Facades\Session;
-
 use Illuminate\Http\Request;
 
 class QuizController extends Controller
 {
-
-    // adding data
-    public function add(Request $request){
-        $validate=$request->validate([
-            'question'=>'required',
-            'opa'=>'required',
-            'opb'=>'required',
-            'opc'=>'required',
-            'opd'=>'required',
-            'ans'=>'required',
+    // Adding data
+    public function add(Request $request)
+    {
+        $validated = $request->validate([
+            'question' => 'required',
+            'opa' => 'required',
+            'opb' => 'required',
+            'opc' => 'required',
+            'opd' => 'required',
+            'ans' => 'required',
         ]);
-        $q = new question();
-        $q->question=$request->question;
-        $q->a=$request->opa;
-        $q->b=$request->opb;
-        $q->c=$request->opc;
-        $q->d=$request->opd;
-        $q->ans=$request->ans;
+
+        $q = new Question();
+        $q->question = $request->question;
+        $q->a = $request->opa;
+        $q->b = $request->opb;
+        $q->c = $request->opc;
+        $q->d = $request->opd;
+        $q->ans = $request->ans;
 
         $q->save();
 
-        session::put('successMessage',"Question Successfully Added");
+        Session::put('successMessage', "Question Successfully Added");
         return redirect('quiz/question');
-
-
     }
 
-    public function showque(){
+    public function showque() {
         $qs = question::all();
+        \Log::info('Questions: ', $qs->toArray());
 
-        return view('quiz/question')->with(['question'=>$qs]);
+        return view('quiz/question')->with(['question' => $qs]);
     }
 
-    // updating data
-
-    public function update(Request $request){
-        $validate=$request->validate([
-            'id'=>'required',
-            'question'=>'required',
-            'opa'=>'required',
-            'opb'=>'required',
-            'opc'=>'required',
-            'opd'=>'required',
-            'ans'=>'required',
+    // Updating data
+    public function update(Request $request)
+    {
+        $validated = $request->validate([
+            'id' => 'required',
+            'question' => 'required',
+            'opa' => 'required',
+            'opb' => 'required',
+            'opc' => 'required',
+            'opd' => 'required',
+            'ans' => 'required',
         ]);
-        $q = question::find($request->id);
-        $q->question=$request->question;
-        $q->a=$request->opa;
-        $q->b=$request->opb;
-        $q->c=$request->opc;
-        $q->d=$request->opd;
-        $q->ans=$request->ans;
+
+        $q = Question::findOrFail($request->id);
+        $q->question = $request->question;
+        $q->a = $request->opa;
+        $q->b = $request->opb;
+        $q->c = $request->opc;
+        $q->d = $request->opd;
+        $q->ans = $request->ans;
 
         $q->save();
 
-        session::put('successMessage',"Question Successfully Updated");
+        Session::put('successMessage', "Question Successfully Updated");
         return redirect('quiz/question');
-
-
     }
 
-    // delete data
-    public function delete(Request $request){
-        $validate=$request->validate([
-            'id'=>'required',
+    // Delete data
+    public function delete(Request $request)
+    {
+        $validated = $request->validate([
+            'id' => 'required',
         ]);
 
-        question::where('id', $request->id)->delete();
-        session::put('successMessage',"Question Successfully Deleted");
+        Question::destroy($request->id);
+        Session::put('successMessage', "Question Successfully Deleted");
         return redirect('quiz/question');
     }
 
-    // start quiz function
-    public function startquiz(){
-        session::put("nextq",'1');
-        session::put("wrongans",'0');
-        session::put("correctans",'0');
-        $q=question::all()->first();
+    // Start quiz function
+    public function startquiz()
+    {
+        Session::put("nextq", 1);
+        Session::put("wrongans", 0);
+        Session::put("correctans", 0);
 
-        return view('quiz/answerDesk')->with(['question'=>$q]);
+        $q = Question::first();
+
+        return view('quiz/answerDesk')->with(['question' => $q]);
     }
 
-    // submit answer function
+    // Submit answer function
     public function submitans(Request $request)
     {
         // Retrieve session data
-        $nextq = Session::get('nextq', 1); // Default to 1 if not set
+        $nextq = Session::get('nextq', 1);
         $wrongans = Session::get('wrongans', 0);
         $correctans = Session::get('correctans', 0);
 
@@ -132,7 +133,11 @@ class QuizController extends Controller
         // Get the current question based on the index
         $currentQuestion = $questions->get($nextq - 1);
 
+        // Ensure that the question exists
+        if (!$currentQuestion) {
+            return redirect('quiz/end')->with('error', 'No more questions available.');
+        }
+
         return view('quiz/answerDesk')->with(['question' => $currentQuestion]);
     }
-
 }

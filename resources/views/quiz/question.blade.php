@@ -14,121 +14,147 @@
 
     <style>
         body {
-    color: #566787;
-    background: #f5f5f5;
-    font-family: 'Roboto', sans-serif;
-  }
-  .table-responsive {
-    margin: 30px 0;
-  }
-  .table-wrapper {
-    min-width: 1000px;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 1px 1px rgba(0,0,0,.05);
-  }
-  .table-title {
-    padding-bottom: 10px;
-    margin: 0 0 10px;
-    min-width: 100%;
-  }
-  .table-title h2 {
-    margin: 8px 0 0;
-    font-size: 22px;
-  }
-  .search-box {
-    position: relative;
-    float: right;
-  }
-  .search-box input {
-    height: 34px;
-    border-radius: 20px;
-    padding-left: 35px;
-    border-color: #ddd;
-    box-shadow: none;
-  }
-  .search-box input:focus {
-    border-color: #3FBAE4;
-  }
-  .search-box i {
-    color: #a0a5b1;
-    position: absolute;
-    font-size: 19px;
-    top: 8px;
-    left: 10px;
-  }
-  table.table tr th, table.table tr td {
-    border-color: #e9e9e9;
-  }
-  table.table-striped tbody tr:nth-of-type(odd) {
-    background-color: #fcfcfc;
-  }
-  table.table-striped.table-hover tbody tr:hover {
-    background: #f5f5f5;
-  }
-  table.table th i {
-    font-size: 13px;
-    margin: 0 5px;
-    cursor: pointer;
-  }
-  table.table td:last-child {
-    width: 130px;
-  }
-  table.table td a {
-    color: #a0a5b1;
-    display: inline-block;
-    margin: 0 5px;
-  }
-  table.table td a.view {
-    color: #03A9F4;
-  }
-  table.table td a.edit {
-    color: #FFC107;
-  }
-  table.table td a.delete {
-    color: #E34724;
-  }
-  table.table td i {
-    font-size: 19px;
-  }
-  .pagination {
-    float: right;
-    margin: 0 0 5px;
-  }
-  .pagination li a {
-    border: none;
-    font-size: 95%;
-    width: 30px;
-    height: 30px;
-    color: #999;
-    margin: 0 2px;
-    line-height: 30px;
-    border-radius: 30px !important;
-    text-align: center;
-    padding: 0;
-  }
-  .pagination li a:hover {
-    color: #666;
-  }
-  .pagination li.active a {
-    background: #03A9F4;
-  }
-  .pagination li.active a:hover {
-    background: #0397d6;
-  }
-  .pagination li.disabled i {
-    color: #ccc;
-  }
-  .pagination li i {
-    font-size: 16px;
-    padding-top: 6px
-  }
-  .hint-text {
-    float: left;
-    margin-top: 6px;
-    font-size: 95%;
-  }
+            color: #566787;
+            background: #f5f5f5;
+            font-family: 'Roboto', sans-serif;
+        }
 
+        .table-responsive {
+            margin: 30px 0;
+        }
+
+        .table-wrapper {
+            min-width: 1000px;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+        }
+
+        .table-title {
+            padding-bottom: 10px;
+            margin: 0 0 10px;
+            min-width: 100%;
+        }
+
+        .table-title h2 {
+            margin: 8px 0 0;
+            font-size: 22px;
+        }
+
+        .search-box {
+            position: relative;
+            float: right;
+        }
+
+        .search-box input {
+            height: 34px;
+            border-radius: 20px;
+            padding-left: 35px;
+            border-color: #ddd;
+            box-shadow: none;
+        }
+
+        .search-box input:focus {
+            border-color: #3FBAE4;
+        }
+
+        .search-box i {
+            color: #a0a5b1;
+            position: absolute;
+            font-size: 19px;
+            top: 8px;
+            left: 10px;
+        }
+
+        table.table tr th,
+        table.table tr td {
+            border-color: #e9e9e9;
+        }
+
+        table.table-striped tbody tr:nth-of-type(odd) {
+            background-color: #fcfcfc;
+        }
+
+        table.table-striped.table-hover tbody tr:hover {
+            background: #f5f5f5;
+        }
+
+        table.table th i {
+            font-size: 13px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        table.table td:last-child {
+            width: 130px;
+        }
+
+        table.table td a {
+            color: #a0a5b1;
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        table.table td a.view {
+            color: #03A9F4;
+        }
+
+        table.table td a.edit {
+            color: #FFC107;
+        }
+
+        table.table td a.delete {
+            color: #E34724;
+        }
+
+        table.table td i {
+            font-size: 19px;
+        }
+
+        .pagination {
+            float: right;
+            margin: 0 0 5px;
+        }
+
+        .pagination li a {
+            border: none;
+            font-size: 95%;
+            width: 30px;
+            height: 30px;
+            color: #999;
+            margin: 0 2px;
+            line-height: 30px;
+            border-radius: 30px !important;
+            text-align: center;
+            padding: 0;
+        }
+
+        .pagination li a:hover {
+            color: #666;
+        }
+
+        .pagination li.active a {
+            background: #03A9F4;
+        }
+
+        .pagination li.active a:hover {
+            background: #0397d6;
+        }
+
+        .pagination li.disabled i {
+            color: #ccc;
+        }
+
+        .pagination li i {
+            font-size: 16px;
+            padding-top: 6px
+        }
+
+        .hint-text {
+            float: left;
+            margin-top: 6px;
+            font-size: 95%;
+        }
     </style>
 </head>
 
@@ -196,128 +222,137 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($question as $q)
+                        @if ($question->isEmpty())
                             <tr>
-                                <td>{{ $loop->index }}</td>
-                                <td>{{ $q->question }}</td>
-
-                                <td>
-                                    <a href="#" class="text-warning" data-bs-toggle="modal"
-                                        data-bs-target="#modal_update{{ $q->id }}">Update</a>
-                                    <a href="#" class="text-warning" data-bs-toggle="modal"
-                                        data-bs-target="#modal_delete{{ $q->id }}">Delete</a>
-                                </td>
+                                <td colspan="3">No questions available.</td>
                             </tr>
+                        @else
+                            @foreach ($question as $q)
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $q->question }}</td>
+                                    <td>
+                                        <a href="#" class="text-warning" data-bs-toggle="modal"
+                                            data-bs-target="#modal_update{{ $q->id }}">Update</a>
+                                        <a href="#" class="text-danger" data-bs-toggle="modal"
+                                            data-bs-target="#modal_delete{{ $q->id }}">Delete</a>
+                                    </td>
+                                </tr>
 
-                            {{-- model update --}}
-                            <div class="modal fade" id="modal_update{{ $q->id }}" data-bs-backdrop="static"
-                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
 
-                                        <form action="/quiz/update" method="post">
-                                            @csrf
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="staticBackdropLabel">Update</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close">
-                                                    <span aria-hidden="true"></span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="row">
-                                                    <h5>Question!</h5>
-                                                </div>
+                                {{-- model update --}}
+                                <div class="modal fade" id="modal_update{{ $q->id }}" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
 
-                                                <div class="row" style="padding: 10px;">
-                                                    <input type="text" value="{{ $q->question }}" name="question"
-                                                        class="form-control">
+                                            <form action="/quiz/update" method="post">
+                                                @csrf
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="staticBackdropLabel">Update</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true"></span>
+                                                    </button>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col-md-6"><label>A:</label></div>
-                                                    <div class="col-md-6"><label>B:</label></div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <input type="text" name="opa" class="form-control"
-                                                            value="{{ $q->a }}">
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <h5>Question!</h5>
                                                     </div>
-                                                    <div class="col-md-6">
-                                                        <input type="text" name="opb" class="form-control"
-                                                            value="{{ $q->b }}">
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-6"><label>C:</label></div>
-                                                    <div class="col-md-6"><label>D:</label></div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-6"><input type="text" name="opc"
-                                                            class="form-control" value="{{ $q->c }}"></div>
-                                                    <div class="col-md-6"><input type="text" name="opd"
-                                                            class="form-control" value="{{ $q->d }}"></div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-3"><label>Answer: </label>
-                                                        <select name="ans" class="form-control">
-                                                            <option value="{{ $q->ans }}">{{ $q->ans }}
-                                                            </option>
-                                                            <option value="a">A</option>
-                                                            <option value="b">B</option>
-                                                            <option value="c">C</option>
-                                                            <option value="d">D</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-md-9"></div>
-                                                </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
-                                                    data-bs-dismiss="modal">Close</button>
-                                                <button type="submit" class="btn btn-primary">Update
-                                                    Question</button>
-                                            </div>
-                                            <input style="visibility: hidden;" name="id"
-                                                value="{{ $q->id }}">
-                                        </form>
 
+                                                    <div class="row" style="padding: 10px;">
+                                                        <input type="text" value="{{ $q->question }}"
+                                                            name="question" class="form-control">
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6"><label>A:</label></div>
+                                                        <div class="col-md-6"><label>B:</label></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <input type="text" name="opa" class="form-control"
+                                                                value="{{ $q->a }}">
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <input type="text" name="opb" class="form-control"
+                                                                value="{{ $q->b }}">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6"><label>C:</label></div>
+                                                        <div class="col-md-6"><label>D:</label></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6"><input type="text" name="opc"
+                                                                class="form-control" value="{{ $q->c }}">
+                                                        </div>
+                                                        <div class="col-md-6"><input type="text" name="opd"
+                                                                class="form-control" value="{{ $q->d }}">
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-3"><label>Answer: </label>
+                                                            <select name="ans" class="form-control">
+                                                                <option value="{{ $q->ans }}">
+                                                                    {{ $q->ans }}
+                                                                </option>
+                                                                <option value="a">A</option>
+                                                                <option value="b">B</option>
+                                                                <option value="c">C</option>
+                                                                <option value="d">D</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-md-9"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-primary">Update
+                                                        Question</button>
+                                                </div>
+                                                <input style="visibility: hidden;" name="id"
+                                                    value="{{ $q->id }}">
+                                            </form>
+
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            {{-- model delete --}}
-                            <div class="modal fade" id="modal_delete{{ $q->id }}" data-bs-backdrop="static"
-                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
+                                {{-- model delete --}}
+                                <div class="modal fade" id="modal_delete{{ $q->id }}"
+                                    data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
 
-                                        <form action="/quiz/delete" method="post">
-                                            @csrf
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="staticBackdropLabel">Delete</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                    aria-label="Close">
-                                                    <span aria-hidden="true"></span>
-                                                </button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h5>Do you want to delete this question?</h5>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
-                                                    data-bs-dismiss="modal">Cancel</button>
-                                                <button type="submit" class="btn btn-danger">Delete</button>
-                                            </div>
-                                            <input style="visibility: hidden;" name="id"
-                                                value="{{ $q->id }}">
-                                        </form>
+                                            <form action="/quiz/delete" method="post">
+                                                @csrf
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="staticBackdropLabel">Delete</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true"></span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h5>Do you want to delete this question?</h5>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">Cancel</button>
+                                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                                </div>
+                                                <input style="visibility: hidden;" name="id"
+                                                    value="{{ $q->id }}">
+                                            </form>
 
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        @endforeach
+                            @endforeach
+                        @endif
                     </tbody>
                 </table>
 

@@ -136,5 +136,5 @@ Route::any('/quiz/update',[QuizController::class,  'update']);
 
 Route::any('/quiz/delete',[QuizController::class,  'delete']);
 
-Route::any('/quiz/question',[QuizController::class,  'showque']);
+Route::get('/quiz/question', [QuizController::class, 'showque']);
 
