@@ -1,6 +1,6 @@
 (function ($) {
     "use strict";
-    
+
     // Dropdown on mouse hover
     $(document).ready(function () {
         function toggleNavbarMethod() {
@@ -17,8 +17,8 @@
         toggleNavbarMethod();
         $(window).resize(toggleNavbarMethod);
     });
-    
-    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
@@ -97,15 +97,15 @@
             }
         }
     });
-    
+
 })(jQuery);
 
-// sidenav course page 
+// sidenav course page
 
 function openNav() {
 	document.getElementById("sideMenu")
 		.style.width = "500px";
-    
+
 	document.getElementById("contentArea")
 		.style.marginLeft = "350px";
 }
@@ -120,11 +120,11 @@ function closeNav() {
 function showContent(content) {
 	document.getElementById("contentTitle")
 		.textContent = content + " Page";
-		
+
 	closeNav();
 }
 
-// video page 
+// video page
     // Get the video element
     const video = document.getElementById('video');
 
@@ -187,3 +187,7 @@ function showContent(content) {
             commentInput.value = '';
         }
     });
+
+
+    // discussion library
+    

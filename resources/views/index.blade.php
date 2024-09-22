@@ -50,7 +50,7 @@
                                         <h5 class="card-title">{{ $sub->subject_name }}</h5>
                                         <p class="card-text">{{ $sub->subject_desc }}</p>
                                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                        <a href="/videopage" class="btn btn-outline-primary">Join Free</a>
+                                        <a href="{{url('/videopage', $sub->id)}}" class="btn btn-outline-primary">Join Free</a>
                                     </div>
                                 </div>
                             </div>

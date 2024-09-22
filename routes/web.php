@@ -106,7 +106,12 @@ Route::get('/videopage/{id?}' , [AdminController::class , 'authvidcor'])->name('
 //------------------------ video sub
 Route::get('/videosub/{id?}' , [AdminController::class , 'authvidsub'])->name('videosub');
 
+//------------------------ discussion library
+// Route::get('/discussionLibrary', [AdminController::class, 'discussionLibrary']);
 
+Route::get('/discussionLibrary', function (){
+    return view('discussionLibrary');
+});
 
 //------------------------- QUIZ ROUTE
 

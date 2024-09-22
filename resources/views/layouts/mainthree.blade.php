@@ -26,6 +26,8 @@
     <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet" />
 
+    <link href="{{asset('https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css')}}" rel="stylesheet" />
+
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
 
@@ -52,7 +54,7 @@
                     <a href="/subject" class="nav-link">Subjects</a>
                     <a href="/courses" class="nav-link">Courses</a>
                     <a href="/faculty" class="nav-item nav-link">Faculty Need?</a>
-                    <a href="#" class="nav-item nav-link">Discussion Library</a>
+                    <a href="/discussionLibrary" class="nav-item nav-link">Discussion Library</a>
                     <a href="/contact" class="nav-item nav-link">Contact</a>
                 </div>
                 @if (Route::has('login'))
@@ -103,6 +105,7 @@
 
     <!-- JavaScript Libraries -->
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>

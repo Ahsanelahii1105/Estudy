@@ -50,7 +50,7 @@
                     <a href="/subject" class="nav-item nav-link">Subjects</a>
                     <a href="/courses" class="nav-item nav-link">Courses</a>
                     <a href="/faculty" class="nav-item nav-link">Faculty Need?</a>
-                    <a href="/faculty" class="nav-item nav-link">Discussion Library</a>
+                    <a href="/discussionLibrary" class="nav-item nav-link">Discussion Library</a>
                     <a href="/contact" class="nav-item nav-link active">Contact</a>
                 </div>
                 @if (Route::has('login'))

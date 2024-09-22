@@ -51,7 +51,7 @@
                     <a href="/subject" class="nav-link ">Subjects</a>
                     <a href="/courses" class="nav-link ">Courses</a>
                     <a href="/faculty" class="nav-item nav-link">Faculty Need?</a>
-                    <a href="gallery.html" class="nav-item nav-link">Discussion Library</a>
+                    <a href="/discussionLibrary" class="nav-item nav-link">Discussion Library</a>
                     <a href="/contact" class="nav-item nav-link">Contact</a>
                 </div>
                 @if (Route::has('login'))
