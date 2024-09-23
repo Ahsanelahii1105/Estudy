@@ -48,7 +48,7 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
 
-                            <form action="#" method="post">
+                            <form action="/discussionLibrary" method="post">
                                 @csrf
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="staticBackdropLabel">Add</h5>
@@ -58,16 +58,16 @@
                                 </div>
                                 <div class="modal-body">
                                     <div class="row">
-                                        <h5>Name:</h5>
+                                        <h5>Your Name:</h5>
                                     </div>
                                     <div class="row" style="padding: 10px;">
-                                        <input type="text" name="question" class="form-control">
+                                        <input type="text" name="name" class="form-control">
                                     </div>
                                     <div class="row">
                                         <h5>Question!</h5>
                                     </div>
                                     <div class="row" style="padding: 10px;">
-                                        <input type="text" name="question" class="form-control">
+                                        <input type="text" name="ques" class="form-control">
                                     </div>
                                 </div>
                                 <div class="modal-footer">

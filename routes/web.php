@@ -109,9 +109,10 @@ Route::get('/videosub/{id?}' , [AdminController::class , 'authvidsub'])->name('v
 //------------------------ discussion library
 // Route::get('/discussionLibrary', [AdminController::class, 'discussionLibrary']);
 
-Route::get('/discussionLibrary', function (){
-    return view('discussionLibrary');
-});
+
+Route::get('/discussionLibrary' , [AdminController::class , 'librarycreate']);
+Route::post('/discussionLibrary' , [AdminController::class , 'librarystore']);
+Route::get('faculty' , [AdminController::class , 'facultydetails']);
 
 //------------------------- QUIZ ROUTE
 

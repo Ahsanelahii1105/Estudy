@@ -10,6 +10,7 @@ use App\Models\courses;
 use App\Models\subject;
 use App\Models\faculties;
 use Illuminate\Http\Request;
+use App\Models\library;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -269,9 +270,6 @@ class AdminController extends Controller
     }
 
 
-
-    // // index vido course page
-
     public function authvidcor(int $id)
     {
         if(Auth::check()){
@@ -292,6 +290,19 @@ class AdminController extends Controller
         }else{
             return redirect()->route('login');
         }
+    }
+
+    public function librarycreate(){
+        return view('discussionLibrary');
+    }
+
+    public function librarystore(Request $request){
+        $library = new Library();
+        $library->user_name = $request->name;
+        $library->user_ques = $request->ques;
+
+        $library->save();
+        return redirect()->back();
     }
 
 
