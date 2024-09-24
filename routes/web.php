@@ -111,7 +111,7 @@ Route::get('/videosub/{id?}' , [AdminController::class , 'authvidsub'])->name('v
 
 
 Route::get('/discussionLibrary' , [AdminController::class , 'libReplycreate']);
-Route::post('/discussionLibrary_' , [AdminController::class , 'libReplystore']);
+Route::post('/discussionLibrary_/{id}' , [AdminController::class , 'libReplystore']);
 
 Route::get('/discussionLibrary' , [AdminController::class , 'librarycreate']);
 Route::post('/discussionLibrary' , [AdminController::class , 'librarystore']);

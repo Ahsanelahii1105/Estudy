@@ -310,7 +310,7 @@ class AdminController extends Controller
         return view('discussionLibrary');
     }
 
-    public function libReplystore(Request $request){
+    public function libReplystore(Request $request, $id){
         $reply = new reply();
         $reply->reply = $request->reply;
 
