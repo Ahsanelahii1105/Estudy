@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('replies', function (Blueprint $table) {
             $table->id();
-            
             $table->string('reply');
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.

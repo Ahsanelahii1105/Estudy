@@ -127,13 +127,54 @@
                                         <p><small>Time: 1:38 AM</small></p>
                                     </div>
 
-
-
                                     <div>
                                         <p class="mb-0 mt-2"><b>Asking!</b></p>
                                         <p class="mb-1">{{$lib->user_ques}}</p>
+                                        @foreach ($reply as $rply)
+
+                                        <div class="container-fluid">
+                        <div class="row">
+
+                            <div class="mrg mt-2 col-md-1 col-sm-1" style="float: left;">
+                                <img src="/img/userimg.jpg" alt="user">
+                            </div>
+
+                            <div class="col-md-10 col-sm-10 ms-4">
+
+                                <div class="mt-3 text-start">
+                                    <div>
+                                        <p class="user-name mb-0">Qadir</p>
+                                        <p><small>Time: 2:38 AM</small></p>
+                                    </div>
+
+                                    <div>
+                                        <p class="mb-0 mt-2"><b>Reply!</b></p>
+                                        <p class="mb-1">{{ $rply->reply }}</p>
+                                        <button class="btn btn-primary mb-2 reply-button"
+                                            onclick="toggleReply(this)">Reply</button>
+                                        <div class="reply-section divshow divhide" style="display: none;">
+                                           <form action="{{url('/discussionLibrary_', $lib->id)}}" method="post">
+                                                @csrf
+                                            <textarea placeholder="Write a reply..." name="reply"></textarea>
+                                            <button class="btn btn-primary mt-2 mb-4 clickreplysub" type="submit">Submit Reply</button>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-1 col-sm-1"></div>
+
+                        </div>
+                    </div>
+                                         @endforeach
                                         <button class="btn btn-primary mb-2 reply-button replyhide"
                                            type="submit">Reply</button>
+
+
+
                                         <div class="reply-section divshow divhide" style="display: none;">
                                            <form action="{{url('/discussionLibrary_', $lib->id)}}" method="post">
                                                 @csrf
@@ -181,7 +222,7 @@
                         <div class="row">
 
                             <div class="mrg mt-2 col-md-1 col-sm-1" style="float: left;">
-                                <img src="/img/passport pic.jpg" alt="user">
+                                <img src="/img/userimg.jpg" alt="user">
                             </div>
 
                             <div class="col-md-10 col-sm-10 ms-4">
@@ -244,7 +285,7 @@
             $('.divhide').hide();
         });
         $(document).on('click', '.clickreplysub', function(){
-            $('.replyhide').show();
+            $('.replyhide').hide();
         });
     });
 

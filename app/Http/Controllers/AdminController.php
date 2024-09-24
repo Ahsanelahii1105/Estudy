@@ -310,13 +310,15 @@ class AdminController extends Controller
         return view('discussionLibrary');
     }
 
-    public function libReplystore(Request $request, $id){
+    public function libReplystore(Request $request, $id)
+    {
         $reply = new reply();
         $reply->reply = $request->reply;
-
         $reply->save();
+
         return redirect()->back();
     }
+
 
     public function librarydetails(){
         $library = library::all();
