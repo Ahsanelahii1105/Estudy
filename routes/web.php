@@ -110,9 +110,12 @@ Route::get('/videosub/{id?}' , [AdminController::class , 'authvidsub'])->name('v
 // Route::get('/discussionLibrary', [AdminController::class, 'discussionLibrary']);
 
 
+Route::get('/discussionLibrary' , [AdminController::class , 'libReplycreate']);
+Route::post('/discussionLibrary' , [AdminController::class , 'libReplystore']);
+
 Route::get('/discussionLibrary' , [AdminController::class , 'librarycreate']);
 Route::post('/discussionLibrary' , [AdminController::class , 'librarystore']);
-Route::get('faculty' , [AdminController::class , 'facultydetails']);
+Route::get('/discussionLibrary' , [AdminController::class , 'librarydetails']);
 
 //------------------------- QUIZ ROUTE
 

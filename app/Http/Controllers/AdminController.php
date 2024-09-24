@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\subs;
+use App\Models\reply;
 use App\Models\booking;
 use App\Models\classes;
 use App\Models\contact;
 use App\Models\courses;
+use App\Models\library;
 use App\Models\subject;
 use App\Models\faculties;
 use Illuminate\Http\Request;
-use App\Models\library;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -305,7 +306,23 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
+    public function libReplycreate(){
+        return view('discussionLibrary');
+    }
 
+    public function libReplystore(Request $request){
+        $reply = new reply();
+        $reply->reply = $request->reply;
+
+        $reply->save();
+        return redirect()->back();
+    }
+
+    public function librarydetails(){
+        $library = library::all();
+        $reply = reply::all();
+        return view('discussionLibrary' , compact([('library'),('reply')]));
+}
     /**
      * Display the specified resource.
      */

@@ -30,15 +30,15 @@
             <div class="col-md-1 col-sm-1"></div>
             <div class="col-md-5 col-sm-5">
                 <div>
-                    <button class="btn btn-primary" onclick="showSubjectContent()">Subject</button>
-                    <button class="btn btn-primary" onclick="showCourseContent()">Course</button>
+                    <button class="btn btn-primary subbtn" onclick="showSubjectContent()">Subject</button>
+                    <button class="btn btn-primary corbtn" onclick="showCourseContent()">Course</button>
                 </div>
             </div>
             <div class="col-md-3 col-sm-3"></div>
             <div class="col-md-3 col-sm-3">
 
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                <button type="button" class="btn btn-primary addbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                     Add
                 </button>
 
@@ -86,7 +86,7 @@
         <div id="content"></div>
     </div>
 
-    <div class="container text-center" style="margin-top: 150px;">
+    <div class="container text-center weldiv" style="margin-top: 150px;">
         <div class="row">
             <div class="col-md-12 col-sm-12">
                 <h1>Welcome To Discussion Library!</h1>
@@ -94,15 +94,11 @@
         </div>
     </div>
 @endsection
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 <script>
-    function toggleReply(button) {
-        var replySection = button.nextElementSibling;
-        if (replySection.style.display === "none" || replySection.style.display === "") {
-            replySection.style.display = "block"; // Show reply section
-        } else {
-            replySection.style.display = "none"; // Hide reply section
-        }
-    }
+
 
     function showSubjectContent() {
         var content = `
@@ -117,32 +113,41 @@
                     <div class="container-fluid">
                         <div class="row">
 
+                            @foreach ($library as $lib)
+
                             <div class="mrg mt-2 col-md-1 col-sm-1" style="float: left;">
-                                <img src="/img/passport pic.jpg" alt="user">
+                                <img src="/img/userimg.jpg" alt="user">
                             </div>
 
                             <div class="col-md-10 col-sm-10 ms-3">
 
                                 <div class="mt-3 text-start">
                                     <div>
-                                        <p class="user-name mb-0">Ahsan</p>
+                                        <p class="user-name mb-0">{{$lib->user_name}}</p>
                                         <p><small>Time: 1:38 AM</small></p>
                                     </div>
 
+
+
                                     <div>
                                         <p class="mb-0 mt-2"><b>Asking!</b></p>
-                                        <p class="mb-1">Find expression if other expression is in string?</p>
-                                        <button class="btn btn-primary mb-2 reply-button"
-                                            onclick="toggleReply(this)">Reply</button>
-                                        <div class="reply-section">
-                                            <textarea placeholder="Write a reply..."></textarea>
-                                            <button class="btn btn-primary mt-2 mb-4">Submit Reply</button>
+                                        <p class="mb-1">{{$lib->user_ques}}</p>
+                                        <button class="btn btn-primary mb-2 reply-button replyhide"
+                                           type="submit">Reply</button>
+                                        <div class="reply-section divshow divhide" style="display: none;">
+                                           <form action="/discussionLibrary" method="post">
+                                                @csrf
+                                            <textarea placeholder="Write a reply..." name="reply"></textarea>
+                                            <button class="btn btn-primary mt-2 mb-4 clickreplysub" type="submit">Submit Reply</button>
+                                            </form>
                                         </div>
                                     </div>
 
                                 </div>
 
                             </div>
+
+                            @endforeach
 
                             <div class="col-md-1 col-sm-1"></div>
 
@@ -158,7 +163,7 @@
 
             </div>
         </div>
-    `;
+   ` ;
         document.getElementById('content').innerHTML = content;
     }
 
@@ -219,4 +224,28 @@
     `;
         document.getElementById('content').innerHTML = content;
     }
+    $(document).ready(function(){
+        $(document).on('click', '.subbtn', function(){
+            $('.weldiv').hide();
+        });
+        $(document).on('click', '.corbtn', function(){
+            $('.weldiv').hide();
+        });
+        $(document).on('click', '.addbtn', function(){
+            $('.weldiv').hide();
+        });
+        $(document).on('click', '.reply-button', function(){
+            $('.divshow').show();
+        });
+        $(document).on('click', '.reply-button', function(){
+            $('.replyhide').hide();
+        });
+        $(document).on('click', '.clickreplysub', function(){
+            $('.divhide').hide();
+        });
+        $(document).on('click', '.clickreplysub', function(){
+            $('.replyhide').show();
+        });
+    });
+
 </script>
