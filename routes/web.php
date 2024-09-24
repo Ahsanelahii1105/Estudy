@@ -115,6 +115,10 @@ Route::post('/discussionLibrary_/{id}' , [AdminController::class , 'libReplystor
 
 Route::get('/discussionLibrary' , [AdminController::class , 'librarycreate']);
 Route::post('/discussionLibrary' , [AdminController::class , 'librarystore']);
+
+Route::get('/discussionLibrary' , [AdminController::class , 'librarycorcreate']);
+Route::post('/discussionLibraryy' , [AdminController::class , 'librarycorstore']);
+
 Route::get('/discussionLibrary' , [AdminController::class , 'librarydetails']);
 
 //------------------------- QUIZ ROUTE

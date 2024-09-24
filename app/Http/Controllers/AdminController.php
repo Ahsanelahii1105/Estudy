@@ -11,7 +11,9 @@ use App\Models\courses;
 use App\Models\library;
 use App\Models\subject;
 use App\Models\faculties;
+use App\Models\librarycor;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -305,6 +307,18 @@ class AdminController extends Controller
         $library->save();
         return redirect()->back();
     }
+    public function librarycorcreate(){
+        return view('discussionLibrary');
+    }
+
+    public function librarycorstore(Request $request){
+        $librarycor = new librarycor();
+        $librarycor->username = $request->name;
+        $librarycor->userques = $request->ques;
+
+        $librarycor->save();
+        return redirect()->back();
+    }
 
     public function libReplycreate(){
         return view('discussionLibrary');
@@ -323,7 +337,8 @@ class AdminController extends Controller
     public function librarydetails(){
         $library = library::all();
         $reply = reply::all();
-        return view('discussionLibrary' , compact([('library'),('reply')]));
+        $librarycor = librarycor::all();
+        return view('discussionLibrary' , compact([('library'),('reply'),('librarycor')]));
 }
     /**
      * Display the specified resource.
