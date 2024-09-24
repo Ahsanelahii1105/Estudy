@@ -135,7 +135,7 @@
                                         <button class="btn btn-primary mb-2 reply-button replyhide"
                                            type="submit">Reply</button>
                                         <div class="reply-section divshow divhide" style="display: none;">
-                                           <form action="/discussionLibrary" method="post">
+                                           <form action="/discussionLibrary_" method="post">
                                                 @csrf
                                             <textarea placeholder="Write a reply..." name="reply"></textarea>
                                             <button class="btn btn-primary mt-2 mb-4 clickreplysub" type="submit">Submit Reply</button>
