@@ -18,6 +18,7 @@
 
 @section('content')
     <div class="container-fluid">
+
         <div class="row mt-5">
             <div class="col-md-4 col-sm-4"></div>
             <div class="col-md-4 col-sm-4">
@@ -37,94 +38,91 @@
             <div class="col-md-1 col-sm-1"></div>
             <div class="col-md-5 col-sm-5">
 
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary addbtn" data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop">
-                    Add Question For Subjects
-                </button>
+                @if(session('message'))
+                <div class="alert alert-success">{{ session('message') }}</div>
+            @endif
 
-                <!-- Modal -->
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
+            <!-- Button to trigger modal for Subject -->
+            <button type="button" class="btn btn-primary addbtn" data-bs-toggle="modal" data-bs-target="#subjectModal">
+                Add Question For Subjects
+            </button>
 
-                            <form action="/discussionLibrary" method="post">
-                                @csrf
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">Add</h5>
-                                    <button type="button" class="btn-close btn-primary" data-bs-dismiss="modal"
-                                        aria-label="Close">
-                                        <span aria-hidden="true"></span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <h5>Your Name:</h5>
-                                    </div>
-                                    <div class="row" style="padding: 10px;">
-                                        <input type="text" name="name" class="form-control">
-                                    </div>
-                                    <div class="row">
-                                        <h5>Question!</h5>
-                                    </div>
-                                    <div class="row" style="padding: 10px;">
-                                        <input type="text" name="ques" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </div>
-                            </form>
-
+            <!-- Modal for Subject -->
+            <div class="modal fade" id="subjectModal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Add</h5>
+                            <button type="button" class="btn-close btn-primary" data-bs-dismiss="modal"
+                                aria-label="Close">
+                                <span aria-hidden="true"></span>
+                            </button>
                         </div>
+                        <form action="/discussionLibrary" method="post">
+                            @csrf
+                            <div class="modal-body">
+                                <div class="row">
+                                    <h5>Your Name:</h5>
+                                </div>
+                                <div class="row" style="padding: 10px;">
+                                    <input type="text" name="name" class="form-control" required>
+                                </div>
+                                <div class="row">
+                                    <h5>Question!</h5>
+                                </div>
+                                <div class="row" style="padding: 10px;">
+                                    <input type="text" name="ques" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary addbtn" data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop">
-                    Add Question For Course
-                </button>
+            </div>
 
-                <!-- Modal -->
-                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
+            <!-- Button to trigger modal for Course -->
+            <button type="button" class="btn btn-primary addbtn" data-bs-toggle="modal" data-bs-target="#courseModal">
+                Add Question For Course
+            </button>
 
-                            <form action="/discussionLibraryy" method="post">
-                                @csrf
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">Add</h5>
-                                    <button type="button" class="btn-close btn-primary" data-bs-dismiss="modal"
-                                        aria-label="Close">
-                                        <span aria-hidden="true"></span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <h5>Your Name:</h5>
-                                    </div>
-                                    <div class="row" style="padding: 10px;">
-                                        <input type="text" name="name" class="form-control">
-                                    </div>
-                                    <div class="row">
-                                        <h5>Question!</h5>
-                                    </div>
-                                    <div class="row" style="padding: 10px;">
-                                        <input type="text" name="ques" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </div>
-                            </form>
-
+            <!-- Modal for Course -->
+            <div class="modal fade" id="courseModal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">Add</h5>
+                            <button type="button" class="btn-close btn-primary" data-bs-dismiss="modal"
+                                aria-label="Close">
+                                <span aria-hidden="true"></span>
+                            </button>
                         </div>
+                        <form action="/discussionLibraryCourse" method="post">
+                            @csrf
+                            <div class="modal-body">
+                                <div class="row">
+                                    <h5>Your Name:</h5>
+                                </div>
+                                <div class="row" style="padding: 10px;">
+                                    <input type="text" name="name" class="form-control" required>
+                                </div>
+                                <div class="row">
+                                    <h5>Question!</h5>
+                                </div>
+                                <div class="row" style="padding: 10px;">
+                                    <input type="text" name="ques" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
+            </div>
 
             </div>
         </div>
@@ -197,7 +195,7 @@
                                         <button class="btn btn-primary mb-2 reply-button"
                                             onclick="toggleReply(this)">Reply</button>
                                         <div class="reply-section divshow divhide" style="display: none;">
-                                           <form action="{{ url('/discussionLibrary_', $lib->id) }}" method="post">
+                                           <form action="/discussionLibrary_" method="post">
                                                 @csrf
                                             <textarea placeholder="Write a reply..." name="reply"></textarea>
                                             <button class="btn btn-primary mt-2 mb-4 clickreplysub" type="submit">Submit Reply</button>
@@ -220,7 +218,7 @@
 
 
                                         <div class="reply-section divshow divhide" style="display: none;">
-                                           <form action="{{ url('/discussionLibrary_', $lib->id) }}" method="post">
+                                           <form action="/discussionLibrary_" method="post">
                                                 @csrf
                                             <textarea placeholder="Write a reply..." name="reply"></textarea>
                                             <button class="btn btn-primary mt-2 mb-4 clickreplysub" type="submit">Submit Reply</button>
@@ -305,7 +303,7 @@
                                         <button class="btn btn-primary mb-2 reply-button"
                                             onclick="toggleReply(this)">Reply</button>
                                         <div class="reply-section divshow divhide" style="display: none;">
-                                           <form action="{{ url('/discussionLibrary_', $lib->id) }}" method="post">
+                                           <form action="/discussionLibrary_" method="post">
                                                 @csrf
                                             <textarea placeholder="Write a reply..." name="reply"></textarea>
                                             <button class="btn btn-primary mt-2 mb-4 clickreplysub" type="submit">Submit Reply</button>
@@ -328,7 +326,7 @@
 
 
                                         <div class="reply-section divshow divhide" style="display: none;">
-                                           <form action="{{ url('/discussionLibrary_', $lib->id) }}" method="post">
+                                           <form action="/discussionLibrary_" method="post">
                                                 @csrf
                                             <textarea placeholder="Write a reply..." name="reply"></textarea>
                                             <button class="btn btn-primary mt-2 mb-4 clickreplysub" type="submit">Submit Reply</button>

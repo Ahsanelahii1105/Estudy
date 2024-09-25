@@ -299,26 +299,30 @@ class AdminController extends Controller
         return view('discussionLibrary');
     }
 
-    public function librarystore(Request $request){
+    public function librarystore(Request $request) {
         $library = new Library();
         $library->user_name = $request->name;
         $library->user_ques = $request->ques;
-
         $library->save();
-        return redirect()->back();
+
+        return redirect()->back()->with('message', 'Question added to subjects successfully!');
     }
+
+
+
     public function librarycorcreate(){
         return view('discussionLibrary');
     }
 
-    public function librarycorstore(Request $request){
+    public function librarycorstore(Request $request) {
         $librarycor = new librarycor();
         $librarycor->username = $request->name;
         $librarycor->userques = $request->ques;
-
         $librarycor->save();
-        return redirect()->back();
+
+        return redirect()->back()->with('message', 'Question added to courses successfully!');
     }
+
 
     public function libReplycreate(){
         return view('discussionLibrary');
