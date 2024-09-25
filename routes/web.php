@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\WebsiteController;
-
+use App\Http\Controllers\CertificateController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -155,3 +155,5 @@ Route::any('/quiz/delete',[QuizController::class,  'delete']);
 
 Route::get('/quiz/question', [QuizController::class, 'showque']);
 
+// ------------ certificate
+Route::get('/admin/certificate/{id}', [CertificateController::class, 'generateCertificate']);

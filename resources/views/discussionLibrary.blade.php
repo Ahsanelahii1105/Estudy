@@ -387,17 +387,29 @@
         $(document).on('click', '.addbtn', function() {
             $('.weldiv').hide();
         });
+
+
         $(document).on('click', '.reply-button', function() {
-            $('.divshow').show();
+            // Hide all reply sections
+            $('.divshow').hide();
+
+            // Show only the reply section related to the clicked button
+            $(this).closest('.text-start').find('.divshow').show();
+
+            // Hide all reply buttons
+            $('.reply-button').show();
+            // Hide the clicked button
+            $(this).hide();
         });
-        $(document).on('click', '.reply-button', function() {
-            $('.replyhide').hide();
-        });
+
         $(document).on('click', '.clickreplysub', function() {
-            $('.divhide').hide();
+            // Hide the reply section when the submit button is clicked
+            $(this).closest('.divshow').hide();
+
+            // Show the reply button again (if needed)
+            $(this).closest('.text-start').find('.reply-button').show();
         });
-        $(document).on('click', '.clickreplysub', function() {
-            $('.replyhide').hide();
-        });
+
+
     });
 </script>

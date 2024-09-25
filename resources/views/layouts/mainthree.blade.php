@@ -48,7 +48,7 @@
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon clicktoggle"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-between mt-3" id="navbarCollapse">
+            <div class="collapse navbar-collapse justify-content-between mt-5" id="navbarCollapse">
                 <div class="navbar-nav font-weight-bold mx-auto py-0">
                     <a href="/" class="nav-item nav-link active">Home</a>
                     <a href="/subject" class="nav-link">Subjects</a>
