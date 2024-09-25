@@ -1,7 +1,7 @@
 @extends('layouts.bs_main')
 
 
-@section('main-section')
+@section('content')
     <style>
         table {
             font-family: arial, sans-serif;

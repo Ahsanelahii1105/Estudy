@@ -63,7 +63,7 @@ Route::get('/about', function () {
 
 
 //-------------Routes By TH for Inserting Data-------------
-Route::get('/admin/home' , [AdminController::class , 'index']);
+Route::get('/admin/home' , [AdminController::class , 'index'])->name('adminIndex');
 
 // for course
 Route::get('/admin/insertsubject' , [AdminController::class , 'create']);

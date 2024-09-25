@@ -1,10 +1,10 @@
 @extends('layouts.bs_main')
 
 
-   @section('main-section')
+   @section('content')
 
-   <h1 class="text-secondary text-center">Insert Course</h1>
    <div class="container-fluid w-50">
+       <h1 class="text-secondary text-center">Insert subject</h1>
       <form action="/admin/insertsubject" method="post" enctype="multipart/form-data">
          @csrf
          <div class="form-group">

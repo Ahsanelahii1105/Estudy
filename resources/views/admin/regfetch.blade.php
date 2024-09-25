@@ -1,7 +1,7 @@
 @extends('layouts.bs_main')
 
 
-@section('main-section')
+@section('content')
     <style>
         table {
             font-family: arial, sans-serif;
@@ -37,6 +37,7 @@
                             <th>Phone</th>
                             <th>Address</th>
                             <th>Gender</th>
+                            <th>Student Certificate</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -50,6 +51,7 @@
                                 <td>{{ $r->phone }}</td>
                                 <td>{{ $r->address }}</td>
                                 <td>{{ $r->gender }}</td>
+                                <td><a href="/admin/certificate/{id}" style="color: white; text-decoration: none;" target="_blank" type="application/pdf" rel="alternate" media="print"><button class="btn btn-seccess" type="button">Generate Certificate</button></a></td>
                                 <td><a href="#" class="btn btn-danger">Delete</a></td>
                             </tr>
                         @endforeach

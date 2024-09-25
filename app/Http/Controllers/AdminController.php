@@ -345,7 +345,7 @@ class AdminController extends Controller
 
         return redirect()->back()->with('message', 'Your reply has been submitted!');
     }
-    
+
     public function libReplycorcreate(){
         return view('discussionLibrary');
     }
