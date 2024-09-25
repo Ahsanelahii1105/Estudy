@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('replies', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('library_id')->constrained('libraries'); // Foreign key to the libraries table
             $table->string('reply');
             $table->timestamps();
         });

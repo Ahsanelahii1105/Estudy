@@ -7,5 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class library extends Model
 {
-    use HasFactory;
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
+    }
 }
+

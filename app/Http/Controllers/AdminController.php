@@ -330,20 +330,23 @@ class AdminController extends Controller
 
     public function libReplystore(Request $request, $id)
     {
-        $reply = new reply();
+        $reply = new Reply();
         $reply->reply = $request->reply;
+        $reply->library_id = $id; // Associate with the specific question
         $reply->save();
 
-        return redirect()->back();
+        return redirect()->back()->with('message', 'Your reply has been submitted!');
     }
 
 
-    public function librarydetails(){
-        $library = library::all();
-        $reply = reply::all();
+    public function librarydetails()
+    {
+        $library = Library::with('replies')->get(); // Eager load replies
         $librarycor = librarycor::all();
-        return view('discussionLibrary' , compact([('library'),('reply'),('librarycor')]));
-}
+        return view('discussionLibrary', compact('library', 'librarycor'));
+    }
+
+
     /**
      * Display the specified resource.
      */

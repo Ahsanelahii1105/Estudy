@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class reply extends Model
 {
-    use HasFactory;
+    public function library()
+    {
+        return $this->belongsTo(Library::class);
+    }
 }

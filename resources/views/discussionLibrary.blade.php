@@ -38,91 +38,91 @@
             <div class="col-md-1 col-sm-1"></div>
             <div class="col-md-5 col-sm-5">
 
-                @if(session('message'))
-                <div class="alert alert-success">{{ session('message') }}</div>
-            @endif
+                @if (session('message'))
+                    <div class="alert alert-success">{{ session('message') }}</div>
+                @endif
 
-            <!-- Button to trigger modal for Subject -->
-            <button type="button" class="btn btn-primary addbtn" data-bs-toggle="modal" data-bs-target="#subjectModal">
-                Add Question For Subjects
-            </button>
+                <!-- Button to trigger modal for Subject -->
+                <button type="button" class="btn btn-primary addbtn" data-bs-toggle="modal" data-bs-target="#subjectModal">
+                    Add Question For Subjects
+                </button>
 
-            <!-- Modal for Subject -->
-            <div class="modal fade" id="subjectModal" tabindex="-1">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Add</h5>
-                            <button type="button" class="btn-close btn-primary" data-bs-dismiss="modal"
-                                aria-label="Close">
-                                <span aria-hidden="true"></span>
-                            </button>
+                <!-- Modal for Subject -->
+                <div class="modal fade" id="subjectModal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Add</h5>
+                                <button type="button" class="btn-close btn-primary" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <span aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <form action="/discussionLibrary" method="post">
+                                @csrf
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <h5>Your Name:</h5>
+                                    </div>
+                                    <div class="row" style="padding: 10px;">
+                                        <input type="text" name="name" class="form-control" required>
+                                    </div>
+                                    <div class="row">
+                                        <h5>Question!</h5>
+                                    </div>
+                                    <div class="row" style="padding: 10px;">
+                                        <input type="text" name="ques" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
                         </div>
-                        <form action="/discussionLibrary" method="post">
-                            @csrf
-                            <div class="modal-body">
-                                <div class="row">
-                                    <h5>Your Name:</h5>
-                                </div>
-                                <div class="row" style="padding: 10px;">
-                                    <input type="text" name="name" class="form-control" required>
-                                </div>
-                                <div class="row">
-                                    <h5>Question!</h5>
-                                </div>
-                                <div class="row" style="padding: 10px;">
-                                    <input type="text" name="ques" class="form-control" required>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
-                        </form>
                     </div>
                 </div>
-            </div>
 
-            <!-- Button to trigger modal for Course -->
-            <button type="button" class="btn btn-primary addbtn" data-bs-toggle="modal" data-bs-target="#courseModal">
-                Add Question For Course
-            </button>
+                <!-- Button to trigger modal for Course -->
+                <button type="button" class="btn btn-primary addbtn" data-bs-toggle="modal" data-bs-target="#courseModal">
+                    Add Question For Course
+                </button>
 
-            <!-- Modal for Course -->
-            <div class="modal fade" id="courseModal" tabindex="-1">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="staticBackdropLabel">Add</h5>
-                            <button type="button" class="btn-close btn-primary" data-bs-dismiss="modal"
-                                aria-label="Close">
-                                <span aria-hidden="true"></span>
-                            </button>
+                <!-- Modal for Course -->
+                <div class="modal fade" id="courseModal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Add</h5>
+                                <button type="button" class="btn-close btn-primary" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                    <span aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <form action="/discussionLibraryCourse" method="post">
+                                @csrf
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <h5>Your Name:</h5>
+                                    </div>
+                                    <div class="row" style="padding: 10px;">
+                                        <input type="text" name="name" class="form-control" required>
+                                    </div>
+                                    <div class="row">
+                                        <h5>Question!</h5>
+                                    </div>
+                                    <div class="row" style="padding: 10px;">
+                                        <input type="text" name="ques" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </form>
                         </div>
-                        <form action="/discussionLibraryCourse" method="post">
-                            @csrf
-                            <div class="modal-body">
-                                <div class="row">
-                                    <h5>Your Name:</h5>
-                                </div>
-                                <div class="row" style="padding: 10px;">
-                                    <input type="text" name="name" class="form-control" required>
-                                </div>
-                                <div class="row">
-                                    <h5>Question!</h5>
-                                </div>
-                                <div class="row" style="padding: 10px;">
-                                    <input type="text" name="ques" class="form-control" required>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
-                        </form>
                     </div>
                 </div>
-            </div>
 
             </div>
         </div>
@@ -157,78 +157,82 @@
 
                             @foreach ($library as $lib)
 
-                            <div class="mrg mt-2 col-md-1 col-sm-1" style="float: left;">
-                                <img src="/img/userimg.jpg" alt="user">
-                            </div>
+                                <div class="mrg mt-2 col-md-1 col-sm-1" style="float: left;">
+                                    <img src="/img/userimg.jpg" alt="user">
+                                </div>
 
-                            <div class="col-md-10 col-sm-10 ms-3">
+                                <div class="col-md-10 col-sm-10 ms-3">
 
-                                <div class="mt-3 text-start">
-                                    <div>
-                                        <p class="user-name mb-0">{{ $lib->user_name }}</p>
-                                        <p><small>Time: 1:38 AM</small></p>
-                                    </div>
-
-                                    <div>
-                                        <p class="mb-0 mt-2"><b>Asking!</b></p>
-                                        <p class="mb-1">{{ $lib->user_ques }}</p>
-                                        @foreach ($reply as $rply)
-
-                                        <div class="container-fluid">
-                        <div class="row">
-
-                            <div class="mrg mt-2 col-md-1 col-sm-1" style="float: left;">
-                                <img src="/img/userimg.jpg" alt="user">
-                            </div>
-
-                            <div class="col-md-10 col-sm-10 ms-4">
-
-                                <div class="mt-3 text-start">
-                                    <div>
-                                        <p class="user-name mb-0">Qadir</p>
-                                        <p><small>Time: 2:38 AM</small></p>
-                                    </div>
-
-                                    <div>
-                                        <p class="mb-0 mt-2"><b>Reply!</b></p>
-                                        <p class="mb-1">{{ $rply->reply }}</p>
-                                        <button class="btn btn-primary mb-2 reply-button"
-                                            onclick="toggleReply(this)">Reply</button>
-                                        <div class="reply-section divshow divhide" style="display: none;">
-                                           <form action="/discussionLibrary_" method="post">
-                                                @csrf
-                                            <textarea placeholder="Write a reply..." name="reply"></textarea>
-                                            <button class="btn btn-primary mt-2 mb-4 clickreplysub" type="submit">Submit Reply</button>
-                                            </form>
+                                    <div class="mt-3 text-start">
+                                        <div>
+                                            <p class="user-name mb-0">{{ $lib->user_name }}</p>
+                                            <p><small>Time: 1:38 AM</small></p>
                                         </div>
+
+                                        <div>
+                                            <p class="mb-0 mt-2"><b>Asking!</b></p>
+                                            <p class="mb-1">{{ $lib->user_ques }}</p>
+
+                                            @if($lib->replies->isNotEmpty())
+                                            @foreach ($lib->replies as $rply)
+
+                                                <div class="container-fluid">
+                                                    <div class="row">
+
+                                                        <div class="mrg mt-2 col-md-1 col-sm-1" style="float: left;">
+                                                            <img src="/img/userimg.jpg" alt="user">
+                                                        </div>
+
+                                                        <div class="col-md-10 col-sm-10 ms-4">
+                                                            <div class="mt-3 text-start">
+                                                                <div>
+                                                                    <p class="user-name mb-0">Qadir</p>
+                                                                    <p><small>Time: 2:38 AM</small></p>
+                                                                </div>
+                                                                <div>
+                                                                    <p class="mb-0 mt-2"><b>Reply!</b></p>
+                                                                    <p class="mb-1">{{ $rply->reply }}</p>
+                                                                    <button class="btn btn-primary mb-2 reply-button"
+                                                                        onclick="toggleReply(this, {{ $lib->id }})">Reply</button>
+                                                                    <div class="reply-section divshow divhide" style="display: none;">
+
+                                                                       <form action="{{ url('/discussionLibrary_', $lib->id) }}" method="post">
+                                                                            @csrf
+                                                                            <textarea placeholder="Write a reply..." name="reply"></textarea>
+                                                                            <button class="btn btn-primary mt-2 mb-4 clickreplysub" type="submit">Submit Reply</button>
+                                                                        </form>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-1 col-sm-1"></div>
+                                                    </div>
+                                                </div>
+
+                                            @endforeach
+                                            @else
+                                                <p>No replies yet.</p>
+                                            @endif
+
+                                            <button class="btn btn-primary mb-2 reply-button replyhide" type="submit">
+                                                Reply
+                                            </button>
+
+                                            <div class="reply-section divshow divhide" style="display: none;">
+
+                                               <form action="{{ url('/discussionLibrary_', $lib->id) }}" method="post">
+                                                    @csrf
+                                                    <textarea placeholder="Write a reply..." name="reply"></textarea>
+                                                    <button class="btn btn-primary mt-2 mb-4 clickreplysub" type="submit">Submit Reply</button>
+                                                </form>
+
+                                            </div>
+                                        </div>
+
                                     </div>
 
                                 </div>
-
-                            </div>
-
-                            <div class="col-md-1 col-sm-1"></div>
-
-                        </div>
-                    </div>
-                                         @endforeach
-                                        <button class="btn btn-primary mb-2 reply-button replyhide"
-                                           type="submit">Reply</button>
-
-
-
-                                        <div class="reply-section divshow divhide" style="display: none;">
-                                           <form action="/discussionLibrary_" method="post">
-                                                @csrf
-                                            <textarea placeholder="Write a reply..." name="reply"></textarea>
-                                            <button class="btn btn-primary mt-2 mb-4 clickreplysub" type="submit">Submit Reply</button>
-                                            </form>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
 
                             @endforeach
 
@@ -252,7 +256,7 @@
 
     function showCourseContent() {
         var content = `
-        <div class="container-fluid">
+            <div class="container-fluid">
             <div class="row">
             <div class="col-md-1 col-sm-1"></div>
 
@@ -265,78 +269,82 @@
 
                             @foreach ($librarycor as $libcor)
 
-                            <div class="mrg mt-2 col-md-1 col-sm-1" style="float: left;">
-                                <img src="/img/userimg.jpg" alt="user">
-                            </div>
+                                <div class="mrg mt-2 col-md-1 col-sm-1" style="float: left;">
+                                    <img src="/img/userimg.jpg" alt="user">
+                                </div>
 
-                            <div class="col-md-10 col-sm-10 ms-3">
+                                <div class="col-md-10 col-sm-10 ms-3">
 
-                                <div class="mt-3 text-start">
-                                    <div>
-                                        <p class="user-name mb-0">{{ $libcor->username }}</p>
-                                        <p><small>Time: 1:38 AM</small></p>
-                                    </div>
-
-                                    <div>
-                                        <p class="mb-0 mt-2"><b>Asking!</b></p>
-                                        <p class="mb-1">{{ $libcor->userques }}</p>
-                                        @foreach ($reply as $rply)
-
-                                        <div class="container-fluid">
-                        <div class="row">
-
-                            <div class="mrg mt-2 col-md-1 col-sm-1" style="float: left;">
-                                <img src="/img/userimg.jpg" alt="user">
-                            </div>
-
-                            <div class="col-md-10 col-sm-10 ms-4">
-
-                                <div class="mt-3 text-start">
-                                    <div>
-                                        <p class="user-name mb-0">Qadir</p>
-                                        <p><small>Time: 2:38 AM</small></p>
-                                    </div>
-
-                                    <div>
-                                        <p class="mb-0 mt-2"><b>Reply!</b></p>
-                                        <p class="mb-1">{{ $rply->reply }}</p>
-                                        <button class="btn btn-primary mb-2 reply-button"
-                                            onclick="toggleReply(this)">Reply</button>
-                                        <div class="reply-section divshow divhide" style="display: none;">
-                                           <form action="/discussionLibrary_" method="post">
-                                                @csrf
-                                            <textarea placeholder="Write a reply..." name="reply"></textarea>
-                                            <button class="btn btn-primary mt-2 mb-4 clickreplysub" type="submit">Submit Reply</button>
-                                            </form>
+                                    <div class="mt-3 text-start">
+                                        <div>
+                                            <p class="user-name mb-0">{{ $libcor->username }}</p>
+                                            <p><small>Time: 1:38 AM</small></p>
                                         </div>
+
+                                        <div>
+                                            <p class="mb-0 mt-2"><b>Asking!</b></p>
+                                            <p class="mb-1">{{ $libcor->userques }}</p>
+
+                                            @if($lib->replies->isNotEmpty())
+                                            @foreach ($lib->replies as $rply)
+
+                                                <div class="container-fluid">
+                                                    <div class="row">
+
+                                                        <div class="mrg mt-2 col-md-1 col-sm-1" style="float: left;">
+                                                            <img src="/img/userimg.jpg" alt="user">
+                                                        </div>
+
+                                                        <div class="col-md-10 col-sm-10 ms-4">
+                                                            <div class="mt-3 text-start">
+                                                                <div>
+                                                                    <p class="user-name mb-0">Qadir</p>
+                                                                    <p><small>Time: 2:38 AM</small></p>
+                                                                </div>
+                                                                <div>
+                                                                    <p class="mb-0 mt-2"><b>Reply!</b></p>
+                                                                    <p class="mb-1">{{ $rply->reply }}</p>
+                                                                    <button class="btn btn-primary mb-2 reply-button"
+                                                                        onclick="toggleReply(this, {{ $lib->id }})">Reply</button>
+                                                                    <div class="reply-section divshow divhide" style="display: none;">
+
+                                                                       <form action="{{ url('/discussionLibrary_', $lib->id) }}" method="post">
+                                                                            @csrf
+                                                                            <textarea placeholder="Write a reply..." name="reply"></textarea>
+                                                                            <button class="btn btn-primary mt-2 mb-4 clickreplysub" type="submit">Submit Reply</button>
+                                                                        </form>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-1 col-sm-1"></div>
+                                                    </div>
+                                                </div>
+
+                                            @endforeach
+                                            @else
+                                                <p>No replies yet.</p>
+                                            @endif
+
+                                            <button class="btn btn-primary mb-2 reply-button replyhide" type="submit">
+                                                Reply
+                                            </button>
+
+                                            <div class="reply-section divshow divhide" style="display: none;">
+
+                                               <form action="{{ url('/discussionLibrary_', $lib->id) }}" method="post">
+                                                    @csrf
+                                                    <textarea placeholder="Write a reply..." name="reply"></textarea>
+                                                    <button class="btn btn-primary mt-2 mb-4 clickreplysub" type="submit">Submit Reply</button>
+                                                </form>
+
+                                            </div>
+                                        </div>
+
                                     </div>
 
                                 </div>
-
-                            </div>
-
-                            <div class="col-md-1 col-sm-1"></div>
-
-                        </div>
-                    </div>
-                                         @endforeach
-                                        <button class="btn btn-primary mb-2 reply-button replyhide"
-                                           type="submit">Reply</button>
-
-
-
-                                        <div class="reply-section divshow divhide" style="display: none;">
-                                           <form action="/discussionLibrary_" method="post">
-                                                @csrf
-                                            <textarea placeholder="Write a reply..." name="reply"></textarea>
-                                            <button class="btn btn-primary mt-2 mb-4 clickreplysub" type="submit">Submit Reply</button>
-                                            </form>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
 
                             @endforeach
 
