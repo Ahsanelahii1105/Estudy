@@ -10,6 +10,7 @@ use App\Models\contact;
 use App\Models\courses;
 use App\Models\library;
 use App\Models\subject;
+use App\Models\replycor;
 use App\Models\faculties;
 use App\Models\librarycor;
 use Illuminate\Http\Request;
@@ -295,6 +296,8 @@ class AdminController extends Controller
         }
     }
 
+    //------------- discussion library
+
     public function librarycreate(){
         return view('discussionLibrary');
     }
@@ -330,19 +333,45 @@ class AdminController extends Controller
 
     public function libReplystore(Request $request, $id)
     {
+        if (!Auth::check()) {
+            return redirect()->route('login')->with('message', 'You need to login to reply.');
+        }
+
         $reply = new Reply();
         $reply->reply = $request->reply;
-        $reply->library_id = $id; // Associate with the specific question
+        $reply->library_id = $id; // Associate the reply with the specific library question
+        $reply->username = Auth::user()->name; // Automatically fetch the logged-in user's name
         $reply->save();
+
+        return redirect()->back()->with('message', 'Your reply has been submitted!');
+    }
+    
+    public function libReplycorcreate(){
+        return view('discussionLibrary');
+    }
+
+    public function libReplycorstore(Request $request, $id)
+    {
+        if (!Auth::check()) {
+            return redirect()->route('login')->with('message', 'You need to login to reply.');
+        }
+
+        $replycor = new replycor();
+        $replycor->reply = $request->reply;
+        $replycor->librarycor_id = $id; // Associate the reply with the specific library question
+        $replycor->username = Auth::user()->name; // Automatically fetch the logged-in user's name
+        $replycor->save();
 
         return redirect()->back()->with('message', 'Your reply has been submitted!');
     }
 
 
+
+
     public function librarydetails()
     {
         $library = Library::with('replies')->get(); // Eager load replies
-        $librarycor = librarycor::all();
+        $librarycor = librarycor::with('replycors')->get(); // Eager load replies
         return view('discussionLibrary', compact('library', 'librarycor'));
     }
 

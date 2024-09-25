@@ -113,6 +113,10 @@ Route::get('/videosub/{id?}' , [AdminController::class , 'authvidsub'])->name('v
 Route::get('/discussionLibrary' , [AdminController::class , 'libReplycreate']);
 Route::post('/discussionLibrary_/{id}' , [AdminController::class , 'libReplystore']);
 
+
+Route::post('/discussionLibraryCourse_/{id}' , [AdminController::class , 'libReplycorstore']);
+
+
 Route::get('/discussionLibrary' , [AdminController::class , 'librarycreate']);
 Route::post('/discussionLibrary', [AdminController::class, 'librarystore']);
 

@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class librarycor extends Model
 {
-    use HasFactory;
+    public function replycors()
+    {
+        return $this->hasMany(replycor::class);
+    }
 }

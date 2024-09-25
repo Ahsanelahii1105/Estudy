@@ -142,6 +142,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 <script>
+
+// function toggleReply(button) {
+//     var replySection = button.nextElementSibling;
+//     if (replySection.style.display === "none" || replySection.style.display === "") {
+//         replySection.style.display = "block";  // Show reply section
+//     } else {
+//         replySection.style.display = "none";   // Hide reply section
+//     }
+// }
+
     function showSubjectContent() {
         var content = `
         <div class="container-fluid">
@@ -186,7 +196,7 @@
                                                         <div class="col-md-10 col-sm-10 ms-4">
                                                             <div class="mt-3 text-start">
                                                                 <div>
-                                                                    <p class="user-name mb-0">Qadir</p>
+                                                                    <p class="user-name mb-0">{{ $rply->username }}</p>
                                                                     <p><small>Time: 2:38 AM</small></p>
                                                                 </div>
                                                                 <div>
@@ -256,7 +266,7 @@
 
     function showCourseContent() {
         var content = `
-            <div class="container-fluid">
+        <div class="container-fluid">
             <div class="row">
             <div class="col-md-1 col-sm-1"></div>
 
@@ -285,8 +295,8 @@
                                             <p class="mb-0 mt-2"><b>Asking!</b></p>
                                             <p class="mb-1">{{ $libcor->userques }}</p>
 
-                                            @if($lib->replies->isNotEmpty())
-                                            @foreach ($lib->replies as $rply)
+                                            @if($libcor->replycors->isNotEmpty())
+                                            @foreach ($libcor->replycors as $rply)
 
                                                 <div class="container-fluid">
                                                     <div class="row">
@@ -298,17 +308,17 @@
                                                         <div class="col-md-10 col-sm-10 ms-4">
                                                             <div class="mt-3 text-start">
                                                                 <div>
-                                                                    <p class="user-name mb-0">Qadir</p>
+                                                                    <p class="user-name mb-0">{{ $rply->username }}</p>
                                                                     <p><small>Time: 2:38 AM</small></p>
                                                                 </div>
                                                                 <div>
                                                                     <p class="mb-0 mt-2"><b>Reply!</b></p>
                                                                     <p class="mb-1">{{ $rply->reply }}</p>
                                                                     <button class="btn btn-primary mb-2 reply-button"
-                                                                        onclick="toggleReply(this, {{ $lib->id }})">Reply</button>
+                                                                        onclick="toggleReply(this, {{ $libcor->id }})">Reply</button>
                                                                     <div class="reply-section divshow divhide" style="display: none;">
 
-                                                                       <form action="{{ url('/discussionLibrary_', $lib->id) }}" method="post">
+                                                                       <form action="{{ url('/discussionLibraryCourse_', $libcor->id) }}" method="post">
                                                                             @csrf
                                                                             <textarea placeholder="Write a reply..." name="reply"></textarea>
                                                                             <button class="btn btn-primary mt-2 mb-4 clickreplysub" type="submit">Submit Reply</button>
@@ -333,7 +343,7 @@
 
                                             <div class="reply-section divshow divhide" style="display: none;">
 
-                                               <form action="{{ url('/discussionLibrary_', $lib->id) }}" method="post">
+                                               <form action="{{ url('/discussionLibraryCourse_', $libcor->id) }}" method="post">
                                                     @csrf
                                                     <textarea placeholder="Write a reply..." name="reply"></textarea>
                                                     <button class="btn btn-primary mt-2 mb-4 clickreplysub" type="submit">Submit Reply</button>
