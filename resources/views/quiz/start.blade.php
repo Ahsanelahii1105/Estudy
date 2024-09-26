@@ -16,7 +16,6 @@
                 <div class="col-md-4 text-center" >
                     <h3>Are you Ready?</h3>
                     <a href="/quiz/startquiz"><button class="btn btn-primary">Start Quiz</button></a>
-                    <div class="text-center"><a href="/quiz/quizIndex">Home?</a></div>
                 </div>
                 <div class="col-md-4"></div>
             </div>

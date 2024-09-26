@@ -131,6 +131,10 @@ Route::any('/quizIndex', function () {
     return view('quiz/quizIndex');
 });
 
+Route::any('/admin/quizIndex', function () {
+    return view('admin/quizIndex');
+});
+
 Route::any('/ansDesk', function () {
     return view('quiz/answerDesk');
 });

@@ -19,7 +19,6 @@
                     <label>Result: <small> {{Session::get('correctans')}}/{{Session::get('correctans')+Session::get('wrongans')}} </small></label>
                     <br>
                     <a href="/"><button class="btn btn-primary">Finish Quiz</button></a>
-                    <div class="text-center"><a href="/quizIndex">Home?</a></div>
                 </div>
                 <div class="col-md-4"></div>
             </div>

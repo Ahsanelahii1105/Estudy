@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Question; // Use uppercase 'Q'
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log; // Import Log facade
 
 class QuizController extends Controller
 {
@@ -36,8 +37,8 @@ class QuizController extends Controller
     }
 
     public function showque() {
-        $qs = question::all();
-        Log::info('Questions: ', $qs->toArray());
+        $qs = Question::all();
+        Log::info('Questions: ', $qs->toArray()); // Log statement
 
         return view('quiz/question')->with(['question' => $qs]);
     }

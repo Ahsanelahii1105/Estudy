@@ -135,7 +135,7 @@
             <div class="row">
                 <div class="col-md-2"></div>
                 <div class="col-md-3" style="padding-top: 88vh">
-                    <a href="/quizStart"><button style="width: 130px" class="btn btn-primary">Student</button> </a>
+                    <a href="/quiz/question"><button style="width: 130px" class="btn btn-primary">Teacher</button> </a>
                 </div>
                 <div class="col-md-6"></div>
             </div>

@@ -23,9 +23,9 @@
         }
     </style>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-12 mt-5">
+            <div class="col-lg-12 col-sm-12 mt-5">
 
                 <table class="text-center">
                     <thead>
@@ -55,7 +55,7 @@
                                 <td>
                                     <button type="button" class="btn btn-primary addbtn" data-bs-toggle="modal"
                                         data-bs-target="#courseModal{{ $r->id }}">
-                                        Insert Student Marks
+                                        Student Marks
                                     </button>
                                 </td>
                                 <td>
