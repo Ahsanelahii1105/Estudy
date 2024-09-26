@@ -158,5 +158,5 @@ Route::get('/quiz/question', [QuizController::class, 'showque']);
 // ------------ certificate
 
 Route::get('/certificate/{id}', [CertificateController::class, 'generateCertificate']);
-Route::post('/student', [CertificateController::class, 'insertStudent']);
+Route::post('/admin/student', [CertificateController::class, 'insertStudent']);
 
