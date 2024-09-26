@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Certificate</title>
 
+    <script>
+        $backgroundPath = asset('img/certificate.avif');
+
+    </script>
 
     <style>
         /* Reset default margin and padding */
@@ -79,12 +83,13 @@
         <div class="certificate-header">
             <h1>Certificate of Achievement</h1>
             <p>This is to certify that</p>
-            <h2>{{ $name }}</h2>
-            <p>of Class <strong>{{$marks}}</strong></p>
+            <h2>{{$name}}</h2>
+            <p>of Course <strong>{{$coursename}}</strong></p>
         </div>
 
         <div class="certificate-body">
-            <p>has successfully achieved a grade of <strong>{{ $grade }}</strong></p>
+            <p>has successfully achieved a grade of <strong>{{$grade}}</strong></p>
+            <p>with a total score of <strong>{{$marks}}</strong></p>
         </div>
 
         <div class="auth-sign" style="margin-left: 80px !important">

@@ -59,10 +59,10 @@
                                     </button>
                                 </td>
                                 <td>
-                                    <a href="#"
+                                    <a href="{{url('/certificate', $r->id)}}"
                                         style="color: white; text-decoration: none;" target="_blank" type="application/pdf"
-                                        rel="alternate" media="print">
-                                        <button class="btn btn-success" type="button">Generate Certificate</button>
+                                        rel="alternate" media="print" class="btn btn-success">
+                                        Generate Certificate
                                     </a>
                                 </td>
 
@@ -80,18 +80,16 @@
                                             <button type="button" class="btn-close btn-primary" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                         </div>
-                                        <form action="{{ url('/admin/student') }}" method="POST">
+                                        <form action="{{ url('/student') }}" method="POST">
                                             @csrf
                                             <div class="modal-body">
                                                 <div class="form-group">
                                                     <label for="name">Student Name</label>
-                                                    <input type="text" name="name" class="form-control"
-                                                        value="{{ $r->name }}" readonly>
+                                                    <input type="text" name="name" class="form-control" value="{{ $r->name }}" readonly>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="email">Email</label>
-                                                    <input type="email" name="email" class="form-control"
-                                                        value="{{ $r->email }}" readonly>
+                                                    <input type="email" name="email" class="form-control" value="{{ $r->email }}" readonly>
                                                 </div>
                                                 <div class="form-group">
                                                     <label for="coursename">Course Name</label>
@@ -107,11 +105,11 @@
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
-                                                    data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                                 <button type="submit" class="btn btn-primary">Submit</button>
                                             </div>
                                         </form>
+
                                     </div>
                                 </div>
                             </div>
