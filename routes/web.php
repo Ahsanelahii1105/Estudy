@@ -157,3 +157,5 @@ Route::get('/quiz/question', [QuizController::class, 'showque']);
 
 // ------------ certificate
 
+Route::get('/certificate', [CertificateController::class, 'generateCertificate']);
+
