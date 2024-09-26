@@ -37,7 +37,7 @@ class QuizController extends Controller
 
     public function showque() {
         $qs = question::all();
-        \Log::info('Questions: ', $qs->toArray());
+        Log::info('Questions: ', $qs->toArray());
 
         return view('quiz/question')->with(['question' => $qs]);
     }

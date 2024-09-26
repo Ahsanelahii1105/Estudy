@@ -156,4 +156,4 @@ Route::any('/quiz/delete',[QuizController::class,  'delete']);
 Route::get('/quiz/question', [QuizController::class, 'showque']);
 
 // ------------ certificate
-Route::get('/admin/certificate/{id}', [CertificateController::class, 'generateCertificate']);
+
