@@ -14,8 +14,8 @@
             <div class="row" style="padding-top: 40vh">
                 <div class="col-md-4"></div>
                 <div class="col-md-4 text-center">
-                    <label>Correct: <small> {{Session::get('correctans')}} </small></label>
-                    <label>Incorrect: <small> {{Session::get('wrongans')}} </small></label>
+                    <label>Correct: <small> {{Session::get('correctans')}} </small></label><br><br>
+                    <label>Incorrect: <small> {{Session::get('wrongans')}} </small></label><br><br>
                     <label>Result: <small> {{Session::get('correctans')}}/{{Session::get('correctans')+Session::get('wrongans')}} </small></label>
                     <br>
                     <a href="/"><button class="btn btn-primary">Finish Quiz</button></a>

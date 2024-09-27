@@ -217,6 +217,26 @@
                                     <td>{{$a_section_question}}</td>
                                     <td>{{$a_awnser}}</td>
                                 </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>{{$a_section_questiontwo}}</td>
+                                    <td>{{$a_awnsertwo}}</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>{{$a_section_questionthree}}</td>
+                                    <td>{{$a_awnserthree}}</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>{{$a_section_questionfour}}</td>
+                                    <td>{{$a_awnserfour}}</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>{{$a_section_questionfive}}</td>
+                                    <td>{{$a_awnserfive}}</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -243,6 +263,26 @@
                                     <td>{{$b_section_question}}</td>
                                     <td>{{$b_awnser}}</td>
                                 </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>{{$b_section_questiontwo}}</td>
+                                    <td>{{$b_awnsertwo}}</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>{{$b_section_questionthree}}</td>
+                                    <td>{{$b_awnserthree}}</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>{{$b_section_questionfour}}</td>
+                                    <td>{{$b_awnserfour}}</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>{{$b_section_questionfive}}</td>
+                                    <td>{{$b_awnserfive}}</td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -264,6 +304,31 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>{{$c_section_question}}</td>
+                                    <td>{{$c_awnser}}</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>{{$c_section_questiontwo}}</td>
+                                    <td>{{$c_awnsertwo}}</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>{{$c_section_questionthree}}</td>
+                                    <td>{{$c_awnserthree}}</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>{{$c_section_questionfour}}</td>
+                                    <td>{{$c_awnserfour}}</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>{{$c_section_questionfive}}</td>
+                                    <td>{{$c_awnserfive}}</td>
+                                </tr>
                                 <tr>
                                     <td>4</td>
                                     <td>{{$c_section_question}}</td>
