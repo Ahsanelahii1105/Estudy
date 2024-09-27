@@ -467,13 +467,13 @@
 
 	<div id="contentArea">
 		<span style="font-size: 30px; cursor: pointer"
-			onclick="openNav()">☰</span>
+			onclick="openNav()"></span>
 		<div class="contentText">
 
 		<h2 id="contentTitle">All Subject</h2>
 	@foreach ($subs as $s)
 
-	<div class="card mb-5 shadow" style="max-width: 1000px;">
+	<div class="card mb-5 shadow mt-5" style="max-width: 1000px;">
 		<div class="row g-0">
 			<div class="col-md-4">
 				<img src="{{$s->sub_image}}" width="100%" height="302px" class="img rounded-start position-relative" alt="image">

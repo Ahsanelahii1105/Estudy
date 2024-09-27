@@ -464,14 +464,14 @@
 
 	<div id="contentArea">
 		<span style="font-size: 30px; cursor: pointer"
-			onclick="openNav()">☰</span>
+			onclick="openNav()"></span>
 		<div class="contentText">
 
 		<h2 id="contentTitle">All Courses</h2>
 
 		@foreach ($courses as $cors)
 
-		<div class="card mb-5 shadow" style="max-width: 1000px;" id="contentTitle">
+		<div class="card mb-5 shadow mt-5" style="max-width: 1000px;" id="contentTitle">
 			<div class="row g-0">
 				<div class="col-md-4">
 					<img src="{{$cors->course_image}}" width="100%" height="302px" class="img rounded-start position-relative" alt="image">
