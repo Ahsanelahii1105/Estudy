@@ -8,7 +8,7 @@
     <!-- Facilities Start -->
 
 
-    <div class="container mt-5">
+    {{-- <div class="container mt-5">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12" style="margin: auto;">
                 <div class="container text-center">
@@ -19,7 +19,7 @@
 
             </div>
         </div>
-    </div>
+    </div> --}}
 
     <div class="container mt-5">
         <div class="row">

@@ -9,6 +9,7 @@ use App\Http\Controllers\QuizController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\WebsiteController;
 use App\Http\Controllers\CertificateController;
+use App\Http\Controllers\pdfcontroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,8 +42,15 @@ Route::middleware([
     })->name('dashboard');
 });
 
+// routes/web.php
+
+Route::get('/insertModular', function(){
+    return view('admin/insertModular');
+});
+
+Route::post('/insertModular', [App\Http\Controllers\pdfController::class, 'insertModular'])->name('insertModular');
 // pdf ROUTE
-Route::get('generate-pdf', [App\Http\Controllers\pdfController::class, 'generatepdf']);
+Route::get('/generate-pdf/{id}', [App\Http\Controllers\pdfController::class, 'generatepdf']);
 
 // navbar
 

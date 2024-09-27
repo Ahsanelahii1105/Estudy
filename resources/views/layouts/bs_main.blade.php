@@ -120,6 +120,11 @@
                                             <span class="sub-item">Teacher Question</span>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a href="/insertModular">
+                                            <span class="sub-item">Modular Insert</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
