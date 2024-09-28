@@ -48,7 +48,7 @@
                                     knowledge
                                 </p>
                                 <button style="width: 130px; background-color: #5a8fef;" class="btn mx-3 p-2"
-                                    type="button"><a href="/videopage"
+                                    type="button"><a href="/videopage/4"
                                         style="width: 130px; background-color: #5a8fef; color: #e8dcdc; border: none; font-weight: 700; border: none !important;">Start</a></button>
                             </div>
                         </div>
